@@ -26,5 +26,12 @@ namespace FIT5120App.Controllers
 
             return View();
         }
+
+        public ActionResult ViewDiseases()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }
