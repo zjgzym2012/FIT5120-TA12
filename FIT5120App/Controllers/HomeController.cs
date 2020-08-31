@@ -37,5 +37,9 @@ namespace FIT5120App.Controllers
         {
             return View();
         }
+        public ActionResult Mining()
+        {
+            return View();
+        }
     }
 }

@@ -128,12 +128,57 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\about\1.jpg" />
+    <Content Include="assets\img\about\2.jpg" />
+    <Content Include="assets\img\about\3.jpg" />
+    <Content Include="assets\img\about\4.jpg" />
+    <Content Include="assets\img\close-icon.svg" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\header-bg.jpg" />
+    <Content Include="assets\img\logos\creative-market.jpg" />
+    <Content Include="assets\img\logos\designmodo.jpg" />
+    <Content Include="assets\img\logos\envato.jpg" />
+    <Content Include="assets\img\logos\themeforest.jpg" />
+    <Content Include="assets\img\map-image.png" />
+    <Content Include="assets\img\navbar-logo.svg" />
+    <Content Include="assets\img\portfolio\01-full.jpg" />
+    <Content Include="assets\img\portfolio\01-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\02-full.jpg" />
+    <Content Include="assets\img\portfolio\02-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\03-full.jpg" />
+    <Content Include="assets\img\portfolio\03-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\04-full.jpg" />
+    <Content Include="assets\img\portfolio\04-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\05-full.jpg" />
+    <Content Include="assets\img\portfolio\05-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\06-full.jpg" />
+    <Content Include="assets\img\portfolio\06-thumbnail.jpg" />
+    <Content Include="assets\img\team\1.jpg" />
+    <Content Include="assets\img\team\2.jpg" />
+    <Content Include="assets\img\team\3.jpg" />
+    <Content Include="assets\mail\contact_me.js" />
+    <Content Include="assets\mail\contact_me.php" />
+    <Content Include="assets\mail\jqBootstrapValidation.js" />
     <Content Include="Content\Style.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="Images\cover.png" />
+    <Content Include="Images\image1.jpg" />
     <Content Include="Images\construction.jpg" />
+    <Content Include="Images\image2.jpg" />
+    <Content Include="Images\image_1.jpg" />
+    <Content Include="Images\image_construction.png" />
+    <Content Include="Images\image_diseases.png" />
+    <Content Include="Images\image_industries.png" />
+    <Content Include="Images\image_manufacturing.png" />
+    <Content Include="Images\image_mining.png" />
+    <Content Include="Images\img.jpeg" />
     <Content Include="Images\logo.PNG" />
-    <Content Include="Images\lung wallpaper_meitu_1.jpg" />
+    <Content Include="Images\image_2.jpg" />
     <Content Include="Images\lung.png" />
+    <Content Include="Images\image_3.jpg" />
+    <Content Include="Images\mining-cover.jpg" />
     <Content Include="Images\mining.jpg" />
+    <Content Include="Images\science-in-hd-pAzSrQF3XUQ-unsplash.jpg" />
     <Content Include="Images\search-icon-jpg-14.jpg" />
     <Content Include="Content\bootstrap-Minty.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -144,6 +189,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\image3.jpg" />
+    <Content Include="index2.html" />
+    <Content Include="js\scripts.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -173,10 +221,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ViewDiseases.cshtml" />
     <Content Include="Views\Home\Industries.cshtml" />
+    <Content Include="Views\Home\Mining.cshtml" />
+    <Content Include="Views\Home\Manufacturing.cshtml" />
+    <Content Include="Views\Home\Construction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\Industries\" />
   </ItemGroup>
   <ItemGroup>
