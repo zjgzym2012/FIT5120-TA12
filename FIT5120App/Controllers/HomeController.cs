@@ -41,5 +41,13 @@ namespace FIT5120App.Controllers
         {
             return View();
         }
+        public ActionResult Manufacturing()
+        {
+            return View();
+        }
+        public ActionResult Construction()
+        {
+            return View();
+        }
     }
 }

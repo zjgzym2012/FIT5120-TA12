@@ -162,15 +162,15 @@ sup {
 }
 
 a {
-    color: #2d8b6b;
+    color: #fff;
     text-decoration: none;
     background-color: transparent;
 }
 
-a:hover {
-  color: #4aa48a;
-  text-decoration: underline;
-}
+    a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
 
 a:not([href]):not([class]) {
   color: inherit;
@@ -4517,11 +4517,12 @@ input[type="button"].btn-block {
 }
 
 .nav-link:hover, .nav-link:focus {
-  text-decoration: none;
+  text-decoration:underline;
+ text-decoration-color:mediumturquoise;
 }
 
 .nav-link.disabled {
-  color: #888;
+  color: #000;
   pointer-events: none;
   cursor: default;
 }
@@ -4544,15 +4545,17 @@ input[type="button"].btn-block {
   border-color: #f7f7f9 #f7f7f9 #eceeef;
 }
 
-.nav-tabs .nav-link.disabled {
-  color: #888;
-  background-color: transparent;
-  border-color: transparent;
-}
+    .nav-tabs .nav-link.disabled {
+        color: #000000;
+        font-size: large;
+        background-color: transparent;
+        border-color: transparent;
+    }
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #5a5a5a;
+  color: #56cc9d;
+  font-size:large;
   background-color: #fff;
   border-color: #eceeef #eceeef #fff;
 }
@@ -4567,11 +4570,12 @@ input[type="button"].btn-block {
   border-radius: 0.4rem;
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #78C2AD;
-}
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+        color: #fff;
+        background-color: #78C2AD;
+        color: #56cc9d;
+    }
 
 .nav-fill > .nav-link,
 .nav-fill .nav-item {
@@ -4635,7 +4639,7 @@ input[type="button"].btn-block {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 2rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4950,7 +4954,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: #5a5a5a;
+  color: #000000;
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
@@ -4958,7 +4962,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 10);
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
@@ -4973,7 +4977,7 @@ input[type="button"].btn-block {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #5a5a5a;
+  color: #000403;
 }
 
 .navbar-light .navbar-toggler {
@@ -6844,7 +6848,7 @@ a.close.disabled {
     display: none;
     float: left;
     width: 100%;
-    height: 32rem;
+    height: 100%;
     margin-right: -100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -7193,7 +7197,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #fff !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -11093,7 +11097,8 @@ legend {
         top: 0;
         left: 0;
         min-width: 100%;
-        height: 32rem;
+        height:auto;
+        min-height: 100%;
 }
 .carousel {
     margin-bottom: 4rem;
