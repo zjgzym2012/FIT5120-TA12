@@ -161,16 +161,33 @@
     <Content Include="assets\mail\jqBootstrapValidation.js" />
     <Content Include="Content\Style.css" />
     <Content Include="Images\construction.jpg" />
+    <Content Include="Images\cover.png" />
+    <Content Include="Images\find_out_more.png" />
     <Content Include="Images\Heart-256 %281%29.png" />
     <Content Include="Images\henry-co-3coKbdfnAFg-unsplash_meitu_4.jpg" />
+    <Content Include="Images\homepage_card_1.png" />
+    <Content Include="Images\homepage_card_2.png" />
+    <Content Include="Images\image1.jpg" />
+    <Content Include="Images\image2.jpg" />
+    <Content Include="Images\image3.jpg" />
+    <Content Include="Images\image_1.jpg" />
+    <Content Include="Images\image_2.jpg" />
+    <Content Include="Images\image_3.jpg" />
+    <Content Include="Images\image_construction.png" />
+    <Content Include="Images\image_diseases.png" />
+    <Content Include="Images\image_industries.png" />
+    <Content Include="Images\image_manufacturing.png" />
+    <Content Include="Images\image_mining.png" />
+    <Content Include="Images\img.jpeg" />
     <Content Include="Images\logo.PNG" />
-    <Content Include="Images\lung wallpaper_meitu_1.jpg" />
     <Content Include="Images\lung.png" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" />
+    <Content Include="Images\mining-cover.jpg" />
     <Content Include="Images\mining.jpg" />
     <Content Include="Images\robina-weermeijer-Pw9aFhc92P8-unsplash_meitu_6.jpg" />
+    <Content Include="Images\science-in-hd-pAzSrQF3XUQ-unsplash.jpg" />
     <Content Include="Images\search-icon-jpg-14.jpg" />
     <Content Include="Content\bootstrap-Minty.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -212,6 +229,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ViewDiseases.cshtml" />
     <Content Include="Views\Home\Industries.cshtml" />
+    <Content Include="Views\Home\Manufacturing.cshtml" />
+    <Content Include="Views\Home\Mining.cshtml" />
+    <Content Include="Views\Home\Construction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

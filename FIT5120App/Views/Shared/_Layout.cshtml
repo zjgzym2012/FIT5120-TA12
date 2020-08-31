@@ -30,7 +30,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/Home/Index">Home <span class="sr-only">(current)</span></a>
                     </li>
                     @*<li class="nav-item">
                         <a class="nav-link" href="#">Features</a>
@@ -59,7 +59,17 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Breathe And Believe</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1"><a href="/Home/About"><p>About</p></a></div>
+                    <div class="col-1"><a href="/Home/About"><p>Contact</p></a></div>
+                </div>
+
+            </div>
+            <div class="container">
+                <p>&copy; @DateTime.Now.Year - Breathe And Believe</p>
+            </div>
+            
         </footer>
     </div>
 
