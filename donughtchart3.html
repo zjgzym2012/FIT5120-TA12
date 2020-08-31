@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <style>
+        section {
+            width: 50%;
+        }
+    </style>
+    <body class="bg-success">
+            <div class="col-md-4 offset-md-2 my-5">
+            <div class="card">
+                <div class="card-body">
+                <hr>    
+                </div>
+                <div class="card-body">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        <section>
+            <canvas id="myChart" width="200" height="200"> </canvas>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+            // The type of chart we want to create
+                type: 'doughnut',
+
+            // The data for our dataset
+                data: {
+                    
+                    labels: ["Construction", "Manufacturing", "Transport and warehousing", "Mining", "Information media", "Other services"],
+                    datasets: [{
+        
+                            backgroundColor: ['rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(130, 126, 16, 1)', 'rgba(150, 126, 16, 1)'],
+                            borderWidth: 3,
+                            data: [13855, 12925, 8515, 2140, 470, 2890]
+                        
+                    }]
+                },
+
+        options: {
+            responsive: true,
+            title:{
+              display: true,
+              text: 'Number of claims in each industry based on the Australian workers compensation data from 2000-2018',
+              fontSize: 15
+            }
+        }
+    });
+        </script>
+    </body>
+</html>
