@@ -160,7 +160,11 @@
     <Content Include="assets\mail\contact_me.php" />
     <Content Include="assets\mail\jqBootstrapValidation.js" />
     <Content Include="Content\Style.css" />
+    <Content Include="Images\asbestos.png" />
+    <Content Include="Images\coal.jpg" />
     <Content Include="Images\construction.jpg" />
+    <Content Include="Images\cotton.jpg" />
+    <Content Include="Images\dust.jpg" />
     <Content Include="Images\Heart-256 %281%29.png" />
     <Content Include="Images\henry-co-3coKbdfnAFg-unsplash_meitu_4.jpg" />
     <Content Include="Images\logo.PNG" />
@@ -170,6 +174,8 @@
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" />
     <Content Include="Images\mining.jpg" />
+    <Content Include="Images\mushroom.jpg" />
+    <Content Include="Images\quartz.jpeg" />
     <Content Include="Images\robina-weermeijer-Pw9aFhc92P8-unsplash_meitu_6.jpg" />
     <Content Include="Images\search-icon-jpg-14.jpg" />
     <Content Include="Content\bootstrap-Minty.css" />
@@ -181,7 +187,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\silica.jpeg" />
     <Content Include="Images\Stethoscope-03-160.png" />
+    <Content Include="Images\textile.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\YumengVM - Web Deploy.pubxml" />

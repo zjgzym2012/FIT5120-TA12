@@ -205,7 +205,7 @@ img {
     vertical-align: middle;
     border-style: none;
     width: 100%;
-    height: calc(100vh-100px);
+    height: auto;
     /*object-fit:fill;*/
 }
 
@@ -11151,3 +11151,22 @@ button.bg-custom:hover,
 button.bg-custom:focus {
     background-color: #78C2AD !important;
 }
+.card-custom {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.4rem;
+}
+
+
+
