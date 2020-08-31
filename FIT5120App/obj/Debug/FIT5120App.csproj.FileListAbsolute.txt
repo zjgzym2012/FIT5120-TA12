@@ -406,8 +406,8 @@ E:\FIT5120-TA12\FIT5120App\bin\zh-Hans\System.Web.Razor.resources.dll
 E:\FIT5120-TA12\FIT5120App\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\FIT5120-TA12\FIT5120App\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\FIT5120-TA12\FIT5120App\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\FIT5120-TA12\FIT5120App\obj\Debug\FIT5120App.csprojAssemblyReference.cache
 E:\FIT5120-TA12\FIT5120App\obj\Debug\FIT5120App.csproj.CoreCompileInputs.cache
 E:\FIT5120-TA12\FIT5120App\obj\Debug\FIT5120App.csproj.CopyComplete
 E:\FIT5120-TA12\FIT5120App\obj\Debug\FIT5120App.dll
 E:\FIT5120-TA12\FIT5120App\obj\Debug\FIT5120App.pdb
+E:\FIT5120-TA12\FIT5120App\obj\Debug\FIT5120App.csprojAssemblyReference.cache
