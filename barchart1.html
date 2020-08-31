@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <style>
+        section {
+            width: 50%;
+        }
+    </style>
+    <body class="bg-success">
+            <div class="col-md-4 offset-md-2 my-5">
+            <div class="card">
+                <div class="card-body">
+                <hr>    
+                </div>
+                <div class="card-body">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        <section>
+            <canvas id="myChart" width="200" height="200"> </canvas>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+            // The type of chart we want to create
+                type: 'bar',
+
+            // The data for our dataset
+                data: {
+                    labels: ['Mental Health', 'Digestive system', 'Nervous system and sense organ', 
+                             'Skin and subcutaneous tissue', 'Respiratory system', 'Infectious and parasitic',
+                             'Circulatory system', 'Neoplasms'],
+                    datasets: [{
+                    
+                            backgroundColor: [ 'rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(130, 126, 16, 1)', 'rgba(150, 126, 16, 1)'],
+                            borderWidth: 3,
+                            data: [50340, 17415, 8780, 3685, 1650, 1715, 830, 310]
+                    }]
+                },
+
+        options: {
+            responsive: true,
+            title:{
+              display: true,
+              text: 'Total no.of people affected by the particular disease type',
+              fontSize: 15
+            },
+           defaultFontSize : 12,
+           defaultFontStyle : "bold",
+           scales: {
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Total Count'
+                    }
+                }],
+                xAxes: [{
+                    scaleLabel:{
+                        display: true,
+                        labelString: 'Type of Diseases'
+                    }
+                }]
+            }
+        }
+    });
+        </script>
+    </body>
+</html>
