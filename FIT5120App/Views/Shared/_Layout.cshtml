@@ -9,6 +9,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>@ViewBag.Title - Breathe And Believe</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/img/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="~/css/nice-select.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="~/css/icofont.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="~/css/slicknav.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="~/css/owl-carousel.css">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="~/css/datepicker.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/css/animate.min.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -17,9 +45,12 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light " >
 
+            <a class="navbar-brand">
+
+                <img src="~/Images/logo_transparent.png" />
+            </a>
             <a href="/Home/Index" class="navbar-brand">
                BREATHE AND BELIEVE
-
             </a>
             @*<a class="navbar-brand" href="#">Breathe And Believe</a>*@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,20 +93,63 @@
  
         @RenderBody()
         <hr />
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-1"><a class="text-primary" href="/Home/About"><p>About</p></a></div>
-                    <div class="col-1"><a class="text-primary" href="/Home/About"><p>Contact</p></a></div>
+            <!-- Footer Area -->
+            <footer id="footer" class="footer ">
+                <!-- Footer Top -->
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="single-footer">
+                                    <h2>Contact Us</h2>
+                                    <p>Feel free to give us seggestions and feedbacks, we are looking forward to your interaction.</p>
+                                    <!-- Social -->
+                                    <ul class="social">
+                                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                                        <li><a href="#"><i class="icofont-github"></i></a></li>
+                                    </ul>
+                                    <!-- End Social -->
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="single-footer f-link">
+                                    <h2>Quick Links</h2>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+                                                @*<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>*@
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                                @*<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>*@
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="single-footer">
+                                    <h2>Copyright</h2>
+                                    <p>Copyright ©2020 All rights reserved | This website is made by FIT5120 TA12</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!--/ End Footer Top -->
 
-            </div>
-            <div class="container">
-                <p>&copy; @DateTime.Now.Year - Breathe And Believe</p>
-            </div>
-            
-        </footer>
-    </div>
+            </footer>
+</div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

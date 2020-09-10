@@ -1,26 +1,73 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<head>
+    <link href="~/Content/mdb.css" rel="stylesheet" />
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Site keywords here">
+    <meta name="description" content="">
+    <meta name='copyright' content=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Mediplus - Free Medical and Doctor Directory HTML Template.</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/img/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="~/css/nice-select.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="~/css/icofont.css">
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="~/css/slicknav.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="~/css/owl-carousel.css">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="~/css/datepicker.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="~/css/animate.min.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+
+    <!-- Medipro CSS -->
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+
+</head>
 
 <style>
-            .gallery img{
-            width: 100%;
-        }
-        .gallery{
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-column-gap: 5px;
-        }
-        li:nth-child(1){
-            grid-column: 3/span 2;
-            grid-row: 7/span 1;
-            z-index: 2;
-        }
-        li:nth-child(2){
-            grid-column: 1/span 8;
-            grid-row: 1/ span 8;
-        }
+    .gallery img {
+        width: 100%;
+    }
+
+    .gallery {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 5px;
+    }
+
+    li:nth-child(1) {
+        grid-column: 3/span 2;
+        grid-row: 7/span 1;
+        z-index: 2;
+    }
+
+    li:nth-child(2) {
+        grid-column: 1/span 8;
+        grid-row: 1/ span 8;
+    }
 
     .top-left {
         position: absolute;
@@ -31,66 +78,319 @@
         line-height: 1.4;
         width: 300px
     }
+
+    .card {
+        position: relative;
+        display: inline-block;
+    }
+
+        .card .img-top {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .card:hover .img-top {
+            display: inline;
+        }
 </style>
 
-<body style="padding-top:unset; padding-bottom:unset;">
 
 
+<!-- Slider Area -->
+<section class="slider">
+    <div class="hero-slider">
+        <!-- Start Single Slider -->
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="~/Images/henry-co-3coKbdfnAFg-unsplash_meitu_4.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="~/Images/markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="~/Images/robina-weermeijer-Pw9aFhc92P8-unsplash_meitu_6.jpg" class="d-block w-100" alt="...">
+
+        <div class="single-slider" style="        background-image:url('../../Images/new_homepage_pic1.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <h1>We Provide <span>Medical</span> Suggestions For Your <span>Lung</span> Health</h1>
+                            <p>Here you can find one-stop information for protecting your lung! </p>
+                            <div class="button">
+                                @*<a href="#" class="btn primary">Get Appointment</a>*@
+                                <a href="#" class="btn primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <!-- End Single Slider -->
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url('../../Images/new_homepage_pic1.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <h1>We Provide <span>Medical</span> Suggestions For Your <span>Lung</span> Health</h1>
+                            <p>Here you can find one-stop information for protecting your lung! </p>
+                            <div class="button">
+                                @*<a href="#" class="btn primary">Get Appointment</a>*@
+                                <a href="#" class="btn primary">About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start End Slider -->
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url('../../Images/new_homepage_pic1.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <h1>We Provide <span>Medical</span> Suggestions For Your <span>Lung</span> Health</h1>
+                            <p>Here you can find one-stop information for protecting your lung! </p>
+                            <div class="button">
+                                @*<a href="#" class="btn primary">Get Appointment</a>*@
+                                <a href="#" class="btn primary">Conatct Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slider -->
     </div>
-    @*<img src="~/Images/henry-co-3coKbdfnAFg-unsplash_meitu_4.jpg" />
-    <img src="~/Images/markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" />
-    <img src="~/Images/robina-weermeijer-Pw9aFhc92P8-unsplash_meitu_6.jpg" />*@
+</section>
+<!--/ End Slider Area -->
+<!-- Start Schedule Area -->
+<section class="schedule">
+    <div class="container">
+        <div class="schedule-inner">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 ">
+                    <!-- single-schedule -->
+                    <div class="single-schedule first">
+                        <div class="inner" style="background-color:#5AAC4E">
+                            <div class="icon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <div class="single-content">
+                                <span>Lorem Amet</span>
+                                <h4>User Story 4</h4>
+                                <p>Lorem ipsum sit amet consectetur adipiscing elit. Vivamus et erat in lacus convallis sodales.</p>
+                                <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- single-schedule -->
+                    <div class="single-schedule middle">
+                        <div class="inner" style="background-color:#5AAC4E">
+                            <div class="icon">
+                                <i class="icofont-prescription"></i>
+                            </div>
+                            <div class="single-content">
+                                <span>Fusce Porttitor</span>
+                                <h4>User Story 5</h4>
+                                <p>Lorem ipsum sit amet consectetur adipiscing elit. Vivamus et erat in lacus convallis sodales.</p>
+                                <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-12">
+                    <!-- single-schedule -->
+                    <div class="single-schedule last">
+                        <div class="inner" style="background-color:#5AAC4E">
+                            <div class="icon">
+                                <i class="icofont-ui-clock"></i>
+                            </div>
+                            <div class="single-content">
+                                <span>Donec luctus</span>
+                                <h4>User Story 6</h4>
+                                <p>Lorem ipsum sit amet consectetur adipiscing elit. Vivamus et erat in lacus convallis sodales.</p>
+                                <a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/End Start schedule Area -->
+<!--? About-2 Area Start -->
+<div class="about-area2 section-padding40">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-12">
+                <!-- about-img -->
+                <div class="about-img ">
+                    <img src="~/Images/SMOKE.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="about-caption">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle mb-35">
+                        <h2 style="font-family:Poppins sans-serif; font-size:50px; font-weight:300; text-transform:capitalize; display:block; color:#0D210B">
+                            Get to know Occupation
+                            lung Diseases!
+                        </h2>
+                    </div>
+                    <br /><br />
+                    <p style="font-family:Poppins sans-serif; font-size:16px; font-weight:300; display:block; color:#234821">
+                        Everyone is busy in their occupations and sometimes neglect the risk factors that are being involved when they work in their occupations and in the long-term this may lead to severe health problems. Make your occupations a better, safe and healthier place to work. Occupational Lung Diseases(OLDs) are Work-related problems caused by the inhalation of toxic substances in the work-related environment.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About-2 Area End -->
 
 
-<div style="background-color:#ffffff">
+<br /><br />
+<div class="jumbotronmodify container">
 
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row justify-content-center">
             <div class="col-5">
-                <ul class="gallery">
-                    <li><a href="~/Home/ViewDiseases"><img src="~/Images/find_out_more.png" alt="Picsum Photo"></a></li>
+                <ul class="gallery animated slideInUp">
+                    <li>
+                        <a href="~/Home/ViewDiseases">
+                            <div class="card" style="border:none; box-shadow:none">
+                                <img src="~/Images/find_out_more.png" alt="Picsum Photo">
+                                <img src="~/Images/find_out_more_back.png" class="img-top" />
+                            </div>
+                        </a>
+                    </li>
                     <li><img src="~/Images/homepage_card_1.png" alt="Picsum Photo"></li>
                 </ul>
             </div>
             <div class="col-5">
-                <ul class="gallery">
-                    <li><a href="~/Home/Industries"><img src="~/Images/find_out_more.png" alt="Picsum Photo"></a></li>
-                    <li><img src="~/Images/homepage_card_2.png" alt="Picsum Photo"></li>
+                <ul class="gallery animated slideInUp">
+                    <li>
+                        <a href="~/Home/Industries">
+                            <div class="card" style="border:none; box-shadow:none">
+                                <img src="~/Images/find_out_more.png" alt="Picsum Photo">
+                                <img src="~/Images/find_out_more_back.png" class="img-top" />
+                            </div>
+                        </a>
+                    </li>
+                    <li><img src="~/Images/homepage_card_2_v2.png" alt="Picsum Photo"></li>
                 </ul>
             </div>
 
         </div>
 
 
+
+    </div>
+
+    <div style="background-color:#ffffff">
+        <br />
+        <br />
+        <br />
+        <br />
     </div>
 
 
 
+    @*<div class="row justify-content-center">
+        <div class="col-6 align-self-center">
+            <p class="lead">
+                Everyone is busy in their occupations and sometimes neglect the risk factors that are being involved when they work in their occupations and in the long-term this may lead to severe health problems.
+                Make your occupations a better, safe and healthier place to work.
+                Occupational Lung Diseases(OLDs) are Work-related problems caused by the inhalation of toxic substances in the work-related environment.
+            </p>
+        </div>
+        <div class="col-6">
+
+            <img src="~/Images/SMOKE.jpg" class="img-fluid d-block" alt="Responsive image">
+        </div>
+
+    </div>*@
+
+
+    <div class="row justify-content-center">
+        <div class="col-6 align-self-center">
+
+            <img src="~/Images/Physical symptoms.jpg" class="img-fluid d-block" alt="Responsive image">
+
+
+        </div>
+        <div class="col-6 align-self-center ">
+            <p class="lead" style="font-family:Poppins sans-serif; font-size:24px; font-weight:300; text-transform:capitalize; display:block; color:#0D210B">
+                The initial symptoms of Occupational Lung Diseases includes
+                <br /><br />
+                <ul style="font-family:Poppins sans-serif; font-size:16px; font-weight:300; display:block; color:#234821">
+                    <li>1.Coughing</li>
+                    <li>2.Shortness of breath</li>
+                    <li>3.Chest pain</li>
+                    <li>4.Chest tightness</li>
+                </ul>
+                @*<br />
+                1.Coughing
+                <br />
+                2.Shortness of breath
+                <br />
+                3.Chest pain
+                <br />
+                4.Chest tightness
+                <br />*@
+            </p>
+        </div>
+
+    </div>
 </div>
-</body>
+
+
+
+
+<script src="~/Scripts/bootstrap-datepicker.js"></script>
+<script src="~/Scripts/colors.js"></script>
+<script src="~/Scripts/easing.js"></script>
+<script src="~/Scripts/gmaps.min.js"></script>
+<script src="~/Scripts/isotope.pkgd.min.js"></script>
+<script src="~/Scripts/jquery-migrate-3.0.0.js"></script>
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<script src="~/Scripts/jquery.counterup.min.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/jquery.magnific-popup.min.js"></script>
+<script src="~/Scripts/jquery.nav.js"></script>
+<script src="~/Scripts/jquery.scrollUp.min.js"></script>
+<script src="~/Scripts/main.js"></script>
+<script src="~/Scripts/map-active.js"></script>
+<script src="~/Scripts/masonry.pkgd.min.js"></script>
+<script src="~/Scripts/owl-carousel.js"></script>
+<script src="~/Scripts/niceselect.js"></script>
+<script src="~/Scripts/popper.min.js"></script>
+<script src="~/Scripts/slicknav.min.js"></script>
+<script src="~/Scripts/steller.js"></script>
+<script src="~/Scripts/tilt.jquery.min.js"></script>
+<script src="~/Scripts/wow.min.js"></script>
+@Scripts.Render("~/Scripts/bootstrap-datepicker.js")
+@Scripts.Render("~/Scripts/colors.js")
+@Scripts.Render("~/Scripts/easing.js")
+@Scripts.Render("~/Scripts/gmaps.min.js")
+@Scripts.Render("~/Scripts/isotope.pkgd.min.js")
+@Scripts.Render("~/Scripts/jquery-migrate-3.0.0.js")
+@Scripts.Render("~/Scripts/jquery-ui.min.js")
+@Scripts.Render("~/Scripts/jquery.counterup.min.js")
+@Scripts.Render("~/Scripts/jquery.min.js")
+@Scripts.Render("~/Scripts/jquery.magnific-popup.min.js")
+@Scripts.Render("~/Scripts/jquery.nav.js")
+@Scripts.Render("~/Scripts/jquery.scrollUp.min.js")
+@Scripts.Render("~/Scripts/main.js")
+@Scripts.Render("~/Scripts/map-active.js")
+@Scripts.Render("~/Scripts/masonry.pkgd.min.js")
+@Scripts.Render("~/Scripts/owl-carousel.js")
+@Scripts.Render("~/Scripts/niceselect.js")
+@Scripts.Render("~/Scripts/popper.min.js")
+@Scripts.Render("~/Scripts/slicknav.min.js")
+@Scripts.Render("~/Scripts/steller.js")
+@Scripts.Render("~/Scripts/tilt.jquery.min.js")
+@Scripts.Render("~/Scripts/wow.min.js")
+
