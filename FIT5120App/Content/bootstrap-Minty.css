@@ -11118,7 +11118,7 @@ legend {
 }
 
 .carousel-item {
-    height: 65vh;
+    height: 70vh;
     min-height: 350px;
     background: no-repeat center center scroll;
     background-size: cover;
@@ -11142,11 +11142,50 @@ legend {
     padding-left: 0;
     border-radius: 0;
 }
-.card:hover {
+/*.card:hover {
     transform: scale(0.9, 0.9);
     box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+}*/
+
+
+  /*.card:hover:before{
+    -webkit-transform: translateY(-4%);
+            transform: translateY(-4%);
+  }
+  .card:hover:after {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+    .card:hover .card-body {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+        .card:hover .card-body > *:not(.card-title) {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+        }
+.card-body > *:not(.card-title) {
+    opacity: 0;
+    -webkit-transform: translateY(1rem);
+    transform: translateY(1rem);
+    -webkit-transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+    transition: opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
 }
+
+.card:hover{
+    -webkit-box-align: center;
+    align-items: center;
+}*/
+  
+
+
+
 .bg-custom {
     background-color: #2d8b6b !important;
 }
