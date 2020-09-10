@@ -24,7 +24,9 @@ namespace FIT5120App
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-Minty.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css"
+                      //,"~/Content/mdb.css"
+                      ));
         }
     }
 }
