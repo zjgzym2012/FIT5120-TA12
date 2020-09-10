@@ -46,11 +46,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -122,8 +130,27 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndustriesController.cs" />
+    <Compile Include="Controllers\OLDsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Disease.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Disease.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Disease.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Disease.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Disease.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Disease.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OLD.cs">
+      <DependentUpon>Disease.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -224,8 +251,25 @@
     <Content Include="Images\Vaishnavi.png" />
     <Content Include="Images\virus.svg" />
     <Content Include="Images\Yumeng.png" />
+    <Content Include="Models\Disease.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Disease.edmx</DependentUpon>
+      <LastGenOutput>Disease.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Disease.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Disease.edmx</DependentUpon>
+      <LastGenOutput>Disease.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Disease.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Disease.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Disease.edmx.diagram">
+      <DependentUpon>Disease.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\YumengVM - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -257,10 +301,15 @@
     <Content Include="Views\Home\Manufacturing.cshtml" />
     <Content Include="Views\Home\Mining.cshtml" />
     <Content Include="Views\Home\Construction.cshtml" />
+    <Content Include="Views\OLDs\Create.cshtml" />
+    <Content Include="Views\OLDs\Delete.cshtml" />
+    <Content Include="Views\OLDs\Details.cshtml" />
+    <Content Include="Views\OLDs\Edit.cshtml" />
+    <Content Include="Views\OLDs\Index.cshtml" />
+    <Content Include="Views\Home\Asthma.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Industries\" />
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +324,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

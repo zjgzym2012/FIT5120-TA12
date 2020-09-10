@@ -5063,9 +5063,8 @@ input[type="button"].btn-block {
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.4rem;
-
-
+    border-radius: 0 0 0 50px;
+    transition : 0.5s ease-in-out;
 }
 
 .card > hr {
@@ -7138,7 +7137,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #78C2AD !important;
+    background-color: #5AAC4E !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -11142,19 +11141,27 @@ legend {
     padding-left: 0;
     border-radius: 0;
 }
-/*.card:hover {
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
-}*/
 
 
-  /*.card:hover:before{
-    -webkit-transform: translateY(-4%);
-            transform: translateY(-4%);
-  }
-  .card:hover:after {
-    -webkit-transform: translateY(-50%);
+.card:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    background: #6dc568;
+    transition: .6s;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 0 0 0 50px
+}
+
+.card:hover::before{
+    width:100%
+}
+
+/*.card:hover:after {
+    -webkit-transform: translateY(-50%);card
             transform: translateY(-50%);
   }
     .card:hover .card-body {
@@ -11182,10 +11189,6 @@ legend {
     -webkit-box-align: center;
     align-items: center;
 }*/
-  
-
-
-
 .bg-custom {
     background-color: #2d8b6b !important;
 }
