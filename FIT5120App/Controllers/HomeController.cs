@@ -52,7 +52,10 @@ namespace FIT5120App.Controllers
         {
             return View();
         }
-
+        public ActionResult Asthma()
+        {
+            return View();
+        }
 
     }
 
