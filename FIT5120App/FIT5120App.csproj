@@ -224,6 +224,11 @@
     <Content Include="Images\mining.jpg" />
     <Content Include="Images\mushroom.jpg" />
     <Content Include="Images\new_homepage_pic1.jpg" />
+    <Content Include="Images\pageHeading_construction.png" />
+    <Content Include="Images\pageHeading_diseases.png" />
+    <Content Include="Images\pageHeading_industries.png" />
+    <Content Include="Images\pageHeading_manufacturing.png" />
+    <Content Include="Images\pageHeading_mining.png" />
     <Content Include="Images\Physical symptoms.jpg" />
     <Content Include="Images\PIC.jpg" />
     <Content Include="Images\quartz.jpeg" />
