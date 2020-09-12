@@ -180,6 +180,9 @@
     <Content Include="Images\asbestos.png" />
     <Content Include="Images\chest.jpg" />
     <Content Include="Images\coal.jpg" />
+    <Content Include="Images\construct.jpg" />
+    <Content Include="Images\construction-home.jpg" />
+    <Content Include="Images\construction-homee.jpg" />
     <Content Include="Images\construction.jpg" />
     <Content Include="Images\cotton.jpg" />
     <Content Include="Images\cover.png" />
@@ -220,6 +223,7 @@
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" />
+    <Content Include="Images\mine-home.jpg" />
     <Content Include="Images\mining-cover.jpg" />
     <Content Include="Images\mining.jpg" />
     <Content Include="Images\mushroom.jpg" />
