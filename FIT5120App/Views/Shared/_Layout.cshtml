@@ -63,23 +63,34 @@
                     <a class="nav-link" href="/Home/Index">Home <span class="sr-only">(current)</span></a>
                 </li>
                 @*<li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>*@
+            <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>*@
                 @*</li>*@
                 <li class="nav-item">
 
                     <a class="nav-link" href="/Home/About">About</a>
                 </li>
-                <li class="nav-item">
 
-                    <a class="nav-link" href="/Home/ViewDiseases">OLD</a>
-                </li>
-                <li class="nav-item">
 
-                    <a class="nav-link" href="/Home/Industries">Industries</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/Home/ViewDiseases" role="button" aria-haspopup="true" aria-expanded="false">OLDs</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/Home/Asthma">Asthma</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="/Home/ViewDiseases">All Diseases</a>
+                    </div>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/Home/Industries" role="button" aria-haspopup="true" aria-expanded="false">Industries</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/Home/Mining">Mining</a>
+                        <a class="dropdown-item" href="/Home/Construction">Construction</a>
+                        <a class="dropdown-item" href="/Home/Manufacturing">Manufacturing</a>
+                    </div>
+                </li>
+
             </ul>
 
         </div>
@@ -95,7 +106,7 @@
         <!-- Footer Area -->
         <footer id="footer" class="footer ">
             <!-- Footer Top -->
-            <div class="footer-top">
+            @*<div class="footer-top">
                 <div class="container">
                     <div class="row">
 
@@ -118,10 +129,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="single-footer">
-                                <h2>Copyright</h2>
-                                <p>Copyright ©2020 All rights reserved | This website is made by Respiratory Repairers</p>
+
+
+
+
+                    </div>
+                </div>
+            </div>*@
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <div class="copyright-content">
+                                <p>Copyright ©2020 All rights reserved | This website is made by Respiratory Repairers</a> </p>
                             </div>
                         </div>
                     </div>

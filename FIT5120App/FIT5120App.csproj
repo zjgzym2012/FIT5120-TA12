@@ -213,10 +213,12 @@
     <Content Include="Images\logo.PNG" />
     <Content Include="Images\logo_meitu_1.png" />
     <Content Include="Images\logo_transparent.png" />
+    <Content Include="Images\Lung Cancer_symptoms.png" />
     <Content Include="Images\lung-cancer.svg" />
     <Content Include="Images\lung.png" />
     <Content Include="Images\lungs.png" />
     <Content Include="Images\lungs.svg" />
+    <Content Include="Images\lungs_1.png" />
     <Content Include="Images\Manasie.png" />
     <Content Include="Images\manufacturing.jpg" />
     <Content Include="Images\manufacturing1.jpg" />
@@ -235,8 +237,9 @@
     <Content Include="Images\pageHeading_mining.png" />
     <Content Include="Images\Physical symptoms.jpg" />
     <Content Include="Images\PIC.jpg" />
+    <Content Include="Images\protective.jpg" />
     <Content Include="Images\quartz.jpeg" />
-    <Content Include="Images\robina-weermeijer-Pw9aFhc92P8-unsplash_meitu_6.jpg" />
+    <Content Include="Images\lungs-old.jpg" />
     <Content Include="Images\science-in-hd-pAzSrQF3XUQ-unsplash.jpg" />
     <Content Include="Images\search-icon-jpg-14.jpg" />
     <Content Include="Content\bootstrap-Minty.css" />
@@ -281,12 +284,14 @@
     <Content Include="img\favicon.png" />
     <Content Include="img\fun-bg.jpg" />
     <Content Include="img\logo.png" />
+    <Content Include="img\Lung Cancer_symptoms.png" />
     <Content Include="img\map-marker.png" />
     <Content Include="img\mission-img.jpg" />
     <Content Include="img\pf1.jpg" />
     <Content Include="img\pf2.jpg" />
     <Content Include="img\pf3.jpg" />
     <Content Include="img\pf4.jpg" />
+    <Content Include="img\protective.jpg" />
     <Content Include="img\section-img.png" />
     <Content Include="img\section-img2.png" />
     <Content Include="img\service-details-bg.jpg" />
@@ -393,6 +398,7 @@
     <Content Include="Views\Home\Construction.cshtml" />
     <Content Include="Views\Home\.htaccess" />
     <Content Include="Views\Home\.htmyxyz" />
+    <Content Include="Views\Home\LungCancer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
