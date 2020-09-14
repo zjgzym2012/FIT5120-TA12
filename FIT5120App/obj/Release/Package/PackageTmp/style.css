@@ -4152,11 +4152,11 @@ body{
 .footer .single-footer .newsletter-inner .button:hover i{
 	color:#2C2D3F;
 }
-.footer .copyright{
-	background:#1A76D1;
-	padding:25px 0px 25px 0px;
-	text-align:center;
-}
+    .footer .copyright {
+        background: #5AAC4E;
+        padding: 25px 0px 25px 0px;
+        text-align: center;
+    }
 .footer .copyright .copyright-content p{
 	color:#fff;
 }
@@ -4170,3 +4170,82 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+
+
+.about-area2 .about-caption {
+    padding-left: 50px
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    .about-area2 .about-caption {
+        padding-left: 50px
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .about-area2 .about-caption {
+        padding-left: 0px
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .about-area2 .about-caption {
+        padding-top: 50px;
+        padding-left: 0px
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .about-area2 .about-caption {
+        padding-top: 50px;
+        padding-left: 0px
+    }
+}
+
+@media (max-width: 575px) {
+    .about-area2 .about-caption {
+        padding-top: 40px;
+        padding-left: 0px
+    }
+}
+
+.about-area2 .about-caption .pera-top {
+    color: #234821;
+    font-weight: 300;
+    font-size: 26px
+}
+
+@media (max-width: 575px) {
+    .about-area2 .about-caption .pera-top {
+        font-size: 23px
+    }
+}
+
+.about-area2 .about-caption .pera-bottom {
+    font-size: 17px;
+    color: #234821;
+    font-weight: 300
+}
+.section-tittle h2 {
+    font-size: 45px;
+    display: block;
+    color: #0D210B;
+    font-weight: 300;
+    text-transform: capitalize
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section-tittle {
+        margin-bottom: 40px
+    }
+}
+.section-tittle {
+    margin-bottom: 40px
+}
+.mb-40 {
+    margin-bottom: 30px;
+}
+
+p span {
+    color: #5AAC4E;
+    font-weight:400;
+}

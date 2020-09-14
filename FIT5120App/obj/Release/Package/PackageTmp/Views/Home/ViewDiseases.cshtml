@@ -2,29 +2,15 @@
 @{
     ViewBag.Title = "ViewDiseases";
 }
-    <div class="row">
-        <div class="col-md-12">
-            <img src="~/Images/image_diseases.png" class="img-fluid d-block" alt="Responsive image">
-            <div class="carousel-caption">
-                <h3 class="align-self-baseline">Want to know more about occupational lung diseases?</h3>
-            </div>
+<div class="row">
+    <div class="col-md-12">
+        <img src="~/Images/pageHeading_diseases.png" class="img-fluid d-block" alt="Responsive image">
+        <div class="carousel-caption">
+            <h3 class="align-self-baseline">Want to know more about occupational lung diseases?</h3>
         </div>
     </div>
+</div>
 <div class="jumbotronmodify container">
-    <div class="row ">
-        <div class="col-6 ">
-            <canvas id="myChart"></canvas>
-
-        </div>
-        <div class="col-6 align-self-center">
-
-            <p class="lead">Respiratory diseases are the top reasons which affect people. And occupational exposure is a big reason which causes lung diseases. This can be prevented if precautions are taken on time.</p>
-            <p class="lead">Having the awareness of what industries and the risk factors involved in these industries will save many of the lung related problems which starts with respiratory diseases</p>
-        </div>
-
-    </div>
-    <br />
-    <br />
 
     <form class="form-inline my-2 my-lg-0">
         <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -61,6 +47,7 @@
                     asthma.
                 </p>
 
+                <btn type="button" class="btn btn-primary" href="~/Home/Asthma">Read More</btn>
             </div>
         </div>
         <div class="card text-white bg-primary mb-3" data-string="Malignant mesothelioma">
@@ -79,6 +66,7 @@
 
     </div>
     <br />
+
     <div class="card-deck">
         <div class="card text-white bg-primary mb-3" data-string="Bronchiolitis obliterans">
 
@@ -120,12 +108,14 @@
 
                 <p class="card-text">
                     It is a disease that causes immune inflammation along with granulomas in the lung parenchyma such as bronchioles and alveoli.
+
                 </p>
 
 
             </div>
         </div>
     </div>
+    <br />
     <div class="card-deck">
         <div class="card text-white bg-primary mb-3" data-string="Asbestosis">
 
@@ -170,54 +160,54 @@
 
 
 @Scripts.Render("~/bundles/jquery")
-<script src="~/Scripts/bootstrap.min.js" defer></script>
-<script src="~/Scripts/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'bar',
+@*<script src="~/Scripts/bootstrap.min.js" defer></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
 
-        // The data for our dataset
-        data: {
-            labels: ['Mental Health', 'Digestive system', 'Nervous system and sense organ',
-                'Skin and subcutaneous tissue', 'Respiratory system', 'Infectious and parasitic',
-                'Circulatory system', 'Neoplasms'],
-            datasets: [{
-                    label:'Type of Diseases',
-                backgroundColor: 'rgba(124,58,132,1)',
-                borderWidth: 3,
-                data: [50340, 17415, 8780, 3685, 1650, 1715, 830, 310]
-            }]
-        },
-
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Total no.of people affected by the particular disease type',
-                fontSize: 15
-            },
-            defaultFontSize: 12,
-            defaultFontStyle: "bold",
-            scales: {
-                yAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Total Count'
-                    }
-                }],
-                xAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Type of Diseases'
-                    }
+            // The data for our dataset
+            data: {
+                labels: ['Mental Health', 'Digestive system', 'Nervous system and sense organ',
+                    'Skin and subcutaneous tissue', 'Respiratory system', 'Infectious and parasitic',
+                    'Circulatory system', 'Neoplasms'],
+                datasets: [{
+                        label:'Type of Diseases',
+                    backgroundColor: 'rgba(124,58,132,1)',
+                    borderWidth: 3,
+                    data: [50340, 17415, 8780, 3685, 1650, 1715, 830, 310]
                 }]
+            },
+
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Total no.of people affected by the particular disease type',
+                    fontSize: 15
+                },
+                defaultFontSize: 12,
+                defaultFontStyle: "bold",
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Total Count'
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Type of Diseases'
+                        }
+                    }]
+                }
             }
-        }
-    });
-</script>
+        });
+    </script>*@
 
 <script>
 
