@@ -56,31 +56,6 @@ namespace FIT5120App.Controllers
         {
             return View();
         }
-        public ActionResult LungCancer()
-        {
-            return View();
-        }
-        public ActionResult COPD()
-        {
-            return View();
-        }
-        public ActionResult Asbestosis()
-        {
-            return View();
-        }
-        public ActionResult Silicosis()
-        {
-            return View();
-        }
-        public ActionResult Mesothelioma()
-        {
-            return View();
-        }
-        public ActionResult Pneumoconiosis()
-        {
-            return View();
-        }
-
 
     }
 

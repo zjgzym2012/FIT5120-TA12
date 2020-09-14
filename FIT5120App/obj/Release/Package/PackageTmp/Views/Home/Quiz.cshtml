@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "Quiz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Content/quiz.css" rel="stylesheet" />
+<body>
+
+    <div class="container" id="Quiz_container" style="background-color:#ffffff">
+        <div class="row">
+            <br>
+
+        </div>
+        <div class="row">
+            <br><br>
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="loader">
+                    <div class="col-xs-3 col-xs-offset-5">
+                        <div id="loadbar" style="display: none;">
+                            @*<img src="https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif" alt="Loading" class="center-block loanParamsLoader" style="">*@
+                        </div>
+                    </div>
+
+                    <div id="quiz">
+
+                        <div class="question">
+                            <h3>
+                                <span class="label label-warning" id="qid">   1  </span>
+                                <span id="question"> What diseases do not belong to Occupational Lung Diseases(OLDs)</span>
+                            </h3>
+                        </div>
+                        <ul>
+                            <li id="quiz_li">
+                                <input type="radio" id="f-option" name="selector" value="1">
+                                <label for="f-option" class="element-animation">Pneumothorax</label>
+                                <div class="check"></div>
+                            </li>
+
+                            <li id="quiz_li">
+                                <input type="radio" id="s-option" name="selector" value="2">
+                                <label for="s-option" class="element-animation">Chronic Obstructive Pulmonary Disease</label>
+                                <div class="check"><div class="inside"></div></div>
+                            </li>
+
+                            <li id="quiz_li">
+                                <input type="radio" id="t-option" name="selector" value="3">
+                                <label for="t-option" class="element-animation">Pneumoconiosis</label>
+                                <div class="check"><div class="inside"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-muted">
+                    <span id="answer"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div id="result-of-question" class="pulse animated" style="display: none;">
+                    <span id="totalCorrect" class="pull-right"></span>
+                    <table class="table table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Question No.</th>
+                                <th>Our answer</th>
+                                <th>Your answer</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody id="quizResult"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="button" style="position:relative; left:21%; top:30px; display:none">Next question</button>
+
+    <div class="container-fluid">
+        <div class="col-sm-8" style="position:relative; left:21%; top:50px;">
+            <p id="line1">
+            </p>
+            <p id="line2">
+
+            </p>
+            <br /><br /><br /><br /><br /><br />
+        </div>
+    </div>
+
+
+</body>
+<script src="~/js/quiz.js"></script>
+@Scripts.Render("~/js/quiz.js")

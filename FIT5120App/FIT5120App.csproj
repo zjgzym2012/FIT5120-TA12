@@ -160,13 +160,14 @@
     <Content Include="assets\mail\contact_me.php" />
     <Content Include="assets\mail\jqBootstrapValidation.js" />
     <Content Include="Content\animate.css" />
+    <Content Include="Content\mdb.css" />
+    <Content Include="Content\Style.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\datepicker.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\icofont.css" />
     <Content Include="css\magnific-popup.css" />
-    <Content Include="Content\mdb.css" />
     <Content Include="css\nice-select.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\owl-carousel.css" />
@@ -174,21 +175,15 @@
     <Content Include="css\slicknav.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\icofont.svg" />
-    <Content Include="Images\2.png" />
-    <Content Include="Images\4.png" />
-    <Content Include="Images\5.png" />
     <Content Include="Images\About-unsplash.jpg" />
     <Content Include="Images\About_2.jpg" />
     <Content Include="Images\asbestos.png" />
-    <Content Include="Images\asb_symp.png" />
-    <Content Include="Images\Asthma_symp.png" />
     <Content Include="Images\chest.jpg" />
     <Content Include="Images\coal.jpg" />
     <Content Include="Images\construct.jpg" />
     <Content Include="Images\construction-home.jpg" />
     <Content Include="Images\construction-homee.jpg" />
     <Content Include="Images\construction.jpg" />
-    <Content Include="Images\copd_symp.png" />
     <Content Include="Images\cotton.jpg" />
     <Content Include="Images\cover.png" />
     <Content Include="Images\David.png" />
@@ -224,16 +219,12 @@
     <Content Include="Images\lungs.png" />
     <Content Include="Images\lungs.svg" />
     <Content Include="Images\lungs_1.png" />
-    <Content Include="Images\Lung_symp.png" />
     <Content Include="Images\Manasie.png" />
     <Content Include="Images\manufacturing.jpg" />
     <Content Include="Images\manufacturing1.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" />
-    <Content Include="Images\meso_info.png" />
-    <Content Include="Images\mesth_symp.png" />
-    <Content Include="Images\mes_symp.png" />
     <Content Include="Images\mine-home.jpg" />
     <Content Include="Images\mining-cover.jpg" />
     <Content Include="Images\mining.jpg" />
@@ -244,7 +235,6 @@
     <Content Include="Images\pageHeading_industries.png" />
     <Content Include="Images\pageHeading_manufacturing.png" />
     <Content Include="Images\pageHeading_mining.png" />
-    <Content Include="Images\penuo_symp.png" />
     <Content Include="Images\Physical symptoms.jpg" />
     <Content Include="Images\PIC.jpg" />
     <Content Include="Images\protective.jpg" />
@@ -262,7 +252,6 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\silica.jpeg" />
-    <Content Include="Images\sili_symp.png" />
     <Content Include="Images\SMOKE.jpg" />
     <Content Include="Images\Stethoscope-03-160.png" />
     <Content Include="Images\textile.jpg" />
@@ -387,7 +376,6 @@
     <Content Include="Scripts\steller.js" />
     <Content Include="Scripts\tilt.jquery.min.js" />
     <Content Include="Scripts\wow.min.js" />
-    <Content Include="Content\style.css" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -411,11 +399,6 @@
     <Content Include="Views\Home\.htaccess" />
     <Content Include="Views\Home\.htmyxyz" />
     <Content Include="Views\Home\LungCancer.cshtml" />
-    <Content Include="Views\Home\Mesothelioma.cshtml" />
-    <Content Include="Views\Home\Silicosis.cshtml" />
-    <Content Include="Views\Home\Asbestosis.cshtml" />
-    <Content Include="Views\Home\COPD.cshtml" />
-    <Content Include="Views\Home\Pneumoconiosis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
