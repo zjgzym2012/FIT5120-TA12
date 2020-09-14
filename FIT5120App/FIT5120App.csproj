@@ -161,6 +161,7 @@
     <Content Include="assets\mail\jqBootstrapValidation.js" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\mdb.css" />
+    <Content Include="Content\quiz.css" />
     <Content Include="Content\Style.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -327,6 +328,7 @@
     <Content Include="js\niceselect.js" />
     <Content Include="js\owl-carousel.js" />
     <Content Include="js\popper.min.js" />
+    <Content Include="js\quiz.js" />
     <Content Include="js\slicknav.min.js" />
     <Content Include="js\steller.js" />
     <Content Include="js\tilt.jquery.min.js" />
@@ -399,6 +401,7 @@
     <Content Include="Views\Home\.htaccess" />
     <Content Include="Views\Home\.htmyxyz" />
     <Content Include="Views\Home\LungCancer.cshtml" />
+    <Content Include="Views\Home\Quiz.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
