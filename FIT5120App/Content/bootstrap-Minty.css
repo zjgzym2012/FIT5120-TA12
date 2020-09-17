@@ -164,13 +164,13 @@ sup {
 }
 
 a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     background-color: transparent;
 }
 
     a:hover {
-        color: #fff;
+        color: #000;
         text-decoration: none;
     }
 
@@ -2065,7 +2065,7 @@ pre {
 }
 
 .table-bordered {
-    border: 1px solid #234821;
+    border: 2px solid #234821;
 }
 
     .table-bordered th,
@@ -3632,7 +3632,7 @@ input[type="button"].btn-block {
 }
 
 .fade:not(.show) {
-    opacity: 0;
+    opacity: 1;
 }
 
 .collapse:not(.show) {
@@ -4746,7 +4746,7 @@ input[type="button"].btn-block {
 }
 
    nav-link:hover, .nav-link:focus {
-   color:#fff;
+   color:#000;
 
     }
 
@@ -4757,7 +4757,7 @@ input[type="button"].btn-block {
     }
 
 .nav-tabs {
-    border-bottom: 1px solid #eceeef;
+    border-bottom: 1px solid #5AAC4E;
 }
 
     .nav-tabs .nav-item {
@@ -4768,10 +4768,11 @@ input[type="button"].btn-block {
         border: 1px solid transparent;
         border-top-left-radius: 0.4rem;
         border-top-right-radius: 0.4rem;
+        font-size:16px;
     }
 
         .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-            border-color: #f7f7f9 #f7f7f9 #eceeef;
+            border-color: #5AAC4E #5AAC4E #5AAC4E;
         }
 
         .nav-tabs .nav-link.disabled {
@@ -4785,8 +4786,8 @@ input[type="button"].btn-block {
         .nav-tabs .nav-item.show .nav-link {
             color: #000000;
             font-size: large;
-            background-color: #fff;
-            border-color: #eceeef #eceeef #fff;
+            background-color: #5AAC4E;
+            border-color: #5AAC4E #5AAC4E #5AAC4E;
         }
 
     .nav-tabs .dropdown-menu {
@@ -5225,7 +5226,7 @@ a .nav-link {
 }
 
     navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-        color: #fff;
+        color: #000;
     }
 
     .navbar-light .navbar-nav .nav-link.disabled {
@@ -12121,6 +12122,6 @@ button.bg-custom:focus {
 
 nav ul li a.active,
 nav ul li a:hover, nav-link.active, nav-link:hover {
-    color: #fff;
+    color: #000;
     background: #5AAC4E;
 }

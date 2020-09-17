@@ -660,3 +660,7 @@ E:\FIT5120-TA12-Iteration1\FIT5120App\obj\Debug\FIT5120App.csproj.CoreCompileInp
 E:\FIT5120-TA12-Iteration1\FIT5120App\obj\Debug\FIT5120App.csproj.CopyComplete
 E:\FIT5120-TA12-Iteration1\FIT5120App\obj\Debug\FIT5120App.dll
 E:\FIT5120-TA12-Iteration1\FIT5120App\obj\Debug\FIT5120App.pdb
+C:\Users\manasie\source\repos\FIT5120-TA12-new\FIT5120App\bin\EntityFramework.dll
+C:\Users\manasie\source\repos\FIT5120-TA12-new\FIT5120App\bin\EntityFramework.SqlServer.dll
+C:\Users\manasie\source\repos\FIT5120-TA12-new\FIT5120App\bin\EntityFramework.xml
+C:\Users\manasie\source\repos\FIT5120-TA12-new\FIT5120App\bin\EntityFramework.SqlServer.xml

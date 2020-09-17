@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="breathebelieveModelStoreContainer" CdmEntityContainer="breathebelieveEntities">
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="breathebelieveModel.Question">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="Symptom" ColumnName="Symptom" />
+          <ScalarProperty Name="Industry_name" ColumnName="Industry name" />
+          <ScalarProperty Name="Disease_name" ColumnName="Disease name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

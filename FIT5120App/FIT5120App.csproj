@@ -46,11 +46,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -122,8 +130,28 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndustriesController.cs" />
+    <Compile Include="Controllers\QuestionController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Question.cs">
+      <DependentUpon>Questions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -179,6 +207,7 @@
     <Content Include="Images\About-unsplash.jpg" />
     <Content Include="Images\About_2.jpg" />
     <Content Include="Images\asbestos.png" />
+    <Content Include="Images\Asthma.PNG" />
     <Content Include="Images\chest.jpg" />
     <Content Include="Images\coal.jpg" />
     <Content Include="Images\construct.jpg" />
@@ -220,6 +249,7 @@
     <Content Include="Images\lungs.png" />
     <Content Include="Images\lungs.svg" />
     <Content Include="Images\lungs_1.png" />
+    <Content Include="Images\lung_cancer.PNG" />
     <Content Include="Images\Manasie.png" />
     <Content Include="Images\manufacturing.jpg" />
     <Content Include="Images\manufacturing1.jpg" />
@@ -231,6 +261,7 @@
     <Content Include="Images\mining.jpg" />
     <Content Include="Images\mushroom.jpg" />
     <Content Include="Images\new_homepage_pic1.jpg" />
+    <Content Include="Images\OLD_Overview_Video.mp4" />
     <Content Include="Images\pageHeading_construction.png" />
     <Content Include="Images\pageHeading_diseases.png" />
     <Content Include="Images\pageHeading_industries.png" />
@@ -238,6 +269,7 @@
     <Content Include="Images\pageHeading_mining.png" />
     <Content Include="Images\Physical symptoms.jpg" />
     <Content Include="Images\PIC.jpg" />
+    <Content Include="Images\prevention.png" />
     <Content Include="Images\protective.jpg" />
     <Content Include="Images\quartz.jpeg" />
     <Content Include="Images\lungs-old.jpg" />
@@ -328,11 +360,22 @@
     <Content Include="js\niceselect.js" />
     <Content Include="js\owl-carousel.js" />
     <Content Include="js\popper.min.js" />
+    <Content Include="js\questionnaire.js" />
     <Content Include="js\quiz.js" />
     <Content Include="js\slicknav.min.js" />
     <Content Include="js\steller.js" />
     <Content Include="js\tilt.jquery.min.js" />
     <Content Include="js\wow.min.js" />
+    <Content Include="Models\Questions.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Questions.Context.cs</LastGenOutput>
+      <DependentUpon>Questions.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Questions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Questions.edmx</DependentUpon>
+      <LastGenOutput>Questions.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -345,6 +388,13 @@
     <Content Include="fonts\icofont.ttf" />
     <Content Include="fonts\icofont.woff" />
     <Content Include="fonts\icofont.woff2" />
+    <EntityDeploy Include="Models\Questions.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Questions.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Questions.edmx.diagram">
+      <DependentUpon>Questions.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\YumengVM - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\colors.js" />
@@ -402,11 +452,10 @@
     <Content Include="Views\Home\.htmyxyz" />
     <Content Include="Views\Home\LungCancer.cshtml" />
     <Content Include="Views\Home\Quiz.cshtml" />
+    <Content Include="Views\Home\Questionnaire.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\Industries\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -420,6 +469,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

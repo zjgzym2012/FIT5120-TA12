@@ -84,6 +84,10 @@ namespace FIT5120App.Controllers
         {
             return View();
         }
+        public ActionResult Questionnaire()
+        {
+            return View();
+        }
     }
 
     public class BasicAuthenticationAttribute : ActionFilterAttribute
