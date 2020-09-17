@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters />
+<parameters>
+  <parameter name="breathebelieveEntities-Web.config Connection String" description="breathebelieveEntities 由应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="metadata=res://*/Models.Questions.csdl|res://*/Models.Questions.ssdl|res://*/Models.Questions.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Questions.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\FIT5120-TA12-Iteration1\\FIT5120App\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='breathebelieveEntities']/@connectionString" />
+  </parameter>
+</parameters>

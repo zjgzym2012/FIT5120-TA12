@@ -330,3 +330,7 @@ E:\FIT5120-TA12-Iteration1\FIT5120App\obj\Release\FIT5120App.csproj.CoreCompileI
 E:\FIT5120-TA12-Iteration1\FIT5120App\obj\Release\FIT5120App.csproj.CopyComplete
 E:\FIT5120-TA12-Iteration1\FIT5120App\obj\Release\FIT5120App.dll
 E:\FIT5120-TA12-Iteration1\FIT5120App\obj\Release\FIT5120App.pdb
+E:\FIT5120-TA12-Iteration1\FIT5120App\bin\EntityFramework.dll
+E:\FIT5120-TA12-Iteration1\FIT5120App\bin\EntityFramework.SqlServer.dll
+E:\FIT5120-TA12-Iteration1\FIT5120App\bin\EntityFramework.xml
+E:\FIT5120-TA12-Iteration1\FIT5120App\bin\EntityFramework.SqlServer.xml

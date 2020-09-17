@@ -1,4 +1,5 @@
-﻿
+﻿@model FIT5120App.Models.Question
+
 @{
     ViewBag.Title = "Quiz";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,7 +8,13 @@
 
 <link href="~/Content/quiz.css" rel="stylesheet" />
 <body>
-
+    <br /><br />
+    <div class="container">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" id="progressBar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 1%; background-color:#5AAC4E"></div>
+        </div>
+    </div>
+    <br /><br /><br />
     <div class="container" id="Quiz_container" style="background-color:#ffffff">
         <div class="row">
             <br>
@@ -15,7 +22,7 @@
         </div>
         <div class="row">
             <br><br>
-            <div class="col-sm-8 col-sm-offset-2">
+            <div class="col-8 offset-2">
                 <div class="loader">
                     <div class="col-xs-3 col-xs-offset-5">
                         <div id="loadbar" style="display: none;">
@@ -28,27 +35,40 @@
                         <div class="question">
                             <h3>
                                 <span class="label label-warning" id="qid">   1  </span>
-                                <span id="question"> What diseases do not belong to Occupational Lung Diseases(OLDs)</span>
+                                <span id="question"> Which of the following are not the features of Occupational Lung Diseases(OLD)?</span>
                             </h3>
                         </div>
                         <ul>
                             <li id="quiz_li">
                                 <input type="radio" id="f-option" name="selector" value="1">
-                                <label for="f-option" class="element-animation">Pneumothorax</label>
+                                <label for="f-option" class="element-animation" style="font-family:Poppins" id="1">Which of the following are not the features of Occupational Lung Diseases(OLD)?</label>
                                 <div class="check"></div>
                             </li>
 
                             <li id="quiz_li">
                                 <input type="radio" id="s-option" name="selector" value="2">
-                                <label for="s-option" class="element-animation">Chronic Obstructive Pulmonary Disease</label>
+                                <label for="s-option" class="element-animation" style="font-family:Poppins" id="2">
+                                    When a worker works in an occupation and gets exposed to some hazards, substances, chemicals. Then he suffers from some breathing problems.
+                                </label>
                                 <div class="check"><div class="inside"></div></div>
                             </li>
 
                             <li id="quiz_li">
                                 <input type="radio" id="t-option" name="selector" value="3">
-                                <label for="t-option" class="element-animation">Pneumoconiosis</label>
+                                <label for="t-option" class="element-animation" style="font-family:Poppins" id="3">
+                                    Symptoms of OLD for a worker who is working in an occupation lasts even after his work ends.
+                                </label>
                                 <div class="check"><div class="inside"></div></div>
                             </li>
+
+                            <li id="quiz_li">
+                                <input type="radio" id="4-option" name="selector" value="4">
+                                <label for="4-option" class="element-animation" style="font-family:Poppins" id="4">
+                                    OLDs are developed slowly and might take several years to become symptomatic after the first exposure.
+                                </label>
+                                <div class="check"><div class="inside"></div></div>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -58,38 +78,138 @@
 
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <div id="result-of-question" class="pulse animated" style="display: none;">
-                    <span id="totalCorrect" class="pull-right"></span>
-                    <table class="table table-hover table-responsive">
-                        <thead>
-                            <tr>
-                                <th>Question No.</th>
-                                <th>Our answer</th>
-                                <th>Your answer</th>
-                                <th>Result</th>
-                            </tr>
-                        </thead>
-                        <tbody id="quizResult"></tbody>
-                    </table>
+        @*<div class="row">
+                <div class="col-8 offset-2">
+                    <div id="result-of-question" class="pulse animated" style="display: none;">
+                        <span id="totalCorrect" class="pull-right"></span>
+                        <table class="table table-hover table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Question No.</th>
+                                    <th>Our answer</th>
+                                    <th>Your answer</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody id="quizResult"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>*@
+    </div>
+
+    <div class="container">
+
+
+        <div class="col-2 offset-2">
+            <br /><br />
+            @*<button type="button" class="btn btn-primary" id="button" style="position:relative; left:31%; top:30px; display:none">Next question</button>*@
+            <button type="button" class="btn btn-primary" id="button" style="position:relative; display:none">Next question</button>
+            @*<button type="button" class="btn btn-primary" id="goBack" style="position:relative; left:31%; top:30px; display:none; z-index:9">GO BACK</button>*@
+            <a href="~/Home/Index" class="btn btn-primary" id="goBack" style="position:relative; display:none">GO BACK</a>
+        </div>
+
+    </div>
+
+    <div class="container" id="result" style="display:none">
+        <div class="row justify-content-around">
+            <div class="col-md-6  pr-0">
+                <img src="~/img/well done_meitu_1.jpg" alt="">
+            </div>
+            <div class="col-md-5 pl-0" id="about">
+                <div class="content">
+                    <h1>You have finished the quiz</h1>
+
+                    <hr />
+                    <p id="p1">Sed do eiusmod tempor incididunt ut labore et dolo magna aliqua. Ut enim ad minim veniam, quis nostd exercitation ullamco laboris nisi ut aliquip ex ea mo consequat. Duis aute irure dolor in reprehenderit in ullamco.</p>
+                    <div class="col-6">
+                        <div class="row justify-content-between">
+
+
+                            <a href="~/Home/Index" class="btn" style="background-color:#5AAC4E;">GO BACK</a>
+                            <a href="~/Home/ViewDiseases" class="btn" style="background-color:#5AAC4E">OLD PAGE</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <button type="button" class="btn btn-primary" id="button" style="position:relative; left:21%; top:30px; display:none">Next question</button>
 
-    <div class="container-fluid">
-        <div class="col-sm-8" style="position:relative; left:21%; top:50px;">
+    <div class="container" id="allLines">
+        <div class="col-8 offset-2" style="position:relative; top:50px;">
+            <p id="line20">
+
+            </p>
+            <p id="line10">
+            </p>
+            <br />
             <p id="line1">
             </p>
+            <br />
             <p id="line2">
-
             </p>
-            <br /><br /><br /><br /><br /><br />
+            <br />
+            <p id="line3">
+            </p>
+            <br />
+            <p id="line4">
+            </p><br />
+            <p id="line5">
+            </p><br />
+            <p id="line6">
+            </p><br />
+            <p id="line7">
+            </p><br />
+            <p id="line8">
+            </p>
+            <br /><br />
         </div>
     </div>
+
+
+
+
+
+    @*<div class="container" id="result" style="display:none">
+            <div class="row justify-content-around">
+                <div class="col-md-6  pr-0">
+                    <img src="~/img/well done_meitu_1.jpg" alt="">
+                </div>
+                <div class="col-md-5 pl-0" id="about">
+                    <div class="content">
+                        <h1>You have finished the quiz</h1>
+
+                        <hr />
+                        <p id="p1">Sed do eiusmod tempor incididunt ut labore et dolo magna aliqua. Ut enim ad minim veniam, quis nostd exercitation ullamco laboris nisi ut aliquip ex ea mo consequat. Duis aute irure dolor in reprehenderit in ullamco.</p>
+                        <div class="col-6">
+                            <div class="row justify-content-between">
+
+
+                                <a href="~/Home/Index" class="btn" style="background-color:#5AAC4E;">GO BACK</a>
+                                <a href="~/Home/ViewDiseases" class="btn" style="background-color:#5AAC4E">OLD PAGE</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+
+    @*@foreach (var item in Model)
+        {
+            <p>
+                @Html.DisplayFor(modelItem => item.Symptom)
+            </p>
+            <p>
+                @Html.DisplayNameFor(model => model.Industry_name)
+            </p>
+        }
+        <p>*@
+
+
 
 
 </body>
