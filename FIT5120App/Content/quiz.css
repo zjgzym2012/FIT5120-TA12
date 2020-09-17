@@ -206,18 +206,18 @@ form.login a:hover
     height: 415.2px;
     width: 415.2px;
 }
-.question{
-    background: #75ba48;
+.question {
+    background: #5AAC4E;
     padding: 20px;
     color: #fff;
     border-bottom-right-radius: 55px;
     border-top-left-radius: 55px;
 }
 
-#qid{
+#qid {
     margin-right: 22px;
-    background-color: #ffffff;
-    color: #aaaaaa;
+    background-color: #5AAC4E;
+    color: #000;
 }
 .container ul{
   list-style: none;
@@ -232,7 +232,7 @@ form.login a:hover
     position: relative;
     float: left;
     width: 100%;
-    height: 100px;
+    height: 100%;
     border-bottom: 1px solid #111111;
 }
 
@@ -248,7 +248,7 @@ ul li label{
   font-size: 1.35em;
   padding: 25px 25px 25px 80px;
   margin: 10px auto;
-  height: 30px;
+  height: 100%;
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
@@ -291,15 +291,15 @@ ul li .check::before {
 }
 
 input[type=radio]:checked ~ .check {
-  border: 5px solid #00FF00;
+  border: 5px solid;
 }
 
 input[type=radio]:checked ~ .check::before{
-  background: #00FF00;/*attr('data-background');*/
+  /*background: #00FF00;*//*attr('data-background');*/
 }
 
 input[type=radio]:checked ~ label{
-  color: #00FF00;
+  /*color: #00FF00;*/
 }
 
 #result-of-question th{
@@ -309,18 +309,20 @@ input[type=radio]:checked ~ label{
     padding: 18px;
     font-size: 18px;
     border: none;
+    font-family: Poppins;
 }
-#result-of-question  td{
-  text-align: center;
+#result-of-question td {
+    text-align: center;
     color: #222;
     background-color: #fff;
     padding: 18px;
     font-size: 15px;
     font-weight: 600;
     border: 1px solid #75ba48;
+    font-family: Poppins;
 }
 
-#totalCorrect{
+#totalCorrect {
     color: #fff;
     background: #75ba48;
     padding: 22px 20px;
@@ -330,6 +332,7 @@ input[type=radio]:checked ~ label{
     font-weight: bold;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
+    font-family: Poppins;
 }
 #alert{
     /* Position fixed */

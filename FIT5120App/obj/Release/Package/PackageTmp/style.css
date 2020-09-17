@@ -1,9 +1,4 @@
-/* =====================================
-Template Name: 	Mediplus.
-Author Name: Naimur Rahman
-Website: http://wpthemesgrid.com/
-Description: Mediplus - Doctor HTML Template.
-Version:	1.1
+
 ========================================*/   
 /*======================================
 [ CSS Table of contents ]
@@ -4210,9 +4205,16 @@ body{
 }
 
 .about-area2 .about-caption .pera-top {
-    color: #234821;
+    color: #000000;
     font-weight: 300;
-    font-size: 26px
+    font-size: 26px;
+}
+
+.about-area2 .about-caption .pera-topp {
+    color: #000000;
+    font-weight: 400;
+    font-size: 20px;
+    text-align:justify
 }
 
 @media (max-width: 575px) {
@@ -4223,7 +4225,7 @@ body{
 
 .about-area2 .about-caption .pera-bottom {
     font-size: 17px;
-    color: #234821;
+    color: #000000;
     font-weight: 300
 }
 .section-tittle h2 {
@@ -4247,5 +4249,11 @@ body{
 
 p span {
     color: #5AAC4E;
-    font-weight:400;
+    font-weight:500;
+}
+.pera-bottom {
+    font-size: 17px;
+    color: #000000;
+    font-weight: 300;
+    text-align: justify;
 }

@@ -664,3 +664,7 @@ C:\Users\manasie\source\repos\FIT5120-TA12-new\FIT5120App\bin\EntityFramework.dl
 C:\Users\manasie\source\repos\FIT5120-TA12-new\FIT5120App\bin\EntityFramework.SqlServer.dll
 C:\Users\manasie\source\repos\FIT5120-TA12-new\FIT5120App\bin\EntityFramework.xml
 C:\Users\manasie\source\repos\FIT5120-TA12-new\FIT5120App\bin\EntityFramework.SqlServer.xml
+E:\FIT5120-TA12-Iteration1\FIT5120App\bin\EntityFramework.dll
+E:\FIT5120-TA12-Iteration1\FIT5120App\bin\EntityFramework.SqlServer.dll
+E:\FIT5120-TA12-Iteration1\FIT5120App\bin\EntityFramework.xml
+E:\FIT5120-TA12-Iteration1\FIT5120App\bin\EntityFramework.SqlServer.xml
