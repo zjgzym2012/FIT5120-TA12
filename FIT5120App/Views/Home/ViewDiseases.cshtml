@@ -2,72 +2,93 @@
 @{
     ViewBag.Title = "ViewDiseases";
 }
-    <div class="row">
-        <div class="col-md-12">
-            <img src="~/Images/image_diseases.png" class="img-fluid d-block" alt="Responsive image">
-            <div class="carousel-caption">
-                <h3 class="align-self-baseline">Want to know more about occupational lung diseases?</h3>
-            </div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">View Diseases</li>
+    </ol>
+</nav>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <img src="~/Images/pageHeading_diseases.png" class="img-fluid d-block" alt="Responsive image">
+        <div class="carousel-caption">
+
+
+            <h3 class="align-self-baseline">Want to know more about occupational lung diseases?</h3>
+
         </div>
     </div>
-    <div class="jumbotronmodify container">
-
-        <form class="form-inline my-2 my-lg-0">
-            <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search">
-
-        </form>
-        <br />
-        <div class="card-deck">
-
-            <div class="card text-white bg-primary mb-3" data-string="Chronic Obstructive Pulmonary Disease">
 
 
-                <div class="card-body">
-                    <h4 class="card-title">Chronic Obstructive Pulmonary Disease</h4>
+
+</div>
 
 
 
 
-                    <p class="card-text">
-                        As a disease group in which airflow obstruction is observed due to chronic bronchitis or emphysema, airflow obstruction is mostly irreversible and progressive.
+<div class="jumbotronmodify container">
+    <nav aria-label="breadcrumb">
 
-                    </p>
+    </nav>
+    <form class="form-inline my-2 my-lg-0">
+        <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search">
+
+    </form>
+    <br />
+    <div class="card-deck">
+
+        <div class="card text-white bg-primary mb-3" data-string="Chronic Obstructive Pulmonary Disease">
 
 
-                </div>
+            <div class="card-body">
+                <h4 class="card-title">Chronic Obstructive Pulmonary Disease</h4>
+
+
+
+
+                <p class="card-text">
+                    COPD is a type of obstructive lung disease characterized by long-term breathing problems and poor airflow.
+
+                </p>
+                <a type="button" class="btn btn-primary" href="~/Home/COPD">Read More</a>
+
             </div>
-            <div class="card text-white bg-primary mb-3" data-string="Occupational Asthma">
-
-
-                <div class="card-body">
-                    <h4 class="card-title">Occupational Asthma</h4>
-                    <p class="card-text">
-                        Occupational asthma is defined as asthma caused by exposure to agents
-                        encountered in the working environment in workers without pre-existing
-                        asthma.
-                    </p>
-
-                </div>
-            </div>
-            <div class="card text-white bg-primary mb-3" data-string="Malignant mesothelioma">
-
-
-                <div class="card-body">
-                    <h4 class="card-title">Malignant mesothelioma</h4>
-
-
-
-                    <p class="card-text">Malignant mesothelioma is a malignant tumor arising from mesothelial cells. It mainly occurs on the pleura and is known as a pleural tumor. </p>
-                    <i class="fa fa-plus-circle"></i>
-
-                </div>
-            </div>
-
         </div>
-        <br />
+        <div class="card text-white bg-primary mb-3" data-string="Occupational Asthma">
 
-        <div class="card-deck">
-            <div class="card text-white bg-primary mb-3" data-string="Bronchiolitis obliterans">
+
+            <div class="card-body">
+                <h4 class="card-title">Occupational Asthma</h4>
+                <p class="card-text">
+                    Occupational asthma is defined as asthma caused by exposure to agents
+                    encountered in the working environment in workers without pre-existing
+                    asthma.
+                </p>
+
+                <a type="button" class="btn btn-primary" href="~/Home/Asthma">Read More</a>
+            </div>
+        </div>
+        <div class="card text-white bg-primary mb-3" data-string="Malignant mesothelioma">
+
+
+            <div class="card-body">
+                <h4 class="card-title">Malignant mesothelioma</h4>
+
+
+
+                <p class="card-text">Malignant mesothelioma is a malignant tumor arising from mesothelial cells. It mainly occurs on the pleura and is known as a pleural tumor. </p>
+
+                <a type="button" class="btn btn-primary" href="~/Home/Mesothelioma">Read More</a>
+            </div>
+        </div>
+
+    </div>
+    <br />
+
+    <div class="card-deck">
+        @*<div class="card text-white bg-primary mb-3" data-string="Bronchiolitis obliterans">
 
 
                 <div class="card-body">
@@ -79,25 +100,25 @@
                     <p class="card-text">It  is a respiratory disease caused by injury to the smallest airways. Inflammation of the bronchioles, which is the peripheral airway, refers to bronchitis in which airways are blocked.  </p>
 
                 </div>
+            </div>*@
+
+
+        <div class="card text-white bg-primary mb-3" data-string="Lung Cancer">
+
+
+            <div class="card-body">
+                <h4 class="card-title">Lung Cancer</h4>
+
+
+
+                <p class="card-text">
+                    Lung cancer refers to malignant tumors in the lungs, and can be divided into primary lung cancer and metastatic lung cancer. It is one of the major occupational cancer.
+                </p>
+                <a type="button" class="btn btn-primary" href="~/Home/LungCancer">Read More</a>
+
             </div>
-
-
-            <div class="card text-white bg-primary mb-3" data-string="Lung Cancer">
-
-
-                <div class="card-body">
-                    <h4 class="card-title">Lung Cancer</h4>
-
-
-
-                    <p class="card-text">
-                        Lung cancer refers to malignant tumors in the lungs, and can be divided into primary lung cancer and metastatic lung cancer.
-                    </p>
-
-
-                </div>
-            </div>
-            <div class="card text-white bg-primary mb-3" data-string="Hypersensitivity pneumonitis">
+        </div>
+        @*<div class="card text-white bg-primary mb-3" data-string="Hypersensitivity pneumonitis">
 
 
                 <div class="card-body">
@@ -107,106 +128,110 @@
 
                     <p class="card-text">
                         It is a disease that causes immune inflammation along with granulomas in the lung parenchyma such as bronchioles and alveoli.
-                        <btn>Read More</btn>
+
                     </p>
 
-                    
+
                 </div>
+            </div>*@
+
+
+
+        <div class="card text-white bg-primary mb-3" data-string="Asbestosis">
+
+
+            <div class="card-body">
+                <h4 class="card-title">Asbestosis</h4>
+
+
+
+
+                <p class="card-text">Asbestosis is long term inflammation and scarring of the lungs due to asbestos fibers and it is caused by breathing in asbestos fibers.  </p>
+                <a type="button" class="btn btn-primary" href="~/Home/Asbestosis">Read More</a>
             </div>
         </div>
-        <br />
-        <div class="card-deck">
-            <div class="card text-white bg-primary mb-3" data-string="Asbestosis">
+        <div class="card text-white bg-primary mb-3" data-string="Pneumoconiosis">
 
 
-                <div class="card-body">
-                    <h4 class="card-title">Asbestosis</h4>
+            <div class="card-body">
+                <h4 class="card-title">Pneumoconiosis</h4>
 
 
 
 
-                    <p class="card-text">Asbestosis begins with respiratory bronchiolitis and alveolitis, causes diffuse pulmonary fibrosis, and is followed by thickening and calcification of the parietal pleura. </p>
-
-                </div>
+                <p class="card-text">Pneumoconiosis is the general term for a class of interstitial lung diseases where inhalation of dust has caused interstitial fibrosis. </p>
+                <a type="button" class="btn btn-primary" href="~/Home/Pneumoconiosis">Read More</a>
             </div>
-            <div class="card text-white bg-primary mb-3" data-string="Pneumoconiosis">
+        </div>
+
+    </div>
+    <br />
+
+    <div class="card-columns">
+        <div class="card text-white bg-primary mb-3" data-string="Silicosis">
 
 
-                <div class="card-body">
-                    <h4 class="card-title">Pneumoconiosis</h4>
+            <div class="card-body">
+                <h4 class="card-title">Silicosis</h4>
 
 
-
-
-                    <p class="card-text">Pneumoconiosis is one of a group of interstitial lung disease caused by breathing in certain kinds of dust particles that damage your lungs.  </p>
-
-                </div>
-            </div>
-
-            <div class="card text-white bg-primary mb-3" data-string="Silicosis">
-
-
-                <div class="card-body">
-                    <h4 class="card-title">Silicosis</h4>
-
-
-                    <p class="card-text">When dust containing silicic acid accumulates in the lungs, the lungs become inflamed by the mechanical and chemical actions of silicic acid.  </p>
-
-                </div>
+                <p class="card-text">When dust containing silicic acid accumulates in the lungs, the lungs become inflamed by the mechanical and chemical actions of silicic acid.  </p>
+                <a type="button" class="btn btn-primary" href="~/Home/Silicosis">Read More</a>
             </div>
         </div>
     </div>
+</div>
 
 
 @Scripts.Render("~/bundles/jquery")
 @*<script src="~/Scripts/bootstrap.min.js" defer></script>
-<script src="~/Scripts/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'bar',
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
 
-        // The data for our dataset
-        data: {
-            labels: ['Mental Health', 'Digestive system', 'Nervous system and sense organ',
-                'Skin and subcutaneous tissue', 'Respiratory system', 'Infectious and parasitic',
-                'Circulatory system', 'Neoplasms'],
-            datasets: [{
-                    label:'Type of Diseases',
-                backgroundColor: 'rgba(124,58,132,1)',
-                borderWidth: 3,
-                data: [50340, 17415, 8780, 3685, 1650, 1715, 830, 310]
-            }]
-        },
-
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Total no.of people affected by the particular disease type',
-                fontSize: 15
-            },
-            defaultFontSize: 12,
-            defaultFontStyle: "bold",
-            scales: {
-                yAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Total Count'
-                    }
-                }],
-                xAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Type of Diseases'
-                    }
+            // The data for our dataset
+            data: {
+                labels: ['Mental Health', 'Digestive system', 'Nervous system and sense organ',
+                    'Skin and subcutaneous tissue', 'Respiratory system', 'Infectious and parasitic',
+                    'Circulatory system', 'Neoplasms'],
+                datasets: [{
+                        label:'Type of Diseases',
+                    backgroundColor: 'rgba(124,58,132,1)',
+                    borderWidth: 3,
+                    data: [50340, 17415, 8780, 3685, 1650, 1715, 830, 310]
                 }]
+            },
+
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Total no.of people affected by the particular disease type',
+                    fontSize: 15
+                },
+                defaultFontSize: 12,
+                defaultFontStyle: "bold",
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Total Count'
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Type of Diseases'
+                        }
+                    }]
+                }
             }
-        }
-    });
-</script>*@
+        });
+    </script>*@
 
 <script>
 

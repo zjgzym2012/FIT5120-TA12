@@ -130,31 +130,40 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndustriesController.cs" />
-    <Compile Include="Controllers\OLDsController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Disease.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Disease.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Disease.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Disease.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Disease.Designer.cs">
+    <Compile Include="Models\Disease1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Disease.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\OLD.cs">
-      <DependentUpon>Disease.tt</DependentUpon>
+    <Compile Include="Models\Question.cs">
+      <DependentUpon>Questions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Questions.mdf" />
+    <Content Include="App_Data\Questions_log.ldf">
+      <DependentUpon>Questions.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\img\about\1.jpg" />
     <Content Include="assets\img\about\2.jpg" />
     <Content Include="assets\img\about\3.jpg" />
@@ -186,23 +195,66 @@
     <Content Include="assets\mail\contact_me.js" />
     <Content Include="assets\mail\contact_me.php" />
     <Content Include="assets\mail\jqBootstrapValidation.js" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\mdb.css" />
+    <Content Include="Content\quiz.css" />
     <Content Include="Content\Style.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\datepicker.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\icofont.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\nice-select.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\owl-carousel.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\slicknav.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\icofont.svg" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.png" />
     <Content Include="Images\About-unsplash.jpg" />
     <Content Include="Images\About_2.jpg" />
+    <Content Include="Images\admin.svg" />
+    <Content Include="Images\air-pollution.svg" />
+    <Content Include="Images\air.png" />
     <Content Include="Images\asbestos.png" />
+    <Content Include="Images\Asbestosis.PNG" />
+    <Content Include="Images\asb_symp.png" />
+    <Content Include="Images\Asthma.PNG" />
+    <Content Include="Images\Asthmaa.PNG" />
+    <Content Include="Images\Asthma_symp.png" />
+    <Content Include="Images\checkup.svg" />
     <Content Include="Images\chest.jpg" />
+    <Content Include="Images\clean.png" />
     <Content Include="Images\coal.jpg" />
+    <Content Include="Images\construct.jpg" />
+    <Content Include="Images\construction-home.jpg" />
+    <Content Include="Images\construction-homee.jpg" />
     <Content Include="Images\construction.jpg" />
+    <Content Include="Images\control.svg" />
+    <Content Include="Images\COPD.PNG" />
+    <Content Include="Images\copd_symp.png" />
     <Content Include="Images\cotton.jpg" />
     <Content Include="Images\cover.png" />
     <Content Include="Images\David.png" />
     <Content Include="Images\dust.jpg" />
+    <Content Include="Images\eliminate.jpg" />
+    <Content Include="Images\eliminate.svg" />
+    <Content Include="Images\execution.svg" />
+    <Content Include="Images\fan.svg" />
     <Content Include="Images\find_out_more.png" />
+    <Content Include="Images\find_out_more_back.png" />
     <Content Include="Images\gas-mask.svg" />
+    <Content Include="Images\hazard.svg" />
+    <Content Include="Images\hazmat.svg" />
     <Content Include="Images\Heart-256 %281%29.png" />
     <Content Include="Images\henry-co-3coKbdfnAFg-unsplash_meitu_4.jpg" />
     <Content Include="Images\homepage_card_1.png" />
     <Content Include="Images\homepage_card_2.png" />
+    <Content Include="Images\homepage_card_2_v2.png" />
     <Content Include="Images\image1.jpg" />
     <Content Include="Images\image2.jpg" />
     <Content Include="Images\image3.jpg" />
@@ -216,23 +268,59 @@
     <Content Include="Images\image_mining.png" />
     <Content Include="Images\img.jpeg" />
     <Content Include="Images\inhaler.png" />
+    <Content Include="Images\label.svg" />
+    <Content Include="Images\logo.jpg" />
     <Content Include="Images\logo.PNG" />
+    <Content Include="Images\logo_meitu_1.png" />
+    <Content Include="Images\logo_transparent.png" />
+    <Content Include="Images\Lung Cancer_symptoms.png" />
     <Content Include="Images\lung-cancer.svg" />
     <Content Include="Images\lung.png" />
+    <Content Include="Images\LungCancer.PNG" />
     <Content Include="Images\lungs.png" />
     <Content Include="Images\lungs.svg" />
+    <Content Include="Images\lungs_1.png" />
+    <Content Include="Images\lung_cancer.PNG" />
+    <Content Include="Images\Lung_symp.png" />
+    <Content Include="Images\manage.svg" />
     <Content Include="Images\Manasie.png" />
     <Content Include="Images\manufacturing.jpg" />
     <Content Include="Images\manufacturing1.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" />
+    <Content Include="Images\medical_checkup.jpg" />
+    <Content Include="Images\Mesothelioma.PNG" />
+    <Content Include="Images\meso_info.png" />
+    <Content Include="Images\mesth_symp.png" />
+    <Content Include="Images\mes_symp.png" />
+    <Content Include="Images\mine-home.jpg" />
     <Content Include="Images\mining-cover.jpg" />
     <Content Include="Images\mining.jpg" />
     <Content Include="Images\mushroom.jpg" />
+    <Content Include="Images\new_homepage_pic1.jpg" />
+    <Content Include="Images\no-smoking.svg" />
+    <Content Include="Images\OLD_Overview_Video.mp4" />
+    <Content Include="Images\Open Data\Asthma.png" />
+    <Content Include="Images\Open Data\COPD.png" />
+    <Content Include="Images\Open Data\Employment.png" />
+    <Content Include="Images\Open Data\lungcancer.png" />
+    <Content Include="Images\Open Data\mesothelioma.png" />
+    <Content Include="Images\pageHeading_construction.png" />
+    <Content Include="Images\pageHeading_diseases.png" />
+    <Content Include="Images\pageHeading_industries.png" />
+    <Content Include="Images\pageHeading_manufacturing.png" />
+    <Content Include="Images\pageHeading_mining.png" />
+    <Content Include="Images\penuo_symp.png" />
+    <Content Include="Images\Physical symptoms.jpg" />
     <Content Include="Images\PIC.jpg" />
+    <Content Include="Images\Pneumoconiosis.PNG" />
+    <Content Include="Images\precautionss.png" />
+    <Content Include="Images\prevention.png" />
+    <Content Include="Images\protective.jpg" />
     <Content Include="Images\quartz.jpeg" />
-    <Content Include="Images\robina-weermeijer-Pw9aFhc92P8-unsplash_meitu_6.jpg" />
+    <Content Include="Images\lungs-old.jpg" />
+    <Content Include="Images\risk.svg" />
     <Content Include="Images\science-in-hd-pAzSrQF3XUQ-unsplash.jpg" />
     <Content Include="Images\search-icon-jpg-14.jpg" />
     <Content Include="Content\bootstrap-Minty.css" />
@@ -245,43 +333,166 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\silica.jpeg" />
+    <Content Include="Images\Silicosis.PNG" />
+    <Content Include="Images\sili_symp.png" />
     <Content Include="Images\SMOKE.jpg" />
     <Content Include="Images\Stethoscope-03-160.png" />
+    <Content Include="Images\surveillance.svg" />
+    <Content Include="Images\Symptoms.png" />
     <Content Include="Images\textile.jpg" />
+    <Content Include="Images\training.svg" />
     <Content Include="Images\Vaishnavi.png" />
+    <Content Include="Images\ventilation.svg" />
     <Content Include="Images\virus.svg" />
+    <Content Include="Images\warning.svg" />
     <Content Include="Images\Yumeng.png" />
-    <Content Include="Models\Disease.Context.tt">
+    <Content Include="img\about-img.jpg" />
+    <Content Include="img\author1.jpg" />
+    <Content Include="img\author2.jpg" />
+    <Content Include="img\author3.jpg" />
+    <Content Include="img\blockqoute-bg.jpg" />
+    <Content Include="img\blog-sidebar1.jpg" />
+    <Content Include="img\blog-sidebar2.jpg" />
+    <Content Include="img\blog-sidebar3.jpg" />
+    <Content Include="img\blog1.jpg" />
+    <Content Include="img\blog2.jpg" />
+    <Content Include="img\blog3.jpg" />
+    <Content Include="img\blog4.jpg" />
+    <Content Include="img\bread-bg.jpg" />
+    <Content Include="img\call-bg.jpg" />
+    <Content Include="img\client-bg.jpg" />
+    <Content Include="img\client1.png" />
+    <Content Include="img\client2.png" />
+    <Content Include="img\client3.png" />
+    <Content Include="img\client4.png" />
+    <Content Include="img\client5.png" />
+    <Content Include="img\contact-img.png" />
+    <Content Include="img\department.jpg" />
+    <Content Include="img\doctor-detail.jpg" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\fun-bg.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\Lung Cancer_symptoms.png" />
+    <Content Include="img\map-marker.png" />
+    <Content Include="img\mission-img.jpg" />
+    <Content Include="img\pf1.jpg" />
+    <Content Include="img\pf2.jpg" />
+    <Content Include="img\pf3.jpg" />
+    <Content Include="img\pf4.jpg" />
+    <Content Include="img\protective.jpg" />
+    <Content Include="img\section-img.png" />
+    <Content Include="img\section-img2.png" />
+    <Content Include="img\service-details-bg.jpg" />
+    <Content Include="img\signup-bg.jpg" />
+    <Content Include="img\slider.jpg" />
+    <Content Include="img\slider2.jpg" />
+    <Content Include="img\slider3.jpg" />
+    <Content Include="img\team1.jpg" />
+    <Content Include="img\team2.jpg" />
+    <Content Include="img\team3.jpg" />
+    <Content Include="img\team4.jpg" />
+    <Content Include="img\testi-bg.jpg" />
+    <Content Include="img\testi1.png" />
+    <Content Include="img\testi2.png" />
+    <Content Include="img\testi3.png" />
+    <Content Include="img\video-bg.jpg" />
+    <Content Include="img\well done_meitu_1.jpg" />
+    <Content Include="js\bootstrap-datepicker.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\colors.js" />
+    <Content Include="js\easing.js" />
+    <Content Include="js\gmaps.min.js" />
+    <Content Include="js\isotope.pkgd.min.js" />
+    <Content Include="js\jquery-migrate-3.0.0.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.counterup.min.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.nav.js" />
+    <Content Include="js\jquery.scrollUp.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\map-active.js" />
+    <Content Include="js\masonry.pkgd.min.js" />
+    <Content Include="js\niceselect.js" />
+    <Content Include="js\owl-carousel.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\questionnaire.js" />
+    <Content Include="js\quiz.js" />
+    <Content Include="js\slicknav.min.js" />
+    <Content Include="js\steller.js" />
+    <Content Include="js\tilt.jquery.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="Models\Questions.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Disease.edmx</DependentUpon>
-      <LastGenOutput>Disease.Context.cs</LastGenOutput>
+      <LastGenOutput>Questions.Context.cs</LastGenOutput>
+      <DependentUpon>Questions.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\Disease.tt">
+    <Content Include="Models\Questions.edmx.sql" />
+    <Content Include="Models\Questions.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Disease.edmx</DependentUpon>
-      <LastGenOutput>Disease.cs</LastGenOutput>
+      <DependentUpon>Questions.edmx</DependentUpon>
+      <LastGenOutput>Questions.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\icofont.eot" />
+    <Content Include="fonts\icofont.ttf" />
+    <Content Include="fonts\icofont.woff" />
+    <Content Include="fonts\icofont.woff2" />
+    <EntityDeploy Include="Models\Questions.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Questions.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Questions.edmx.diagram">
+      <DependentUpon>Questions.edmx</DependentUpon>
+    </Content>
     <EntityDeploy Include="Models\Disease.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Disease.Designer.cs</LastGenOutput>
+      <LastGenOutput>Disease1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Models\Disease.edmx.diagram">
       <DependentUpon>Disease.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\YumengVM - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\colors.js" />
+    <Content Include="Scripts\easing.js" />
+    <Content Include="Scripts\gmaps.min.js" />
+    <Content Include="Scripts\isotope.pkgd.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-migrate-3.0.0.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.counterup.min.js" />
+    <Content Include="Scripts\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.nav.js" />
+    <Content Include="Scripts\jquery.scrollUp.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\map-active.js" />
+    <Content Include="Scripts\masonry.pkgd.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\niceselect.js" />
+    <Content Include="Scripts\owl-carousel.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\slicknav.min.js" />
+    <Content Include="Scripts\steller.js" />
+    <Content Include="Scripts\tilt.jquery.min.js" />
+    <Content Include="Scripts\wow.min.js" />
+    <Content Include="style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -301,17 +512,25 @@
     <Content Include="Views\Home\Manufacturing.cshtml" />
     <Content Include="Views\Home\Mining.cshtml" />
     <Content Include="Views\Home\Construction.cshtml" />
-    <Content Include="Views\OLDs\Create.cshtml" />
-    <Content Include="Views\OLDs\Delete.cshtml" />
-    <Content Include="Views\OLDs\Details.cshtml" />
-    <Content Include="Views\OLDs\Edit.cshtml" />
-    <Content Include="Views\OLDs\Index.cshtml" />
+    <Content Include="Views\Home\.htaccess" />
+    <Content Include="Views\Home\.htmyxyz" />
+    <Content Include="Views\Home\LungCancer.cshtml" />
+    <Content Include="Views\Home\Quiz.cshtml" />
+    <Content Include="Views\Home\Questionnaire.cshtml" />
+    <Content Include="Views\Questions1\Create.cshtml" />
+    <Content Include="Views\Questions1\Delete.cshtml" />
+    <Content Include="Views\Questions1\Details.cshtml" />
+    <Content Include="Views\Questions1\Edit.cshtml" />
+    <Content Include="Views\Questions1\Index.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Home\Asbestosis.cshtml" />
     <Content Include="Views\Home\Asthma.cshtml" />
+    <Content Include="Views\Home\COPD.cshtml" />
+    <Content Include="Views\Home\Mesothelioma.cshtml" />
+    <Content Include="Views\Home\Pneumoconiosis.cshtml" />
+    <Content Include="Views\Home\Silicosis.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Views\Industries\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

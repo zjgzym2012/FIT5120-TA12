@@ -3,11 +3,18 @@
     ViewBag.Title = "Manufacturing";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Home/Industries">Industries</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Manufacturing</li>
+    </ol>
+</nav>
 
 <div class="row">
     <div class="col-md-12">
 
-        <img src="~/Images/image_manufacturing.png" class="img-fluid d-block" alt="Responsive image">
+        <img src="~/Images/pageHeading_manufacturing.png" class="img-fluid d-block" alt="Responsive image">
         <div class="carousel-caption">
             <h3 class="align-self-center">Know about the Risk factors involved with Manufacturing</h3>
         </div>
@@ -17,7 +24,7 @@
 
     <p class="lead">Click on the icon to know more</p>
     <div class="media">
-        <img class="btn img-thumbnail rounded-circle" src="~/Images/gas-mask.svg" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" />
+        <img class="btn img-thumbnaill rounded-circle" src="~/Images/gas-mask.svg" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" />
         <p class="lead" style="align-self:center">Hazardous Substances</p>
     </div>
     <div class="collapse multi-collapse " id="multiCollapseExample1">
@@ -26,19 +33,19 @@
                 <li class="media">
 
                 <li class="media">
-                    <img src="~/Images/silica.jpeg" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/silica.jpeg" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1">Silica</h5>
                         Silica is a major component of sand and one of the most abundant substances in the world. Inhalation of finely ground crystalline silicon dioxide infiltrates the lungs and continuously stimulates cellular tissues, reducing lung function.
-                </div>
-                        </li>
+                    </div>
+                </li>
                 <li class="media my-4">
-                    <img src="~/Images/quartz.jpeg" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/quartz.jpeg" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
                     <div class="media-body">
                         <h5 class="mt-0 mb-1">Quartz</h5>
                         Quartz is mainly composed of silicon or silicon dioxide, and is used in the manufacture of glass and ferrosilicon through thermal processing. In particular, silica sand is a quartz-grained sand that is used as a raw material for abrasives, in addition to manufacturing glass types.
-               </div>
-                        </li>
+                    </div>
+                </li>
             </ul>
         </div>
 
@@ -46,28 +53,28 @@
 
     </div>
     <div class="media">
-        <img class="btn img-thumbnail rounded-circle" src="~/Images/lung-cancer.svg" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2" />
+        <img class="btn img-thumbnaill rounded-circle" src="~/Images/lung-cancer.svg" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2" />
         <p class="lead" style="align-self:center">Lung Diseases</p>
     </div>
     <div class="collapse multi-collapse " id="multiCollapseExample2">
         <div class=" card-custom">
             <ul class="list-unstyled">
                 <li class="media">
-                    <img src="~/Images/inhaler.png" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/inhaler.png" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
 
-                    <h5 class="mt-0 mb-1">Occupational asthma</h5>
+                    <h5 class="mt-0 mb-1"><a href="~/Home/Asthma">Occupational asthma</a></h5>
 
                 </li>
                 <li class="media my-4">
-                    <img src="~/Images/lungs.svg" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/lungs.svg" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
 
-                    <h5 class="mt-0 mb-1">chronic obstructive pulmonary disease</h5>
+                    <h5 class="mt-0 mb-1"><a href="~/Home/COPD">chronic obstructive pulmonary disease</a></h5>
 
                 </li>
                 <li class="media">
-                    <img src="~/Images/lungs.png" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/lungs.png" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
 
-                    <h5 class="mt-0 mb-1">Lung Cancer</h5>
+                    <h5 class="mt-0 mb-1"><a href="~/Home/LungCancer">Lung Cancer</a></h5>
 
                 </li>
 

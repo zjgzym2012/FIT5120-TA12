@@ -3,44 +3,62 @@
     ViewBag.Title = "Overview";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Industries</li>
+    </ol>
+</nav>
 
 <div class="row">
     <div class="col-md-12">
-        <img src="~/Images/image_manufacturing.png" class="img-fluid d-block" alt="Responsive image">
+        <img src="~/Images/pageHeading_industries.png" class="img-fluid d-block" alt="Responsive image">
         <div class="carousel-caption">
             <h3 class="align-self-baseline">See how your occupation can be risky for you</h3>
         </div>
     </div>
 </div>
 <div class="jumbotronmodify container">
-    <div class="row ">
-        <div class="col-6 ">
+    @*<div class="row ">
+            <div class="col-6 ">
 
-            <canvas id="myChart"></canvas>
+                <canvas id="myChart"></canvas>
+
+            </div>
+            <div class="col-6 ">
+
+                <canvas id="myChart2"></canvas>
+
+            </div>
 
         </div>
-        <div class="col-6 ">
+        <div class="row ">
+            <div class="col-12">
+                <p class="lead">
+                    From the surveys and health organization websites it was proved that the people who work in an environment of dust (or) some material exposures tends to get more respiratory problems and which directly affects the lungs in a longer period.
+                    “Australian workers compensation data” from 2000-2018 to indicate the total number of people employed in different industries in terms of million count.
+                    <br />
+                    These figures show that there are more number of people employed in construction, manufacturing and these are also some of the industries which have many risk factors and most of the people are provoked to some injury or diseases and hence can be seen from the claim data.
+                    <br />
+                    Explore further and get the awareness of how a person may provoke to the risk factors in different industries.
+                </p>
 
-            <canvas id="myChart2"></canvas>
+            </div>
 
+
+        </div>*@
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-10 col-md-12">
+            <img src="~/Images/Open Data/Employment.png" alt="">
         </div>
+
 
     </div>
-    <div class="row ">
-        <div class="col-12">
-            <p class="lead">
-                From the surveys and health organization websites it was proved that the people who work in an environment of dust (or) some material exposures tends to get more respiratory problems and which directly affects the lungs in a longer period.
-                “Australian workers compensation data” from 2000-2018 to indicate the total number of people employed in different industries in terms of million count.
-                <br />
-                These figures show that there are more number of people employed in construction, manufacturing and these are also some of the industries which have many risk factors and most of the people are provoked to some injury or diseases and hence can be seen from the claim data.
-                <br />
-                Explore further and get the awareness of how a person may provoke to the risk factors in different industries.
-            </p>
-
-        </div>
 
 
-    </div>
     <br />
     <div class="card-deck">
 
@@ -53,17 +71,6 @@
             <div class="back">
                 <p class="copy">Workers in construction industries are exposed to high rates of occupational hazards.</p>
                 <a href="~/Home/Construction">View Risk Factors</a>
-            </div>
-        </div>
-        <div class="card text-white">
-            <img class="card-img" src="~/Images/mining.jpg" alt="Card image">
-            <div class="card-img-overlay">
-                <h2 class="card-title">Mining</h2>
-
-            </div>
-            <div class="back">
-                <p class="copy">Over the years, coal dust accumulates in the lung tissue and gradually scars, causing breathing difficulties</p>
-                <a href="~/Home/Mining">View Risk Factors</a>
             </div>
         </div>
 
@@ -79,86 +86,103 @@
                 <a href="~/Home/Manufacturing">View Risk Factors</a>
             </div>
         </div>
+        <div class="card text-white">
+            <img class="card-img" src="~/Images/mining.jpg" alt="Card image">
+            <div class="card-img-overlay">
+                <h2 class="card-title">Mining</h2>
+
+            </div>
+            <div class="back">
+                <p class="copy">Over the years, coal dust accumulates in the lung tissue and gradually scars, causing breathing difficulties</p>
+                <a href="~/Home/Mining">View Risk Factors</a>
+            </div>
+        </div>
+
     </div>
 
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'bar',
+@*<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
 
-        // The data for our dataset
-        data: {
+            // The data for our dataset
+            data: {
 
-            labels: ["Construction", "Manufacturing", "Transport and warehousing", "Mining", "Information media", "Other services"],
-            datasets: [{
-                 label: 'Type of Industries',
-                backgroundColor: 'green',
-                borderWidth: 3,
-                data: [1.171, 0.906, 0.64, 0.223, 0.221, 0.449]
+                labels: ["Construction", "Manufacturing", "Transport and warehousing", "Mining", "Information media", "Other services"],
+                datasets: [{
+                    label: 'Type of Industries',
+                    backgroundColor: 'green',
+                    borderWidth: 3,
+                    data: [1.171, 0.906, 0.64, 0.223, 0.221, 0.449]
 
-            }]
-        },
-
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Total no.of people employed in each industry based on the Australian workers compensation data from 2000-2018',
-                fontSize: 15
-            },
-            defaultFontSize: 12,
-            defaultFontStyle: "bold",
-            scales: {
-                yAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Total Count'
-                    }
-                }],
-                xAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Type of Industry'
-                    }
                 }]
+            },
+
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Total no.of people employed in each industry based on the Australian workers compensation data from 2000-2018',
+                    fontSize: 15
+                },
+                defaultFontSize: 12,
+                defaultFontStyle: "bold",
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Total Count'
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Type of Industry'
+                        }
+                    }]
+                }
             }
-        }
-    });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script>
-    var ctx = document.getElementById('myChart2').getContext('2d');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'doughnut',
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'doughnut',
 
-        // The data for our dataset
-        data: {
+            // The data for our dataset
+            data: {
 
-            labels: ["Construction", "Manufacturing", "Transport and warehousing", "Mining", "Information media", "Other services"],
-            datasets: [{
+                labels: ["Construction", "Manufacturing", "Transport and warehousing", "Mining", "Information media", "Other services"],
+                datasets: [{
 
-                backgroundColor: ['rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(130, 126, 16, 1)', 'rgba(150, 126, 16, 1)'],
-                borderWidth: 3,
-                data: [13855, 12925, 8515, 2140, 470, 2890]
+                    backgroundColor: ['rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(130, 126, 16, 1)', 'rgba(150, 126, 16, 1)'],
+                    borderWidth: 3,
+                    data: [13855, 12925, 8515, 2140, 470, 2890]
 
-            }]
-        },
+                }]
+            },
 
-        options: {
-            responsive: true,
-            title: {
-                display: true,
-                text: 'Number of claims in each industry based on the Australian workers compensation data from 2000-2018',
-                fontSize: 15
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Number of claims in each industry based on the Australian workers compensation data from 2000-2018',
+                    fontSize: 15
+                }
             }
-        }
-    });
-</script>
+        });
+    </script>*@
+<script src="~/Scripts/jquery.scrollUp.min.js"></script>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+@Scripts.Render("~/Scripts/jquery.scrollUp.min.js")

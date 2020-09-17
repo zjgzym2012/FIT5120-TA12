@@ -3,11 +3,18 @@
     ViewBag.Title = "Construction";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+            <li class="breadcrumb-item"><a href="~/Home/Industries">Industries</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Construction</li>
+        </ol>
+    </nav>
 
 <div class="row">
     <div class="col-md-12">
 
-        <img src="~/Images/image_construction.png" class="img-fluid d-block" alt="Responsive image">
+        <img src="~/Images/pageHeading_construction.png" class="img-fluid d-block" alt="Responsive image">
         <div class="carousel-caption">
             <h3 class="align-self-center">Know about the Risk factors involved with Construction</h3>
         </div>
@@ -17,7 +24,7 @@
     <p class="lead" >Click on the icon to know more</p>
 
     <div class="media">
-        <img class="btn img-thumbnail rounded-circle" src="~/Images/gas-mask.svg" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" />
+        <img class="btn img-thumbnaill rounded-circle" src="~/Images/gas-mask.svg" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" />
         <p class="lead" style="align-self:center">Hazardous Substances</p>
     </div>
     <div class="collapse multi-collapse " id="multiCollapseExample1">
@@ -25,7 +32,7 @@
             <ul class="list-unstyled">
               
                 <li class="media">
-                    <img src="~/Images/quartz.jpeg" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/quartz.jpeg" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
                     <div class="media-body">
 
 
@@ -34,7 +41,7 @@
                     </div>
                 </li>
                 <li class="media my-4">
-                    <img src="~/Images/silica.jpeg" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/silica.jpeg" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
                     <div class="media-body">
 
 
@@ -43,7 +50,7 @@
                     </div>
                 </li>
                 <li class="media ">
-                    <img src="~/Images/asbestos.png" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/asbestos.png" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
                     <div class="media-body">
 
 
@@ -58,22 +65,22 @@
 
     </div>
     <div class="media">
-        <img class="btn img-thumbnail rounded-circle" src="~/Images/lung-cancer.svg" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2" />
+        <img class="btn img-thumbnaill rounded-circle" src="~/Images/lung-cancer.svg" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2" />
         <p class="lead" style="align-self:center">Lung Diseases</p>
     </div>
     <div class="collapse multi-collapse " id="multiCollapseExample2">
         <div class=" card-custom">
             <ul class="list-unstyled">
                 <li class="media">
-                    <img src="~/Images/virus.svg" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/virus.svg" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
 
-                    <h5 class="mt-0 mb-1">Silicosis</h5>
+                    <h5 class="mt-0 mb-1"><a href="~/Home/Silicosis">Silicosis</a></h5>
 
                 </li>
                 <li class="media my-4">
-                    <img src="~/Images/lungs.svg" class="mr-3 img-thumbnail rounded img-fluid" alt="...">
+                    <img src="~/Images/lungs.svg" class="mr-3 img-thumbnaill rounded img-fluid" alt="...">
 
-                    <h5 class="mt-0 mb-1">Asbestosis</h5>
+                    <h5 class="mt-0 mb-1"><a href="~/Home/Asbestosis">Asbestosis</a></h5>
 
                 </li>
   

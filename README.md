@@ -7,9 +7,6 @@ This is the IE project of TA12 in 2020, S2. The theme of the project is Lung hea
 ## Getting Started
 Visit the webisite to see the live preview of the project.
 http://breatheandbelieve.tk/
-* If it requires password then
-* Username: admin
-* Password: 123
 
 ### Built With
 The major framework used for building the project listed below.
