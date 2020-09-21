@@ -3,7 +3,13 @@
     ViewBag.Title = "LungCancer";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item"><a href="~/Home/ViewDiseases">View Diseases</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Lung Cancer</li>
+    </ol>
+</nav>
 
 <div class="row">
     <div class="col-md-12">
@@ -269,7 +275,7 @@
                 <a href="~/Home/Manufacturing/#risk" class="btn btn-primary">Manufacturing</a>
                 <a href="~/Home/Mining/#risk" class="btn btn-primary">Mining</a>
                 <a href="~/Home/Mesothelioma/#main" class="btn btn-primary">Mesothelioma</a>
-                
+
             </div>
 
 

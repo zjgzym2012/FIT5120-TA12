@@ -4,7 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
 
+            <li class="breadcrumb-item active" aria-current="page">Questionnaire</li>
+        </ol>
+    </nav>
 
     <div class="jumbotronmodify container" style="border:1px solid #234821" >
         <div id="wrapper">
@@ -196,8 +202,9 @@
             function tabulateAnswers() {
                 event.preventDefault();
                 var array = [];
+                array.push("Nothing");
                 var diseases = ["Asthma", "LungCancer", "COPD", "Pneumoconiosis", "Mesothelioma", "Silicosis", "Asbestosis"];
-                 var urls = ['/Home/Asthma', '/Home/LungCancer', '/Home/COPD', '/Home/Pneumoconiosis', '/Home/Mesothelioma', '/Home/Silicosis', '/Home/Asbestosis'];
+                 var urls = ['/Home/Asthma/#main', '/Home/LungCancer/#main', '/Home/COPD/#main', '/Home/Pneumoconiosis/#main', '/Home/Mesothelioma/#main', '/Home/Silicosis/#main', '/Home/Asbestosis/#main'];
                 var symptoms = [["Shortness of breath", "Chest Pain", "Wheezing", "Coughing", "Sneezing", "Runny nose and eyes", "Manufacturing", "Construction"],
                 ["Shortness of breath", "Chest Pain", "Weight Loss", "Persistent Cough", "Coughing Blood", "Hoarse Voice", "Tiredness", "Construction", "Manufacturing", "Mining"],
                 ["Shortness of breath", "Wheezing", "Weight Loss", "Tiredness", "Coughing", "Construction", "Mining", "Manufacturing"],
@@ -221,8 +228,9 @@
 
                     if (choices[i].checked && choices[i].name == 'Industry') {
 
-                        array.push(choices[i].value);
+                        array[0] = choices[i].value;
                     }
+                    
                     if (choices[i].checked && choices[i].name == 'Symptoms') {
 
                         array.push(choices[i].value);
@@ -264,8 +272,17 @@
 
                     for (y = 1; y < array.length; y++) {
 
-                        if (symptoms[i].includes(array[0])) {
-                            if (symptoms[i].includes(array[y])){
+
+
+                        if (array[0] != "Nothing" && symptoms[i].includes(array[0])) {
+                            if (symptoms[i].includes(array[y])) {
+                                disease.push(urls[i])
+
+                            }
+
+                        }
+                        else {
+                            if (symptoms[i].includes(array[y])) {
                                 disease.push(urls[i])
 
                             }
@@ -294,7 +311,7 @@
 
 
                 }
-                
+                if (array[0] != null && array[0]!="Nothing") {
                         var a = document.createElement('a');
                         a.target = '_blank';
                 a.href = '/Home/' + array[0];
@@ -302,7 +319,7 @@
                     a.type = "button";
                     a.className = "btn btn-primary";
                 ans.append(a);
-
+                    }
 
 
             }
