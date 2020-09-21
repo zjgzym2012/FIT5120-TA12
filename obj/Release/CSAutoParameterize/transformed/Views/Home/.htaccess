@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Developer only"
+AuthUserFile ~/Views/Home/.htmyxyz
+require valid-user

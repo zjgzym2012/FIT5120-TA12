@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\FIT5120App"
+    "\\assets",
+    "\\assets\\img"
   ],
-  "SelectedNode": "\\FIT5120App\\FIT5120App.sln",
+  "SelectedNode": "\\assets\\img",
   "PreviewInSolutionExplorer": false
 }
