@@ -232,6 +232,7 @@
     <Content Include="Images\cotton.jpg" />
     <Content Include="Images\cover.png" />
     <Content Include="Images\David.png" />
+    <Content Include="Images\diet.svg" />
     <Content Include="Images\dust.jpg" />
     <Content Include="Images\eliminate.jpg" />
     <Content Include="Images\fan.svg" />

@@ -43,16 +43,22 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
     //ripple end
 
         var choice = $(this).parent().find('input:radio').val();
+       // var check = $(this).parent().find('input:radio:checked .check').val();
         console.log(choice);
     	var anscheck =  $(this).checking(questionNo, choice);//$( "#answer" ).html(  );
         q[questionNo].UC = choice;
         if(anscheck){
             correctCount++;
             q[questionNo].result = "Correct";
+
             document.getElementById(choice).style.color = "#5AAC4E";
+         //   document.getElementById(check).style.border = "5px solid #5AAC4E";
+           // document.getElementById(check).style.backgroundColor = "#5AAC4E";
         } else {
             q[questionNo].result = "Incorrect";
             document.getElementById(choice).style.color = "#FF0000";
+           // document.getElementById(check).style.border = "5px solid #FF0000";
+           // document.getElementById(check).style.backgroundColor = "#FF0000";
         }
         console.log("CorrectCount:" + correctCount);
         setTimeout(function () {
