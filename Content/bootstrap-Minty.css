@@ -7483,13 +7483,13 @@ button.bg-info:focus {
 }
 
 .bg-warning {
-    background-color: #ffce67 !important;
+    background-color: #f6a623 !important;
 }
 
 a.bg-warning:hover, a.bg-warning:focus,
 button.bg-warning:hover,
 button.bg-warning:focus {
-    background-color: #ffbe34 !important;
+    background-color: #f6a623 !important;
 }
 
 .bg-danger {
@@ -12135,4 +12135,11 @@ nav ul li a.active,
 nav ul li a:hover, nav-link.active, nav-link:hover {
     color: #000;
     background: #5AAC4E;
+}
+.question {
+    background: #5AAC4E;
+    padding: 20px;
+    color: #fff;
+    border-bottom-right-radius: 55px;
+    border-top-left-radius: 55px;
 }

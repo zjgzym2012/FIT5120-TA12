@@ -221,6 +221,7 @@
     <Content Include="Images\asb_symp.png" />
     <Content Include="Images\Asthma.PNG" />
     <Content Include="Images\Asthma_symp.png" />
+    <Content Include="Images\change.svg" />
     <Content Include="Images\checkup.svg" />
     <Content Include="Images\chest.jpg" />
     <Content Include="Images\coal.jpg" />
@@ -228,6 +229,7 @@
     <Content Include="Images\construction-home.jpg" />
     <Content Include="Images\construction-homee.jpg" />
     <Content Include="Images\construction.jpg" />
+    <Content Include="Images\COPD_New.png" />
     <Content Include="Images\copd_symp.png" />
     <Content Include="Images\cotton.jpg" />
     <Content Include="Images\cover.png" />
@@ -235,6 +237,7 @@
     <Content Include="Images\diet.svg" />
     <Content Include="Images\dust.jpg" />
     <Content Include="Images\eliminate.jpg" />
+    <Content Include="Images\Employmentt.png" />
     <Content Include="Images\fan.svg" />
     <Content Include="Images\find_out_more.png" />
     <Content Include="Images\find_out_more_back.png" />
@@ -276,6 +279,7 @@
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" />
+    <Content Include="Images\medical-insurance.svg" />
     <Content Include="Images\medical_checkup.jpg" />
     <Content Include="Images\meso_info.png" />
     <Content Include="Images\mesth_symp.png" />
@@ -295,6 +299,7 @@
     <Content Include="Images\Physical symptoms.jpg" />
     <Content Include="Images\PIC.jpg" />
     <Content Include="Images\prevention.png" />
+    <Content Include="Images\preventive.PNG" />
     <Content Include="Images\protective.jpg" />
     <Content Include="Images\quartz.jpeg" />
     <Content Include="Images\lungs-old.jpg" />

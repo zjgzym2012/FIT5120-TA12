@@ -1,28 +1,42 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-    <head>
+<head>
 
-        <!-- Meta Tags -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="keywords" content="Site keywords here">
-        <meta name="description" content="">
-        <meta name='copyright' content=''>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="~/Content/icofont.min.css" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/5699d7698c.js" crossorigin="anonymous"></script>
-    </head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Site keywords here">
+    <meta name="description" content="">
+    <meta name='copyright' content=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
 
 
 
 
 <!-- Slider Area -->
-
 <section class="slider">
     <div class="hero-slider">
         <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url('../../Images/construction-homee.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <br /><br /><br />
+                            <h1>Protect <span>Lungs</span> at <span>Work</span>!</h1>
+                            <div class="button">
+                                <a href="~/Home/Questionnaire" class="btn btn-primary">Know more</a>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="single-slider" style="background-image:url('../../Images/new_homepage_pic1.jpg')">
             <div class="container">
@@ -31,7 +45,10 @@
                         <div class="text">
                             <br /><br /><br />
                             <h1>Prevent <span>OLD</span> before you grow <span>Old!</span></h1>
-                            <p> </p>
+                            <div class="button">
+                                <a href="~/Home/Questionnaire" class="btn btn-primary">Know more</a>
+
+                            </div>
 
                         </div>
                     </div>
@@ -47,7 +64,10 @@
                         <div class="text">
                             <br /><br /><br />
                             <h1>Help your <span>Lungs</span> while you still can!</h1>
+                            <div class="button">
+                                <a href="~/Home/Questionnaire" class="btn btn-primary">Know more</a>
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,19 +75,6 @@
         </div>
         <!-- Start End Slider -->
         <!-- Start Single Slider -->
-        <div class="single-slider" style="background-image:url('../../Images/construction-homee.jpg')">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="text">
-                            <br /><br /><br />
-                            <h1>Protect <span>Lungs</span> at <span>Work</span>!</h1>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- End Single Slider -->
     </div>
 </section>
@@ -87,8 +94,8 @@
                             <div class="single-content">
                                 @*<span>Lorem Amet</span>*@
                                 <h4>Know about Occupational Lung Diseases(OLDs)</h4>
-                                <p>Occupational Lung Diseases are lung conditions caused or made worse by the occupational exposure. Most of these diseases are preventable. </p><br />
-                                <a href="~/Home/ViewDiseases">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                                <p>Occupational Lung Diseases are lung conditions caused or made worse by the occupational exposure. Most of these diseases are preventable. </p>
+                                <a href="~/Home/ViewDiseases/#disease">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -103,8 +110,8 @@
                             <div class="single-content">
                                 @*<span>Fusce Porttitor</span>*@
                                 <h4>See the risks your workplace poses for you</h4>
-                                <p>The damage you do to your lungs today cannot be reversed tomorrow. Make sure you know the risks related to your occupation.</p><br />
-                                <a href="~/Home/Industries">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+                                <p>The damage you do to your lungs today cannot be reversed tomorrow. Make sure you know the risks related to your occupation.</p>
+                                <a href="~/Home/Industries/#industry">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -120,11 +127,11 @@
                                 @*<span>Fusce Porttitor</span>*@
                                 <h4>Enhance your knowledge about OLDs</h4>
                                 <p>
-                                    Enhance your knowlede about OLDs and get some recommedations through quizz and questionnaire.
+                                    Enhance your knowlede about OLDs through this quiz. Check your knowledge about the general precautions, symptoms related to OLDs.
                                 </p>
 
                                 <a href="~/Home/Quiz">Take the quiz<i class="fa fa-long-arrow-right"></i></a>
-                                <a href="~/Home/Questionnaire">Take the questionnaire<i class="fa fa-long-arrow-right"></i></a>
+
                             </div>
                         </div>
                     </div>
@@ -184,10 +191,14 @@
                 </div>
                 <div class="col-lg-7 col-md-12">
                     <div class="about-caption">
-                        @*<video width="550" height="400" controls>
-                            <source src="https://vimeo.com/user123491740/review/459615698/aed2f70d54" type="video/mp4">
-                        </video>*@
-                        <iframe src="https://streamable.com/e/lpxo5z" width="550" height="400" frameborder="0" allowfullscreen></iframe>
+
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <video width="550" height="350" controls>
+                                <source src="~/Images/OLD_Overview_Video.mp4" type="video/mp4">
+
+                            </video>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -267,8 +278,6 @@
     </div>*@
 
 
-
-</div>
 
 
 
