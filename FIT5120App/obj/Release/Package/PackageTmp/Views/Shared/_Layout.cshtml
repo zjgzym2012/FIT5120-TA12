@@ -11,8 +11,6 @@
     <title>@ViewBag.Title - Breathe And Believe</title>
 
     <!-- Favicon -->
-
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
@@ -63,10 +61,10 @@
                     <a class="nav-link" href="/Home/Index">Home <span class="sr-only">(current)</span></a>
                 </li>
                 @*<li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>*@
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>*@
                 @*</li>*@
 
 
@@ -81,6 +79,7 @@
                         <a class="dropdown-item" href="/Home/Mesothelioma">Mesothelioma</a>
                         <a class="dropdown-item" href="/Home/Silicosis">Silicosis</a>
                         <a class="dropdown-item" href="/Home/Asbestosis">Asbestosis</a>
+                        <a class="dropdown-item" href="/Home/ViewDiseases">View All Diseases</a>
 
                     </div>
                 </li>
@@ -90,6 +89,7 @@
                         <a class="dropdown-item" href="/Home/Mining">Mining</a>
                         <a class="dropdown-item" href="/Home/Construction">Construction</a>
                         <a class="dropdown-item" href="/Home/Manufacturing">Manufacturing</a>
+                        <a class="dropdown-item" href="/Home/Industries">View All Industries</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -113,35 +113,35 @@
         <footer id="footer" class="footer ">
             <!-- Footer Top -->
             @*<div class="footer-top">
-                <div class="container">
-                    <div class="row">
+                    <div class="container">
+                        <div class="row">
 
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="single-footer f-link">
-                                <h2>Quick Links</h2>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="single-footer f-link">
+                                    <h2>Quick Links</h2>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
 
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
 
-                                        </ul>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+
+
+
                         </div>
-
-
-
-
                     </div>
-                </div>
-            </div>*@
+                </div>*@
             <div class="copyright">
                 <div class="container">
                     <div class="row">
@@ -158,18 +158,68 @@
         </footer>
     </div>
     <script src="~/Scripts/jquery.scrollUp.min.js"></script>
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
     @Scripts.Render("~/Scripts/jquery.scrollUp.min.js")
+
+
+
+
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <script src="~/Scripts/colors.js"></script>
+    <script src="~/Scripts/easing.js"></script>
+    <script src="~/Scripts/gmaps.min.js"></script>
+    <script src="~/Scripts/isotope.pkgd.min.js"></script>
+    <script src="~/Scripts/jquery-migrate-3.0.0.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/jquery.counterup.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.magnific-popup.min.js"></script>
+    <script src="~/Scripts/jquery.nav.js"></script>
+    <script src="~/Scripts/jquery.scrollUp.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/map-active.js"></script>
+    <script src="~/Scripts/masonry.pkgd.min.js"></script>
+    <script src="~/Scripts/owl-carousel.js"></script>
+    <script src="~/Scripts/niceselect.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/slicknav.min.js"></script>
+    <script src="~/Scripts/steller.js"></script>
+    <script src="~/Scripts/tilt.jquery.min.js"></script>
+    <script src="~/Scripts/wow.min.js"></script>
+    @Scripts.Render("~/Scripts/bootstrap-datepicker.js")
+    @Scripts.Render("~/Scripts/colors.js")
+    @Scripts.Render("~/Scripts/easing.js")
+    @Scripts.Render("~/Scripts/gmaps.min.js")
+    @Scripts.Render("~/Scripts/isotope.pkgd.min.js")
+    @Scripts.Render("~/Scripts/jquery-migrate-3.0.0.js")
+    @Scripts.Render("~/Scripts/jquery-ui.min.js")
+    @Scripts.Render("~/Scripts/jquery.counterup.min.js")
+    @Scripts.Render("~/Scripts/jquery.min.js")
+    @Scripts.Render("~/Scripts/jquery.magnific-popup.min.js")
+    @Scripts.Render("~/Scripts/jquery.nav.js")
+    @Scripts.Render("~/Scripts/jquery.scrollUp.min.js")
+    @Scripts.Render("~/Scripts/main.js")
+    @Scripts.Render("~/Scripts/map-active.js")
+    @Scripts.Render("~/Scripts/masonry.pkgd.min.js")
+    @Scripts.Render("~/Scripts/owl-carousel.js")
+    @Scripts.Render("~/Scripts/niceselect.js")
+    @Scripts.Render("~/Scripts/popper.min.js")
+    @Scripts.Render("~/Scripts/slicknav.min.js")
+    @Scripts.Render("~/Scripts/steller.js")
+    @Scripts.Render("~/Scripts/tilt.jquery.min.js")
+    @Scripts.Render("~/Scripts/wow.min.js")
+
     @RenderSection("scripts", required: false)
     <script>
 
 
-        $(".nav .nav-link").on("click", function(){
-   $(".nav").find(".active").removeClass("active");
-   $(this).addClass("active");
-});
+        $(".nav .nav-link").on("click", function () {
+            $(".nav").find(".active").removeClass("active");
+            $(this).addClass("active");
+        });
 
     </script>
 </body>

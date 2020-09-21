@@ -43,22 +43,21 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
     //ripple end
 
         var choice = $(this).parent().find('input:radio').val();
-       // var check = $(this).parent().find('input:radio:checked .check').val();
         console.log(choice);
     	var anscheck =  $(this).checking(questionNo, choice);//$( "#answer" ).html(  );
         q[questionNo].UC = choice;
+        var choicecheck = 'check' + choice
         if(anscheck){
             correctCount++;
             q[questionNo].result = "Correct";
-
-            document.getElementById(choice).style.color = "#5AAC4E";
-         //   document.getElementById(check).style.border = "5px solid #5AAC4E";
-           // document.getElementById(check).style.backgroundColor = "#5AAC4E";
+            document.getElementById(choice).style.color = "#39ff14";
+            document.getElementById(choicecheck).style.color = "#5AAC4E";
+ 
         } else {
             q[questionNo].result = "Incorrect";
             document.getElementById(choice).style.color = "#FF0000";
-           // document.getElementById(check).style.border = "5px solid #FF0000";
-           // document.getElementById(check).style.backgroundColor = "#FF0000";
+            document.getElementById(choicecheck).style.color = "#FF0000";
+
         }
         console.log("CorrectCount:" + correctCount);
         setTimeout(function () {
@@ -115,14 +114,14 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
             else if (questionNo === 2) {
                 document.getElementById("line20").innerHTML = "Your answer: " + abcd;
                 document.getElementById("line10").innerHTML = "The correct answer is D.";
-                document.getElementById("line1").innerHTML = "Symptoms of OLDs are very vague, where people can mislead these symptoms into other common diseases most of the time and do not take proper care. Because of this the diseases that are caused due to OLDs are identified at the advanced stages. Some of the diseases and  symptoms that could occur due to OLDs are as follows )";
-                document.getElementById("line2").innerHTML = "Asthma - Shortness of breath , Chest pain, Wheezing, Coughing, Run nose and eyes, Sneezing";
-                document.getElementById("line3").innerHTML = "COPD - Shortness of breath, Wheezing, Weight loss, Chest Pain, Coughing, Tiredness";
-                document.getElementById("line4").innerHTML = "Lung Cancer - Shortness of breath, Persistent of cough, Weight loss, Chest pain, Coughing blood, Hoarse voice, Tiredness";
-                document.getElementById("line5").innerHTML = "Pneumoconiosis - Shortness of breath, Phlegm, Coughing,Chest tightness";
-                document.getElementById("line6").innerHTML = "Mesothelioma - Shortness of breath, Persistent cough, Excessive sweating, Loss of energy, Chest pain";
-                document.getElementById("line7").innerHTML = "Silicosis - Shortness of breath, Persistent cough, Weight loss, Chest pain, Fatigue, Sudden fever, Skin sensitiveness and Swollen legs";
-                document.getElementById("line8").innerHTML = "Most of the diseases do have common symptoms. Inorder to confirm a certain disease when you trigger to certain symptoms for a long period, try to consult a doctor and take necessary steps accordingly.";
+                document.getElementById("line1").innerHTML = "Symptoms of OLDs are very vague, where people can mislead these symptoms into other common diseases most of the time and do not take proper care. Because of this the diseases that are caused due to OLDs are identified at the advanced stages. To know more go through the diseases page.";
+                //document.getElementById("line2").innerHTML = "Asthma - Shortness of breath , Chest pain, Wheezing, Coughing, Run nose and eyes, Sneezing";
+                //document.getElementById("line3").innerHTML = "COPD - Shortness of breath, Wheezing, Weight loss, Chest Pain, Coughing, Tiredness";
+                //document.getElementById("line4").innerHTML = "Lung Cancer - Shortness of breath, Persistent of cough, Weight loss, Chest pain, Coughing blood, Hoarse voice, Tiredness";
+                //document.getElementById("line5").innerHTML = "Pneumoconiosis - Shortness of breath, Phlegm, Coughing,Chest tightness";
+                //document.getElementById("line6").innerHTML = "Mesothelioma - Shortness of breath, Persistent cough, Excessive sweating, Loss of energy, Chest pain";
+                //document.getElementById("line7").innerHTML = "Silicosis - Shortness of breath, Persistent cough, Weight loss, Chest pain, Fatigue, Sudden fever, Skin sensitiveness and Swollen legs";
+                //document.getElementById("line8").innerHTML = "Most of the diseases do have common symptoms. Inorder to confirm a certain disease when you trigger to certain symptoms for a long period, try to consult a doctor and take necessary steps accordingly.";
                 $("label.element-animation").css("pointer-events", "none");
                 document.getElementById("button").style.display = "block";
                 document.getElementById("progressBar").style.width = "40%";
@@ -130,11 +129,11 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
             else if (questionNo === 3) {
                 document.getElementById("line20").innerHTML = "Your answer: " + abcd;
                 document.getElementById("line10").innerHTML = "The correct answer is D.";
-                document.getElementById("line1").innerHTML = "Some of the top risky occupations where most of the people may be triggered to OLDs are Construction, Manufacturing and Mining. These occupations usually have more chances to get in contact with various materials, hazardous substances and chemicals that play a key role in getting any of the OLD and also according to 2020 census of employment data 40% of employed people work in these industries.";
-                document.getElementById("line2").innerHTML = "Construction:- Hazardous substances include Lead, Crystalline silica and Asbestos. Lung Diseases include Silicosis and Asbestosis.";
-                document.getElementById("line3").innerHTML = "Manufacturing:- Hazardous substances include Silica and Quartz. Lung diseases include Occupational Asthma, COPD and Lung Cancer.";
-                document.getElementById("line4").innerHTML = "Mining:- Hazardous substances include Coal, Dust, Silicon Dioxide and Asbestos. Lung Diseases include Silicosis, Pneumoconiosis and Asbestosis.";
-                document.getElementById("line5").innerHTML = "Apart from these occupations there are also bakery, foundry,various other occupations that are risky.";
+                document.getElementById("line1").innerHTML = "Some of the top risky occupations where most of the people may be triggered to OLDs are Construction, Manufacturing and Mining. These occupations usually have more chances to get in contact with various materials, hazardous substances and chemicals that play a key role in getting any of the OLD and also according to the 2020 census of employment data 40% of employed people work in these industries. To know more go through the industries page.";
+                //document.getElementById("line2").innerHTML = "Construction:- Hazardous substances include Lead, Crystalline silica and Asbestos. Lung Diseases include Silicosis and Asbestosis.";
+                //document.getElementById("line3").innerHTML = "Manufacturing:- Hazardous substances include Silica and Quartz. Lung diseases include Occupational Asthma, COPD and Lung Cancer.";
+                //document.getElementById("line4").innerHTML = "Mining:- Hazardous substances include Coal, Dust, Silicon Dioxide and Asbestos. Lung Diseases include Silicosis, Pneumoconiosis and Asbestosis.";
+                //document.getElementById("line5").innerHTML = "Apart from these occupations there are also bakery, foundry,various other occupations that are risky.";
                 $("label.element-animation").css("pointer-events", "none");
                 document.getElementById("button").style.display = "block";
                 document.getElementById("progressBar").style.width = "60%";
@@ -152,10 +151,10 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
             else if (questionNo === 5) {
                 document.getElementById("line20").innerHTML = "Your answer: " + abcd;
                 document.getElementById("line10").innerHTML = "The correct answer is A.";
-                document.getElementById("line2").innerHTML = "Even Though all of the above options could make the workers better protect their health at the work-place without getting triggered by OLDs, Elimination of Substances is always the best possible way. Elimination of hazardous substances that would cause risk could be eliminated and alternative substances could be used at the work-place which are friendly substances.";
-                document.getElementById("line3").innerHTML = "Substitution of hazardous substances with less harmful substances could still make workers triggered to OLD when the person gets exposed for a long duration to it.";
-                document.getElementById("line4").innerHTML = "Letting workers know about the risk assessments can make the workers working in any of the occupation to know in prior itself about the hazardous substances and how they could protect oneself.";
-                document.getElementById("line5").innerHTML = "Administrative controls include job rotation, rest periods, shift or location changes.";
+                document.getElementById("line2").innerHTML = "Even Though all of the above options could make the workers better protect their health at the work - place without getting triggered by OLDs, Elimination of Substances is always the best possible way.Elimination of hazardous substances that would cause risk could be eliminated completely where workers do not get triggered to any kind of diseases nor health issues.";
+                //document.getElementById("line3").innerHTML = "Substitution of hazardous substances with less harmful substances could still make workers triggered to OLD when the person gets exposed for a long duration to it.";
+                //document.getElementById("line4").innerHTML = "Letting workers know about the risk assessments can make the workers working in any of the occupation to know in prior itself about the hazardous substances and how they could protect oneself.";
+                //document.getElementById("line5").innerHTML = "Administrative controls include job rotation, rest periods, shift or location changes.";
                 $("label.element-animation").css("pointer-events", "none");
                 document.getElementById("button").innerHTML = "See result";
                 document.getElementById("button").style.display = "block";
@@ -175,15 +174,20 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
                 document.getElementById("line1").innerHTML = "";
                 document.getElementById("line2").innerHTML = "";
                 document.getElementById("line3").innerHTML = "";
-                document.getElementById("line4").innerHTML = "";
-                document.getElementById("line5").innerHTML = "";
-                document.getElementById("line6").innerHTML = "";
-                document.getElementById("line7").innerHTML = "";
-                document.getElementById("line8").innerHTML = "";
+                //document.getElementById("line4").innerHTML = "";
+                //document.getElementById("line5").innerHTML = "";
+                //document.getElementById("line6").innerHTML = "";
+                //document.getElementById("line7").innerHTML = "";
+                //document.getElementById("line8").innerHTML = "";
                 document.getElementById("1").style.color = "#000000";
                 document.getElementById("2").style.color = "#000000";
                 document.getElementById("3").style.color = "#000000";
                 document.getElementById("4").style.color = "#000000";
+                document.getElementById("check1").style.color = "#000";
+                document.getElementById("check2").style.color = "#000";
+                document.getElementById("check3").style.color = "#000";
+                document.getElementById("check4").style.color = "#000";
+
 
                 if (questionNo === 5) {
 
@@ -236,6 +240,7 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
                 $($('#f-option').parent().find('label')).html(q[questionNo].C[0]);
                 $($('#s-option').parent().find('label')).html(q[questionNo].C[1]);
                 $($('#t-option').parent().find('label')).html(q[questionNo].C[2]);
+                $($('#4-option').parent().find('label')).html(q[questionNo].C[3]);
                 $("label.element-animation").css("pointer-events", "auto");
                 }
 
