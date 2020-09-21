@@ -8,7 +8,7 @@ namespace FIT5120App.Controllers
 {
 
     [BasicAuthenticationAttribute("your-username", "your-password", 
-    BasicRealm = "your-realm")]
+    BasicRealm = "your-")]
     public class HomeController : Controller
     {
         public ActionResult Index()

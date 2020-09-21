@@ -495,13 +495,21 @@ mark,
 .img-thumbnail {
     padding: 0.25rem;
     background-color: #fff;
-    border: 1px solid #eceeef;
+    border: 0px solid #eceeef;
+    border-radius: 0.4rem;
+    max-width: 100%;
+    width: 60px;
+    height: 100px;
+}
+.img-thumbnaill {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 0px solid #eceeef;
     border-radius: 0.4rem;
     max-width: 100%;
     width: 100px;
     height: 100px;
 }
-
 .figure {
     display: inline-block;
 }
@@ -2046,7 +2054,7 @@ pre {
     .table td {
         padding: 0.75rem;
         vertical-align: top;
-        font-size:15px;
+        font-size: 15px;
         border-top: 1px solid #234821;
     }
 
@@ -2929,6 +2937,7 @@ textarea.form-control {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
+
     .btn:before {
         content: "";
         position: absolute;
@@ -2989,7 +2998,7 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #234821;
     border-color: #fff;
-    align-self:center;
+    align-self: center;
 }
 
     .btn-primary:hover {
@@ -4745,9 +4754,8 @@ input[type="button"].btn-block {
     padding: 0.5rem 1rem;
 }
 
-   nav-link:hover, .nav-link:focus {
-   color:#000;
-
+    nav-link:hover, .nav-link:focus {
+        color: #000;
     }
 
     .nav-link.disabled {
@@ -4768,7 +4776,7 @@ input[type="button"].btn-block {
         border: 1px solid transparent;
         border-top-left-radius: 0.4rem;
         border-top-right-radius: 0.4rem;
-        font-size:16px;
+        font-size: 16px;
     }
 
         .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
@@ -4803,14 +4811,13 @@ input[type="button"].btn-block {
     .nav-pills .nav-link.active,
     .nav-pills .show > .nav-link {
         color: #000;
-       
-
     }
 
 a .nav-link {
     color: #000000;
     font-size: large;
 }
+
 .nav-fill > .nav-link,
 .nav-fill .nav-item {
     -webkit-box-flex: 1;
@@ -4898,8 +4905,7 @@ a .nav-link {
     .navbar-nav .nav-link {
         padding-right: 0;
         padding-left: 0;
-        font-size:16px;
-   
+        font-size: 16px;
     }
 
     .navbar-nav .dropdown-menu {
@@ -5258,10 +5264,10 @@ a .nav-link {
         color: #5a5a5a;
     }
 
-        /*.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
+/*.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
             color: #5a5a5a;
         }*/
-         
+
 .navbar-dark .navbar-brand {
     color: #fff;
 }
@@ -5589,7 +5595,7 @@ a .nav-link {
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
     list-style: none;
-    background-color: #78C2AD;
+    background-color: #fff;
     border-radius: 0.4rem;
 }
 
@@ -5606,7 +5612,7 @@ a .nav-link {
         .breadcrumb-item + .breadcrumb-item::before {
             display: inline-block;
             padding-right: 0.5rem;
-            color: #fff;
+            color: #000;
             content: "/";
         }
 
@@ -5619,7 +5625,7 @@ a .nav-link {
         }
 
     .breadcrumb-item.active {
-        color: #fff;
+        color: #000;
     }
 
 .pagination {
@@ -6456,7 +6462,7 @@ a.badge-dark:focus, a.badge-dark.focus {
     }
 
     .list-group-item-warning.list-group-item-action.active {
-        color: #fff;
+        color: #000;
         background-color: #856b36;
         border-color: #856b36;
     }
@@ -11840,11 +11846,12 @@ legend {
 }
 
 .breadcrumb a {
-    color: rgba(255, 255, 255, 0.6);
+    color: #000;
 }
 
     .breadcrumb a:hover {
-        color: #fff;
+        color: #000;
+        font-weight:700;
         text-decoration: none;
     }
 
@@ -11946,7 +11953,11 @@ legend {
 
 .card:hover > .back {
     transform: perspective(600px) rotateY(0deg);
-    background-color: #78C2AD;
+    background-color: #5AAC4E;
+}
+
+.back > .copy > a {
+    color: #fff;
 }
 
 .back-content {
@@ -12056,7 +12067,7 @@ legend {
     align-items: center;
 }*/
 .bg-custom {
-    background-color: #2d8b6b !important;
+    background-color: #5AAC4E !important;
 }
 
 a.bg-custom:hover, a.bg-custom:focus,

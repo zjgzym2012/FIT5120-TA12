@@ -3,176 +3,182 @@
     ViewBag.Title = "Questionnaire";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Questionnaire</li>
+    </ol>
+</nav>
 
-    <div class="jumbotronmodify container">
-        <div id="wrapper">
-            <div id="header">
-                <h3>Know about OLDs, symptoms and your condition with this questionnaire.</h3>
-            </div>
-            <div id="recommendations" style="display:none">
-                <h3>Our recommendations for you</h3>
-            </div>
+<div class="jumbotronmodify container">
+    <div id="wrapper">
+        <div id="header">
+            <h3>Know about OLDs, symptoms and your condition with this questionnaire.</h3>
+        </div>
+        <div id="recommendations" style="display:none">
+            <h3>Our recommendations for you</h3>
+        </div>
+        <br />
+        <br />
+
+        <form id="quiz">
+            <!-- Question 1 -->
+            <h5>Choose your industry</h5>
+            <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+            <!-- The value is which answer the choice corresponds to. -->
+            <label>
+                <input type="radio" name="Industry" value="Manufacturing">
+                Manufacturing
+            </label><br />
+            <label>
+                <input type="radio" name="Industry" value="Mining">
+                Mining
+            </label><br />
+            <label>
+                <input type="radio" name="Industry" value="Construction">
+                Construction
+            </label><br />
+
+
+            <!-- Question 2 -->
+            <h5>Do you have any of these symptoms?</h5>
+            <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+            <label>
+                <input type="checkbox" name="Symptoms" value="Chest Pain">
+                Chest Pain
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Wheezing">
+                Wheezing
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Coughing">
+                Coughing
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Shortness of breath">
+                Shortness of breath
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Weight Loss">
+                Weight Loss
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Persistent Cough">
+                Persistent Cough"
+            </label><br />
+
+
+            <!-- Question 3 -->
+            <h5>Do your symptoms get better when you are away from work ?</h5>
+            <!-- Choices for the third question -->
+            <label>
+                <input type="radio" name="Condition" value="Yes">
+                Yes
+            </label><br />
+            <label>
+                <input type="radio" name="Condition" value="No">
+                No
+            </label><br />
+            <label>
+                <input type="radio" name="Condition" value="Not Applicable">
+                Not Applicable
+            </label><br />
+
+
+            <!-- Question 4 -->
+            <h5>How long have you been working in the industry?</h5>
+            <!-- Choices for the fourth question -->
+            <label>
+                <input type="radio" name="q4" value="c1">
+                less than 1 year
+            </label><br />
+            <label>
+                <input type="radio" name="q4" value="c2">
+                1-5 years
+            </label><br />
+            <label>
+                <input type="radio" name="q4" value="c3">
+                6-10 years
+            </label><br />
+            <label>
+                <input type="radio" name="q4" value="10-20 years">
+                10-20 years
+            </label><br />
+            <label>
+                <input type="radio" name="q5" value="20+ years">
+                20+ years
+            </label><br />
+
+
+            <h5>Do you smoke?</h5>
+            <!-- Choices for the third question -->
+            <label>
+                <input type="radio" name="Smoke" value="Yes">
+                Yes
+            </label><br />
+            <label>
+                <input type="radio" name="Smoke" value="No">
+                No
+            </label><br />
+
             <br />
-            <br />
-
-            <form id="quiz">
-                <!-- Question 1 -->
-                <h5>Choose your industry</h5>
-                <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
-                <!-- The value is which answer the choice corresponds to. -->
-                <label>
-                    <input type="radio" name="Industry" value="Manufacturing">
-                    Manufacturing
-                </label><br />
-                <label>
-                    <input type="radio" name="Industry" value="Mining">
-                    Mining
-                </label><br />
-                <label>
-                    <input type="radio" name="Industry" value="Construction">
-                    Construction
-                </label><br />
 
 
-                <!-- Question 2 -->
-                <h5>Do you have any of these symptoms?</h5>
-                <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Chest Pain">
-                    Chest Pain
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Wheezing">
-                    Wheezing
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Coughing">
-                    Coughing
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Shortness of breath">
-                    Shortness of breath
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Weight Loss">
-                    Weight Loss
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Persistent Cough">
-                    Persistent Cough"
-                </label><br />
-
-
-                <!-- Question 3 -->
-                <h5>Do your symptoms get better when you are away from work ?</h5>
-                <!-- Choices for the third question -->
-                <label>
-                    <input type="radio" name="Condition" value="Yes">
-                    Yes
-                </label><br />
-                <label>
-                    <input type="radio" name="Condition" value="No">
-                    No
-                </label><br />
-                <label>
-                    <input type="radio" name="Condition" value="Not Applicable">
-                    Not Applicable
-                </label><br />
-
-
-                <!-- Question 4 -->
-                <h5>How long have you been working in the industry?</h5>
-                <!-- Choices for the fourth question -->
-                <label>
-                    <input type="radio" name="q4" value="c1">
-                    less than 1 year
-                </label><br />
-                <label>
-                    <input type="radio" name="q4" value="c2">
-                    1-5 years
-                </label><br />
-                <label>
-                    <input type="radio" name="q4" value="c3">
-                    6-10 years
-                </label><br />
-                <label>
-                    <input type="radio" name="q4" value="10-20 years">
-                    10-20 years
-                </label><br />
-                <label>
-                    <input type="radio" name="q5" value="20+ years">
-                    20+ years
-                </label><br />
-
-
-                <h5>Do you smoke?</h5>
-                <!-- Choices for the third question -->
-                <label>
-                    <input type="radio" name="Smoke" value="Yes">
-                    Yes
-                </label><br />
-                <label>
-                    <input type="radio" name="Smoke" value="No">
-                    No
-                </label><br />
-
-                <br />
-
-
-                <button type="submit" id="submit" onclick="tabulateAnswers()" class="btn btn-primary">Submit</button>
-                <button type="reset" id="reset" class="btn btn-primary">Reset</button>
-            </form>
+            <button type="submit" id="submit" onclick="tabulateAnswers()" class="btn btn-primary">Submit</button>
+            <button type="reset" id="reset" class="btn btn-primary">Reset</button>
+        </form>
 
 
 
-            <div class="row justify-content-center">
+        <div class="row justify-content-center">
 
-                <div class="col-lg-10 col-md-12">
-                    <div id="answer"></div>
-                </div>
-
-
-            </div>
-            <br />
-            <br />
-            <div class="row align-items-center">
-
-
-
-                <div class="col-lg-9 col-md-12" id="image" style="display:none">
-                    <h5 >General Preventive Measures for healthy Lungs</h5>
-                    <img src="~/Images/precautionss.png" alt="">
-                </div>
-
-            </div>
-
-            <div class="row align-items-center">
-
-
-                <div class="col-lg-6 col-md-12">
-                    <div class="alert alert-dismissible alert-warning" id="years" style="display:none">
-
-                        <h4 class="alert-heading">Warning!</h4>
-                        <p class="mb-0">You have been working in an industry for a long time. It is advised for you to get a medical checkup done. <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
-                    </div>
-
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="alert alert-dismissible alert-warning" id="smoker" style="display:none">
-
-                        <h4 class="alert-heading">Smoking is the biggest risk factor for lung conditions!</h4>
-                        <p class="mb-0">If you smoke you will be at a higher risk of developing a lung condition </p>
-                    </div>
-
-                </div>
-
+            <div class="col-lg-10 col-md-12">
+                <div id="answer"></div>
             </div>
 
 
         </div>
+        <br />
+        <br />
+        <div class="row align-items-center">
+
+
+
+            <div class="col-lg-9 col-md-12" id="image" style="display:none">
+                <h5>General Preventive Measures for healthy Lungs</h5>
+                <img src="~/Images/precautionss.png" alt="">
+            </div>
+
         </div>
 
-        <script>
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6 col-md-12">
+                <div class="alert alert-dismissible alert-warning" id="years" style="display:none">
+
+                    <h4 class="alert-heading">Warning!</h4>
+                    <p class="mb-0">You have been working in an industry for a long time. It is advised for you to get a medical checkup done. <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="alert alert-dismissible alert-warning" id="smoker" style="display:none">
+
+                    <h4 class="alert-heading">Smoking is the biggest risk factor for lung conditions!</h4>
+                    <p class="mb-0">If you smoke you will be at a higher risk of developing a lung condition </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
             function tabulateAnswers() {
                 event.preventDefault();
                 var array = [];
@@ -259,7 +265,7 @@
 
 
             }
-         
+
             @*$('#quiz').on('submit', function (event) {
                 event.preventDefault();
                 var answerbox = document.getElementById('answer');
@@ -278,11 +284,11 @@
                     }
                     if (this.name === 'Smoke') {
                         $('#smoker').show();
-                    } 
+                    }
 
                 });
-        
-       
+
+
         $.ajax({
             type: 'POST',
             dataType: 'json',
@@ -312,8 +318,8 @@
                     alert('yes');
 
                 }*@
-            
-    
+
+
 
 
         // $.get('/QuestionsController/Question', {'data':array}, function (response) {
@@ -325,9 +331,9 @@
         //} else {
         //     alert("There is no file assigned to this employee.");
         //     }
-  
 
 
 
 
-        </script>
+
+</script>
