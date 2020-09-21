@@ -277,14 +277,14 @@
                         if (array[0] != "Nothing" && symptoms[i].includes(array[0])) {
                             if (symptoms[i].includes(array[y])) {
                                 disease.push(urls[i])
-
+                                break;
                             }
 
                         }
-                        else {
+                        else if(array[0] == "Nothing"){
                             if (symptoms[i].includes(array[y])) {
                                 disease.push(urls[i])
-
+                                break;
                             }
 
                         }
@@ -297,8 +297,8 @@
 
                         var a = document.createElement('a');
                         a.target = '_blank';
-                    a.href = urls[i];
-                    a.innerText = urls[i].split("/")[2];
+                    a.href = disease[i];
+                    a.innerText = disease[i].split("/")[2];
                     a.type = "button";
                     a.className = "btn btn-primary";
 
