@@ -14,7 +14,7 @@ We as a team now are working on "Occupational Lung Diseases" topic under "My-Hea
 <!-- GETTING STARTED -->
 ## Getting Started
 Visit the webisite to see the live preview of the project.
-http://breatheandbelieve.tk/
+https://breathandbelieve.azurewebsites.net/Home/Index
 
 ### Built With
 The major framework used for building the project listed below.
@@ -29,3 +29,4 @@ The major framework used for building the project listed below.
 * [Bootstrap](https://getbootstrap.com)
 * [Asp.net](https://dotnet.microsoft.com/apps/aspnet)
 * [Powtoon](https://www.powtoon.com)
+* [Splash](https://www.splash.com)
