@@ -30,3 +30,5 @@ The major framework used for building the project listed below.
 * [Asp.net](https://dotnet.microsoft.com/apps/aspnet)
 * [Powtoon](https://www.powtoon.com)
 * [Splash](https://www.splash.com)
+* [Flaticon](https://www.flaticon.com/)
+
