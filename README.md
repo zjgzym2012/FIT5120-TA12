@@ -21,11 +21,6 @@ The major framework used for building the project listed below.
 * [Bootstrap](https://getbootstrap.com)
 * [Asp.net](https://dotnet.microsoft.com/apps/aspnet)
 
-### Database
-It consists of 3 tables
-1. Consists details of the diseases
-2. Consists details of the industries
-3. Consists of data about diseases symptoms and industries related to it
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
