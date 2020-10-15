@@ -93,6 +93,18 @@ namespace FIT5120App.Controllers
         {
             return View();
         }
+        public ActionResult Maps()
+        {
+            return View();
+        }
+        public ActionResult Policies()
+        {
+            return View();
+        }
+        public ActionResult HazardLimit()
+        {
+            return View();
+        }
     }
 
     public class BasicAuthenticationAttribute : ActionFilterAttribute

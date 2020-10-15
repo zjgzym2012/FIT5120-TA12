@@ -199,6 +199,7 @@
     <Content Include="Content\mdb.css" />
     <Content Include="Content\quiz.css" />
     <Content Include="Content\Style.css" />
+    <Content Include="Content\lungmap.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\datepicker.css" />
@@ -221,6 +222,7 @@
     <Content Include="Images\asb_symp.png" />
     <Content Include="Images\Asthma.PNG" />
     <Content Include="Images\Asthma_symp.png" />
+    <Content Include="Images\australia-states_final.jpg" />
     <Content Include="Images\change.svg" />
     <Content Include="Images\checkup.svg" />
     <Content Include="Images\chest.jpg" />
@@ -268,6 +270,7 @@
     <Content Include="Images\Lung Cancer_symptoms.png" />
     <Content Include="Images\lung-cancer.svg" />
     <Content Include="Images\lung.png" />
+    <Content Include="Images\lungs-map.png" />
     <Content Include="Images\lungs.png" />
     <Content Include="Images\lungs.svg" />
     <Content Include="Images\lungs_1.png" />
@@ -380,6 +383,7 @@
     <Content Include="js\colors.js" />
     <Content Include="js\easing.js" />
     <Content Include="js\gmaps.min.js" />
+    <Content Include="js\imageMapResizer.min.js" />
     <Content Include="js\isotope.pkgd.min.js" />
     <Content Include="js\jquery-migrate-3.0.0.js" />
     <Content Include="js\jquery-ui.min.js" />
@@ -387,9 +391,11 @@
     <Content Include="js\jquery.magnific-popup.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.nav.js" />
+    <Content Include="js\jquery.rwdImageMaps.min.js" />
     <Content Include="js\jquery.scrollUp.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\map-active.js" />
+    <Content Include="js\map.js" />
     <Content Include="js\masonry.pkgd.min.js" />
     <Content Include="js\niceselect.js" />
     <Content Include="js\owl-carousel.js" />
@@ -507,6 +513,9 @@
     <Content Include="Views\Home\Mesothelioma.cshtml" />
     <Content Include="Views\Home\Pneumoconiosis.cshtml" />
     <Content Include="Views\Home\Silicosis.cshtml" />
+    <Content Include="Views\Home\Maps.cshtml" />
+    <Content Include="Views\Home\Policies.cshtml" />
+    <Content Include="Views\Home\HazardLimit.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

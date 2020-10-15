@@ -12134,7 +12134,7 @@ button.bg-custom:focus {
 nav ul li a.active,
 nav ul li a:hover, nav-link.active, nav-link:hover {
     color: #000;
-    background: #5AAC4E;
+    background: ##;
 }
 .question {
     background: #5AAC4E;
