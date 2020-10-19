@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CC14B4A-7FE3-4D5A-9D5B-2D4EF29D1E82}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FIT5120App</RootNamespace>
+    <AssemblyName>FIT5120App</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44323</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndustriesController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Disease1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Disease.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Question.cs">
+      <DependentUpon>Questions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Questions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Questions.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Questions.mdf" />
+    <Content Include="App_Data\Questions_log.ldf">
+      <DependentUpon>Questions.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\img\about\1.jpg" />
+    <Content Include="assets\img\about\2.jpg" />
+    <Content Include="assets\img\about\3.jpg" />
+    <Content Include="assets\img\about\4.jpg" />
+    <Content Include="assets\img\close-icon.svg" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\header-bg.jpg" />
+    <Content Include="assets\img\logos\creative-market.jpg" />
+    <Content Include="assets\img\logos\designmodo.jpg" />
+    <Content Include="assets\img\logos\envato.jpg" />
+    <Content Include="assets\img\logos\themeforest.jpg" />
+    <Content Include="assets\img\map-image.png" />
+    <Content Include="assets\img\navbar-logo.svg" />
+    <Content Include="assets\img\portfolio\01-full.jpg" />
+    <Content Include="assets\img\portfolio\01-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\02-full.jpg" />
+    <Content Include="assets\img\portfolio\02-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\03-full.jpg" />
+    <Content Include="assets\img\portfolio\03-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\04-full.jpg" />
+    <Content Include="assets\img\portfolio\04-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\05-full.jpg" />
+    <Content Include="assets\img\portfolio\05-thumbnail.jpg" />
+    <Content Include="assets\img\portfolio\06-full.jpg" />
+    <Content Include="assets\img\portfolio\06-thumbnail.jpg" />
+    <Content Include="assets\img\team\1.jpg" />
+    <Content Include="assets\img\team\2.jpg" />
+    <Content Include="assets\img\team\3.jpg" />
+    <Content Include="assets\mail\contact_me.js" />
+    <Content Include="assets\mail\contact_me.php" />
+    <Content Include="assets\mail\jqBootstrapValidation.js" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap_neaty.css" />
+    <Content Include="Content\mdb.css" />
+    <Content Include="Content\quiz.css" />
+    <Content Include="Content\Style.css" />
+    <Content Include="Content\lungmap.css" />
+    <Content Include="Content\claims.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\datepicker.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\icofont.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\nice-select.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\owl-carousel.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\slicknav.min.css" />
+    <Content Include="css\templatemo-style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\icofont.svg" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\About-unsplash.jpg" />
+    <Content Include="Images\About_2.jpg" />
+    <Content Include="Images\asbestos.png" />
+    <Content Include="Images\asb_symp.png" />
+    <Content Include="Images\Asthma.PNG" />
+    <Content Include="Images\Asthma_symp.png" />
+    <Content Include="Images\Aust.svg" />
+    <Content Include="Images\australia-states_final.jpg" />
+    <Content Include="Images\change.svg" />
+    <Content Include="Images\checkup.svg" />
+    <Content Include="Images\chest.jpg" />
+    <Content Include="Images\coal.jpg" />
+    <Content Include="Images\construct.jpg" />
+    <Content Include="Images\construction-home.jpg" />
+    <Content Include="Images\construction-homee.jpg" />
+    <Content Include="Images\construction.jpg" />
+    <Content Include="Images\COPD_New.png" />
+    <Content Include="Images\copd_symp.png" />
+    <Content Include="Images\cotton.jpg" />
+    <Content Include="Images\cover.png" />
+    <Content Include="Images\David.png" />
+    <Content Include="Images\diet.svg" />
+    <Content Include="Images\dust.jpg" />
+    <Content Include="Images\eliminate.jpg" />
+    <Content Include="Images\Employmentt.png" />
+    <Content Include="Images\fan.svg" />
+    <Content Include="Images\find_out_more.png" />
+    <Content Include="Images\find_out_more_back.png" />
+    <Content Include="Images\gas-mask.svg" />
+    <Content Include="Images\hazmat.svg" />
+    <Content Include="Images\Heart-256 %281%29.png" />
+    <Content Include="Images\henry-co-3coKbdfnAFg-unsplash_meitu_4.jpg" />
+    <Content Include="Images\homepage_card_1.png" />
+    <Content Include="Images\homepage_card_2.png" />
+    <Content Include="Images\homepage_card_2_v2.png" />
+    <Content Include="Images\image1.jpg" />
+    <Content Include="Images\image2.jpg" />
+    <Content Include="Images\image3.jpg" />
+    <Content Include="Images\image_1.jpg" />
+    <Content Include="Images\image_2.jpg" />
+    <Content Include="Images\image_3.jpg" />
+    <Content Include="Images\image_construction.png" />
+    <Content Include="Images\image_diseases.png" />
+    <Content Include="Images\image_industries.png" />
+    <Content Include="Images\image_manufacturing.png" />
+    <Content Include="Images\image_mining.png" />
+    <Content Include="Images\img.jpeg" />
+    <Content Include="Images\inhaler.png" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\logo.PNG" />
+    <Content Include="Images\logo_meitu_1.png" />
+    <Content Include="Images\logo_transparent.png" />
+    <Content Include="Images\Lung Cancer_symptoms.png" />
+    <Content Include="Images\lung-cancer.svg" />
+    <Content Include="Images\lung.png" />
+    <Content Include="Images\lungs-map.png" />
+    <Content Include="Images\lungs.png" />
+    <Content Include="Images\lungs.svg" />
+    <Content Include="Images\lungs_1.png" />
+    <Content Include="Images\lung_cancer.PNG" />
+    <Content Include="Images\Lung_symp.png" />
+    <Content Include="Images\Manasie.png" />
+    <Content Include="Images\manufacturing.jpg" />
+    <Content Include="Images\manufacturing1.jpg" />
+    <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1.jpg" />
+    <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2.jpg" />
+    <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1_meitu_2_meitu_3.jpg" />
+    <Content Include="Images\medical-insurance.svg" />
+    <Content Include="Images\medical_checkup.jpg" />
+    <Content Include="Images\meso_info.png" />
+    <Content Include="Images\mesth_symp.png" />
+    <Content Include="Images\mes_symp.png" />
+    <Content Include="Images\mine-home.jpg" />
+    <Content Include="Images\mining-cover.jpg" />
+    <Content Include="Images\mining.jpg" />
+    <Content Include="Images\mushroom.jpg" />
+    <Content Include="Images\new_homepage_pic1.jpg" />
+    <Content Include="Images\OLD_Overview_Video.mp4" />
+    <Content Include="Images\pageHeading_construction.png" />
+    <Content Include="Images\pageHeading_diseases.png" />
+    <Content Include="Images\pageHeading_industries.png" />
+    <Content Include="Images\pageHeading_manufacturing.png" />
+    <Content Include="Images\pageHeading_mining.png" />
+    <Content Include="Images\penuo_symp.png" />
+    <Content Include="Images\Physical symptoms.jpg" />
+    <Content Include="Images\PIC.jpg" />
+    <Content Include="Images\prevention.png" />
+    <Content Include="Images\preventive.PNG" />
+    <Content Include="Images\protective.jpg" />
+    <Content Include="Images\quartz.jpeg" />
+    <Content Include="Images\lungs-old.jpg" />
+    <Content Include="Images\science-in-hd-pAzSrQF3XUQ-unsplash.jpg" />
+    <Content Include="Images\search-icon-jpg-14.jpg" />
+    <Content Include="Content\bootstrap-Minty.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\silica.jpeg" />
+    <Content Include="Images\sili_symp.png" />
+    <Content Include="Images\SMOKE.jpg" />
+    <Content Include="Images\Stethoscope-03-160.png" />
+    <Content Include="Images\Symptoms.png" />
+    <Content Include="Images\textile.jpg" />
+    <Content Include="Images\Vaishnavi.png" />
+    <Content Include="Images\ventilation.svg" />
+    <Content Include="Images\virus.svg" />
+    <Content Include="Images\Yumeng.png" />
+    <Content Include="img\about-img.jpg" />
+    <Content Include="img\author1.jpg" />
+    <Content Include="img\author2.jpg" />
+    <Content Include="img\author3.jpg" />
+    <Content Include="img\blockqoute-bg.jpg" />
+    <Content Include="img\blog-sidebar1.jpg" />
+    <Content Include="img\blog-sidebar2.jpg" />
+    <Content Include="img\blog-sidebar3.jpg" />
+    <Content Include="img\blog1.jpg" />
+    <Content Include="img\blog2.jpg" />
+    <Content Include="img\blog3.jpg" />
+    <Content Include="img\blog4.jpg" />
+    <Content Include="img\bread-bg.jpg" />
+    <Content Include="img\call-bg.jpg" />
+    <Content Include="img\client-bg.jpg" />
+    <Content Include="img\client1.png" />
+    <Content Include="img\client2.png" />
+    <Content Include="img\client3.png" />
+    <Content Include="img\client4.png" />
+    <Content Include="img\client5.png" />
+    <Content Include="img\contact-img.png" />
+    <Content Include="img\department.jpg" />
+    <Content Include="img\doctor-detail.jpg" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\fun-bg.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\Lung Cancer_symptoms.png" />
+    <Content Include="img\map-marker.png" />
+    <Content Include="img\mission-img.jpg" />
+    <Content Include="img\pf1.jpg" />
+    <Content Include="img\pf2.jpg" />
+    <Content Include="img\pf3.jpg" />
+    <Content Include="img\pf4.jpg" />
+    <Content Include="img\protective.jpg" />
+    <Content Include="img\section-img.png" />
+    <Content Include="img\section-img2.png" />
+    <Content Include="img\service-details-bg.jpg" />
+    <Content Include="img\signup-bg.jpg" />
+    <Content Include="img\slider.jpg" />
+    <Content Include="img\slider2.jpg" />
+    <Content Include="img\slider3.jpg" />
+    <Content Include="img\team1.jpg" />
+    <Content Include="img\team2.jpg" />
+    <Content Include="img\team3.jpg" />
+    <Content Include="img\team4.jpg" />
+    <Content Include="img\testi-bg.jpg" />
+    <Content Include="img\testi1.png" />
+    <Content Include="img\testi2.png" />
+    <Content Include="img\testi3.png" />
+    <Content Include="img\video-bg.jpg" />
+    <Content Include="img\well done_meitu_1.jpg" />
+    <Content Include="js\bootstrap-datepicker.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\claims.js" />
+    <Content Include="js\colors.js" />
+    <Content Include="js\easing.js" />
+    <Content Include="js\gmaps.min.js" />
+    <Content Include="js\imageMapResizer.min.js" />
+    <Content Include="js\isotope.pkgd.min.js" />
+    <Content Include="js\jquery-migrate-3.0.0.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.counterup.min.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.nav.js" />
+    <Content Include="js\jquery.rwdImageMaps.min.js" />
+    <Content Include="js\jquery.scrollUp.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\map-active.js" />
+    <Content Include="js\map.js" />
+    <Content Include="js\masonry.pkgd.min.js" />
+    <Content Include="js\niceselect.js" />
+    <Content Include="js\owl-carousel.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\questionnaire.js" />
+    <Content Include="js\quiz.js" />
+    <Content Include="js\slicknav.min.js" />
+    <Content Include="js\steller.js" />
+    <Content Include="js\tilt.jquery.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="Models\Questions.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Questions.Context.cs</LastGenOutput>
+      <DependentUpon>Questions.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Questions.edmx.sql" />
+    <Content Include="Models\Questions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Questions.edmx</DependentUpon>
+      <LastGenOutput>Questions.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\icofont.eot" />
+    <Content Include="fonts\icofont.ttf" />
+    <Content Include="fonts\icofont.woff" />
+    <Content Include="fonts\icofont.woff2" />
+    <EntityDeploy Include="Models\Questions.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Questions.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Questions.edmx.diagram">
+      <DependentUpon>Questions.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Disease.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Disease1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Disease.edmx.diagram">
+      <DependentUpon>Disease.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\BreathAndBelieve - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\FIT5120TA12iteration2 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\YumengVM - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\colors.js" />
+    <Content Include="Scripts\easing.js" />
+    <Content Include="Scripts\gmaps.min.js" />
+    <Content Include="Scripts\isotope.pkgd.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-migrate-3.0.0.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.counterup.min.js" />
+    <Content Include="Scripts\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.nav.js" />
+    <Content Include="Scripts\jquery.scrollUp.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\map-active.js" />
+    <Content Include="Scripts\masonry.pkgd.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\niceselect.js" />
+    <Content Include="Scripts\owl-carousel.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\slicknav.min.js" />
+    <Content Include="Scripts\steller.js" />
+    <Content Include="Scripts\tilt.jquery.min.js" />
+    <Content Include="Scripts\wow.min.js" />
+    <Content Include="style.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ViewDiseases.cshtml" />
+    <Content Include="Views\Home\Industries.cshtml" />
+    <Content Include="Views\Home\Manufacturing.cshtml" />
+    <Content Include="Views\Home\Mining.cshtml" />
+    <Content Include="Views\Home\Construction.cshtml" />
+    <Content Include="Views\Home\.htaccess" />
+    <Content Include="Views\Home\.htmyxyz" />
+    <Content Include="Views\Home\LungCancer.cshtml" />
+    <Content Include="Views\Home\Quiz.cshtml" />
+    <Content Include="Views\Home\Questionnaire.cshtml" />
+    <Content Include="Views\Questions1\Create.cshtml" />
+    <Content Include="Views\Questions1\Delete.cshtml" />
+    <Content Include="Views\Questions1\Details.cshtml" />
+    <Content Include="Views\Questions1\Edit.cshtml" />
+    <Content Include="Views\Questions1\Index.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Home\Asbestosis.cshtml" />
+    <Content Include="Views\Home\Asthma.cshtml" />
+    <Content Include="Views\Home\COPD.cshtml" />
+    <Content Include="Views\Home\Mesothelioma.cshtml" />
+    <Content Include="Views\Home\Pneumoconiosis.cshtml" />
+    <Content Include="Views\Home\Silicosis.cshtml" />
+    <Content Include="Views\Home\Maps.cshtml" />
+    <Content Include="Views\Home\Policies.cshtml" />
+    <Content Include="Views\Home\HazardLimit.cshtml" />
+    <Content Include="Views\Home\Claims.cshtml" />
+    <Content Include="Views\Home\GeneralLungInfo.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63058</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44323/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

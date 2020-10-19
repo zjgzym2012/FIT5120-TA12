@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "HazardLimit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class='tableauPlaceholder' id='viz1602498044419' style='position: relative; width: 680px; height: 1000px'>
+    <noscript>
+        <a href='#'>
+            <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book7_16024980288320&#47;Sheet1&#47;1_rss.png' style='border: none' />
+        </a>
+    </noscript>
+    <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='Book7_16024980288320&#47;Sheet1' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book7_16024980288320&#47;Sheet1&#47;1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en' />
+        <param name='filter' value='publish=yes' />
+    </object>
+</div>
+<script>
+
+var divElement = document.getElementById('viz1602498044419');
+var vizElement = divElement.getElementsByTagName('object')[0];
+vizElement.style.width='100%';
+vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+var scriptElement = document.createElement('script');
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #F5F5F5;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #5AAC4E;
+            }
+
+            .accordion:after {
+                content: '\2295';
+                color: black;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            font-family: 'Poppins Bold';
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <button class="accordion">What is Permissible Exposure Limits of Hazardous Substances?</button>
+    <div class="panel">
+        <p>It is the maximum legal limit for the workers working in an industry to get exposed to a particular hazardous substance without any danger to health and safety. </p>
+    </div>
+
+    <button class="accordion">How is TWA mgm3 measured?</button>
+    <div class="panel">
+        <p>It means the maximum average airborne concentration of a substance when calculated over an <b> eight-hour working day, for a five-day working week. </b></p>
+    </div>
+
+    <button class="accordion">How does it improve my condition?</button>
+    <div class="panel">
+        <p>Exposure to hazardous substances than permissible exposure limit causes inhale of contaminated air-borne particles and they rapidly get settled in lungs. Thereby causing lung damage in future times.</p>
+    </div>
+
+    <button class="accordion">How will I know if my lungs are damaged due to contaminated air-borne particles</button>
+    <div class="panel">
+        <p>In order to know if the lungs have been damaged due to inhale of contaminated air-borne particles, lung tests will be conducted as prescribed by the doctor.</p>
+    </div>
+    <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+    </script>
+
+</body>
+

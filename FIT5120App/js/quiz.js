@@ -46,13 +46,18 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
         console.log(choice);
     	var anscheck =  $(this).checking(questionNo, choice);//$( "#answer" ).html(  );
         q[questionNo].UC = choice;
+        var choicecheck = 'check' + choice
         if(anscheck){
             correctCount++;
             q[questionNo].result = "Correct";
-            document.getElementById(choice).style.color = "#5AAC4E";
+            document.getElementById(choice).style.color = "#39ff14";
+            document.getElementById(choicecheck).style.color = "#5AAC4E";
+ 
         } else {
             q[questionNo].result = "Incorrect";
             document.getElementById(choice).style.color = "#FF0000";
+            document.getElementById(choicecheck).style.color = "#FF0000";
+
         }
         console.log("CorrectCount:" + correctCount);
         setTimeout(function () {
@@ -169,15 +174,20 @@ $(function(){https://bootsnipp.com/fullscreen/VvrGP
                 document.getElementById("line1").innerHTML = "";
                 document.getElementById("line2").innerHTML = "";
                 document.getElementById("line3").innerHTML = "";
-                document.getElementById("line4").innerHTML = "";
-                document.getElementById("line5").innerHTML = "";
-                document.getElementById("line6").innerHTML = "";
-                document.getElementById("line7").innerHTML = "";
-                document.getElementById("line8").innerHTML = "";
+                //document.getElementById("line4").innerHTML = "";
+                //document.getElementById("line5").innerHTML = "";
+                //document.getElementById("line6").innerHTML = "";
+                //document.getElementById("line7").innerHTML = "";
+                //document.getElementById("line8").innerHTML = "";
                 document.getElementById("1").style.color = "#000000";
                 document.getElementById("2").style.color = "#000000";
                 document.getElementById("3").style.color = "#000000";
                 document.getElementById("4").style.color = "#000000";
+                document.getElementById("check1").style.color = "#000";
+                document.getElementById("check2").style.color = "#000";
+                document.getElementById("check3").style.color = "#000";
+                document.getElementById("check4").style.color = "#000";
+
 
                 if (questionNo === 5) {
 
