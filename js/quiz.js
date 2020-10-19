@@ -226,11 +226,13 @@ $(function () {
                         //chartMake();
                         if (correctCount >= 3) {
                             document.getElementById("p1").innerHTML = "You got " + correctCount + " out of 5 marks. You are showing a great knowledge with OLDs, keep it up!";
+                            document.getElementById("result1").style.display = "block";
                         }
                         else {
-                            document.getElementById("p1").innerHTML = "You got " + correctCount + " out of 5 marks. It seems you are not familiar with OLDs, Check our OLD page for more information!";
+                            document.getElementById("p2").innerHTML = "You got " + correctCount + " out of 5 marks. It seems you are not familiar with OLDs, Check our OLD page for more information!";
+                            document.getElementById("result2").style.display = "block";
                         }
-                        document.getElementById("result").style.display = "block";
+                        
                         document.getElementById("progressBar").style.width = "100%";
                         document.getElementById("GoBack").style.display = "none";
 
