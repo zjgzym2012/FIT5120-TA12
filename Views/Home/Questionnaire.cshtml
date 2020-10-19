@@ -5,10 +5,15 @@
 }
 <style>
 
-    #substances {
+    #substances, #symp {
         -moz-column-count: 2; /* Firefox */
         -webkit-column-count: 2; /* Safari and Chrome */
         column-count: 2;
+    }
+     #substances{
+        -moz-column-count: 3; /* Firefox */
+        -webkit-column-count: 3; /* Safari and Chrome */
+        column-count: 3;
     }
 </style>
 <nav aria-label="breadcrumb">
@@ -22,7 +27,7 @@
 <div class="jumbotronmodify container" style="border:1px solid #234821">
     <div id="wrapper">
         <div id="header">
-            <h3>Know about OLDs, symptoms and your condition with this questionnaire.</h3>
+            <h3>Know if you are at risk at your workplace</h3>
         </div>
 
 
@@ -50,32 +55,38 @@
             <!-- Question 2 -->
             <h5 class="question">Do you have any of these symptoms?</h5>
             <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
-            <label>
-                <input type="checkbox" name="Symptoms" value="Chest Pain">
-                Chest Pain
-            </label><br />
-            <label>
-                <input type="checkbox" name="Symptoms" value="Wheezing">
-                Wheezing
-            </label><br />
-            <label>
-                <input type="checkbox" name="Symptoms" value="Coughing">
-                Coughing
-            </label><br />
-            <label>
-                <input type="checkbox" name="Symptoms" value="Shortness of breath">
-                Shortness of breath
-            </label><br />
-            <label>
-                <input type="checkbox" name="Symptoms" value="Weight Loss">
-                Weight Loss
-            </label><br />
-            <label>
-                <input type="checkbox" name="Symptoms" value="Persistent Cough">
-                Persistent Cough
-            </label><hr />
-
-
+            <div id="symp">
+                <label>
+                    <input type="checkbox" name="Symptoms" value="Chest Pain">
+                    Chest Pain
+                </label><br />
+                <label>
+                    <input type="checkbox" name="Symptoms" value="Wheezing">
+                    Wheezing
+                </label><br />
+                <label>
+                    <input type="checkbox" name="Symptoms" value="Coughing">
+                    Coughing
+                </label><br />
+                <label>
+                    <input type="checkbox" name="Symptoms" value="Shortness of breath">
+                    Shortness of breath
+                </label><br />
+                <label>
+                    <input type="checkbox" name="Symptoms" value="Weight Loss">
+                    Weight Loss
+                </label><br />
+                <label>
+                    <input type="checkbox" name="Symptoms" value="Persistent Cough">
+                    Persistent Cough
+                </label>
+                <br />
+                <label>
+                    <input type="checkbox" name="Symptoms" value="None">
+                    None of the above
+                </label>
+            </div>
+            <hr />
             <!-- Question 3 -->
             <h5 class="question">Do your symptoms get better when you are away from work ?</h5>
             <!-- Choices for the third question -->
@@ -109,9 +120,10 @@
             </div>
 
 
-            <h5 class="question">Are you exposed to any of these substances you are aware of?</h5>
+            <h5 class="question" name="subyes" style="display:none">Are you exposed to any of these substances you are aware of?</h5>
 
-            <div id="substances">
+            <div id="substances" name="subyes" style="display:none">
+                
                 <label>
                     <input type="checkbox" name="Chem" value="Copper and dust mist">
                     Copper and dust mist
@@ -192,7 +204,7 @@
                 10-20 years
             </label><br />
             <label>
-                <input type="radio" name="q5" value="20+ years">
+                <input type="radio" name="q4" value="20+ years">
                 20+ years
             </label><hr />
 
@@ -211,76 +223,152 @@
             <br />
 
 
-            <button type="submit" id="submit" onclick="tabulateAnswers()" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submit" onclick="tabulateAnswers()" class="btn btn-primary" >Submit</button>
             <button type="reset" id="reset" class="btn btn-primary">Reset</button>
         </form>
 
 
+        <!--Solution/ Answer-->
+        <!--Workplace-->
+
+        <div id="workplace" style="display:none">
+            <h5 class="question">Are you at risk?</h5>
+            <br />
+            <h5>
+                Some of the factors which determine the risk-
+            </h5>
+            <br />
+            <div class="card-deck">
+                <div class="card bg-warning mb-3 text-dark" style="display:none" id="old">
 
 
+                    <div class="card-body">
+                        <h4 class="alert-heading">Work-related symptoms!</h4>
+                        <p class="mb-0">As your symptoms get better when you are away from work, the chances of having Occupational Lung Diseases should be considered.</p>
+
+                    </div>
+                </div>
+                <div class="card bg-warning mb-3 text-dark" style="display:none" id="years">
 
 
-        <div class="card-deck">
-            <div class="card bg-warning mb-3 text-dark" style="display:none" id="years">
+                    <div class="card-body">
+                        <h4 class="alert-heading">Time you have spent in the industry!</h4>
+                        <p class="mb-0" id="years_text"></p>
 
-
-                <div class="card-body">
-                    <h4 class="alert-heading">Warning!</h4>
-                    <p class="mb-0" id="years_text"></p>
-
+                    </div>
                 </div>
             </div>
-            <div class="card bg-warning mb-3 text-dark" style="display:none" id="smoker">
+            <div class="card-deck">
+                <div class="card bg-warning mb-3 text-dark" id="limit">
 
 
-                <div class="card-body">
-                    <h4 class="alert-heading">Smoking is the biggest risk factor for lung conditions like COPD and Lung Cancer!</h4>
-                    <p class="mb-0">If you smoke you will be at a higher risk of developing a lung condition. </p>
+                    <div class="card-body">
+                        <h4 class="alert-heading">Hazardous Substances!</h4>
+                        <p class="mb-0">
+                            Substances you are exposed to in your industry have a permissible limit.
+                            If your exposure is more than the prescribed limit then you might be at a higher risk.
+                        </p>
+                        <p class="mb-0" id="limit_text" style="display:none"></p>
+                    </div>
+                </div>
+                <div class="card bg-warning mb-3 text-dark" style="display:none" id="smoker">
+
+
+                    <div class="card-body">
+                        <h4 class="alert-heading">Smoking!</h4>
+                        <p class="mb-0">Smoking is the biggest risk factor for lung conditions like COPD and Lung Cancer. As you smoke you will be at a higher risk of developing a lung condition.</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <hr />
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12 col-md-12">
+                    <p class="pera-bottom mb-30">
+                        Visit this link to know more about the Risks and
+
+
+                            Preventive Measures
+                       specific to your industry
+                    </p>
+                    <div id="answerindustry" ></div>
+                    <hr />
+                    <p class="pera-bottom mb-30" id="diseasesol" style="display:none">
+                        Some of the suggested diseases links based on your symptoms and your working condition.
+
+                    </p>
+                    <div id="answer"></div>
 
                 </div>
+
+            </div>
+
+        </div>
+        <br />
+        <!--Policies-->
+
+        <div id="policies" style="display:none">
+            <h5 class="question">What should you do if you are feeling unwell?</h5>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12 col-md-12">
+                    <p class="pera-bottom mb-30">
+                        You should visit a doctor to know more about your condition and to get tests done.
+                        Access the map to find out your nearby Lung hospitals or clinics-
+                    </p>
+                    <a href="~/Home/Maps/" type="button" class="btn btn-primary">Maps</a>
+
+                    <hr />
+
+                    <p class="pera-bottom mb-30">
+                        You might be eligible to get compensation for your medical treatment. 
+                        Look further into the details using this link-
+                    </p>
+                    <a href="~/Home/Maps/" type="button" class="btn btn-primary">Maps</a>
+
+                </div>
+
+
             </div>
 
         </div>
 
-        <div class="card-deck">
-            <div class="card bg-warning mb-3 text-dark" style="display:none" id="old">
+        <br />
+        <!--Lifestyle-->
+        <div id="lifestyle" style="display:none">
+            <h5 class="question">What can you do to keep your lungs healthy?</h5>
 
+            <div class="row justify-content-center">
 
-                <div class="card-body">
-                    <h4 class="alert-heading">Work-related symptoms</h4>
-                    <p class="mb-0">Generally, if your symptoms get better when you are away from work then chances of Occupational Lung Diseases should be considered.</p>
+                <div class="col-lg-12 col-md-12">
+                    <p class="pera-bottom mb-30">
+                        Nutritional food, execises and some indoor plants can help you in keeping your lungs healthy.
+                        Visit this page to know more.
+                    </p>
+                    <a href="" type="button" class="btn btn-primary">General lung health</a>
+
+               
+                     <hr />
+     
+                    <p class="pera-bottom mb-30">
+                        The air you breathe outside of your workplace can have a major impact on your lung health.
+                        You can visit some lung friendly places to breathe good quality air. Access the map to find out your nearby spots.
+                    </p>
+                    <a href="~/Home/Maps/" type="button" class="btn btn-primary">Maps</a>
 
                 </div>
-            </div>
-            <div class="card bg-warning mb-3 text-dark" style="display:none" id="limit">
 
-
-                <div class="card-body">
-                    <h4 class="alert-heading">Permissible Limit</h4>
-                    <p class="mb-0" id="hazard_limit"></p>
-
-                </div>
-            </div>
-        </div>
-
-
-        <br />
-        <div id="recommendations" style="display:none">
-            <h3>These are few of the suggested links-</h3>
-        </div>
-        <br />
-    
-        <div class="row justify-content-center">
-
-            <div class="col-lg-12 col-md-12">
-                <div id="answer"></div>
             </div>
 
-
         </div>
+
         <br />
         <br />
-        <div class="row align-items-center">
+
+        @*<div class="row align-items-center">
 
 
 
@@ -289,13 +377,13 @@
                 <img src="~/Images/preventive.png" alt="">
             </div>
 
-        </div>
+        </div>*@
 
 
 
 
     </div>
-</div>
+    </div>
 
 <script src="~/js/questionnaire.js"></script>
 @Scripts.Render("~/js/questionnaire.js")

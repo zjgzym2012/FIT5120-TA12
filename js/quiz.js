@@ -1,4 +1,7 @@
 /*--------loader script-----------*/
+
+
+
 $(function () {
     https://bootsnipp.com/fullscreen/VvrGP
     var loading = $('#loadbar').hide();

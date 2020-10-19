@@ -200,6 +200,7 @@
     <Content Include="Content\quiz.css" />
     <Content Include="Content\Style.css" />
     <Content Include="Content\lungmap.css" />
+    <Content Include="Content\claims.css" />
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\datepicker.css" />
@@ -222,6 +223,7 @@
     <Content Include="Images\asb_symp.png" />
     <Content Include="Images\Asthma.PNG" />
     <Content Include="Images\Asthma_symp.png" />
+    <Content Include="Images\Aust.svg" />
     <Content Include="Images\australia-states_final.jpg" />
     <Content Include="Images\change.svg" />
     <Content Include="Images\checkup.svg" />
@@ -380,6 +382,7 @@
     <Content Include="img\well done_meitu_1.jpg" />
     <Content Include="js\bootstrap-datepicker.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\claims.js" />
     <Content Include="js\colors.js" />
     <Content Include="js\easing.js" />
     <Content Include="js\gmaps.min.js" />
@@ -516,6 +519,7 @@
     <Content Include="Views\Home\Maps.cshtml" />
     <Content Include="Views\Home\Policies.cshtml" />
     <Content Include="Views\Home\HazardLimit.cshtml" />
+    <Content Include="Views\Home\Claims.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
