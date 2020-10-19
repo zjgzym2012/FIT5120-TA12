@@ -3,39 +3,27 @@
     ViewBag.Title = "Questionnaire";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<style>
-
-    #substances, #symp {
-        -moz-column-count: 2; /* Firefox */
-        -webkit-column-count: 2; /* Safari and Chrome */
-        column-count: 2;
-    }
-     #substances{
-        -moz-column-count: 3; /* Firefox */
-        -webkit-column-count: 3; /* Safari and Chrome */
-        column-count: 3;
-    }
-</style>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="~/Home/Index">Home</a></li>
-
         <li class="breadcrumb-item active" aria-current="page">Questionnaire</li>
     </ol>
 </nav>
 
-<div class="jumbotronmodify container" style="border:1px solid #234821">
+<div class="jumbotronmodify container">
     <div id="wrapper">
         <div id="header">
-            <h3>Know if you are at risk at your workplace</h3>
+            <h3>Know about OLDs, symptoms and your condition with this questionnaire.</h3>
         </div>
-
+        <div id="recommendations" style="display:none">
+            <h3>Our recommendations for you</h3>
+        </div>
+        <br />
+        <br />
 
         <form id="quiz">
             <!-- Question 1 -->
-
-            <h5 class="question">Choose your industry</h5>
-
+            <h5>Choose your industry</h5>
             <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
             <!-- The value is which answer the choice corresponds to. -->
             <label>
@@ -49,48 +37,41 @@
             <label>
                 <input type="radio" name="Industry" value="Construction">
                 Construction
-            </label><hr />
+            </label><br />
 
 
             <!-- Question 2 -->
-            <h5 class="question">Do you have any of these symptoms?</h5>
+            <h5>Do you have any of these symptoms?</h5>
             <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
-            <div id="symp">
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Chest Pain">
-                    Chest Pain
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Wheezing">
-                    Wheezing
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Coughing">
-                    Coughing
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Shortness of breath">
-                    Shortness of breath
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Weight Loss">
-                    Weight Loss
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="Persistent Cough">
-                    Persistent Cough
-                </label>
-                <br />
-                <label>
-                    <input type="checkbox" name="Symptoms" value="None">
-                    None of the above
-                </label>
-            </div>
-            <hr />
-            <!-- Question 3 -->
-            <h5 class="question">Do your symptoms get better when you are away from work ?</h5>
-            <!-- Choices for the third question -->
+            <label>
+                <input type="checkbox" name="Symptoms" value="Chest Pain">
+                Chest Pain
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Wheezing">
+                Wheezing
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Coughing">
+                Coughing
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Shortness of breath">
+                Shortness of breath
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Weight Loss">
+                Weight Loss
+            </label><br />
+            <label>
+                <input type="checkbox" name="Symptoms" value="Persistent Cough">
+                Persistent Cough"
+            </label><br />
 
+
+            <!-- Question 3 -->
+            <h5>Do your symptoms get better when you are away from work ?</h5>
+            <!-- Choices for the third question -->
             <label>
                 <input type="radio" name="Condition" value="Yes">
                 Yes
@@ -102,101 +83,22 @@
             <label>
                 <input type="radio" name="Condition" value="Not Applicable">
                 Not Applicable
-            </label><hr />
+            </label><br />
 
-
-            <h5 class="question">Are you aware about all the substances you are exposed to?</h5>
-            <div>
-
-                <label>
-                    <input type="radio" name="Sub" value="Yes">
-                    Yes
-                </label><br />
-                <label>
-                    <input type="radio" name="Sub" value="No">
-                    No
-                </label><br />
-
-            </div>
-
-
-            <h5 class="question" name="subyes" style="display:none">Are you exposed to any of these substances you are aware of?</h5>
-
-            <div id="substances" name="subyes" style="display:none">
-                
-                <label>
-                    <input type="checkbox" name="Chem" value="Copper and dust mist">
-                    Copper and dust mist
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Wood dust">
-                    Wood dust
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Grain dust">
-                    Grain dust
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Coal dust">
-                    Coal dust
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Silica dust" />
-                    Silica dust
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Any type of fumes">
-                    Any type of fumes
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Silica gel">
-                    Silica gel
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Lead">
-                    Lead
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Cotton dust" />
-                    Cotton dust
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Coal dust">
-                    Coal dust
-                </label><br />
-
-                <label>
-                    <input type="checkbox" name="Chem" value="Coal tar">
-                    Coal tar
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Rock wool">
-                    Rock wool
-                </label><br />
-                <label>
-                    <input type="checkbox" name="Chem" value="Asbestos fibres">
-                    Asbestos fibres
-                </label><br />
-
-            </div>
-
-
-
-            <hr />
 
             <!-- Question 4 -->
-            <h5 class="question">How long have you been working in the industry?</h5>
+            <h5>How long have you been working in the industry?</h5>
             <!-- Choices for the fourth question -->
             <label>
-                <input type="radio" name="q4" value="less than 1 year">
+                <input type="radio" name="q4" value="c1">
                 less than 1 year
             </label><br />
             <label>
-                <input type="radio" name="q4" value="1-5 years">
+                <input type="radio" name="q4" value="c2">
                 1-5 years
             </label><br />
             <label>
-                <input type="radio" name="q4" value="6-10 years">
+                <input type="radio" name="q4" value="c3">
                 6-10 years
             </label><br />
             <label>
@@ -204,12 +106,12 @@
                 10-20 years
             </label><br />
             <label>
-                <input type="radio" name="q4" value="20+ years">
+                <input type="radio" name="q5" value="20+ years">
                 20+ years
-            </label><hr />
+            </label><br />
 
 
-            <h5 class="question">Do you smoke?</h5>
+            <h5>Do you smoke?</h5>
             <!-- Choices for the third question -->
             <label>
                 <input type="radio" name="Smoke" value="Yes">
@@ -218,172 +120,220 @@
             <label>
                 <input type="radio" name="Smoke" value="No">
                 No
-            </label><hr />
+            </label><br />
 
             <br />
 
 
-            <button type="submit" id="submit" onclick="tabulateAnswers()" class="btn btn-primary" >Submit</button>
+            <button type="submit" id="submit" onclick="tabulateAnswers()" class="btn btn-primary">Submit</button>
             <button type="reset" id="reset" class="btn btn-primary">Reset</button>
         </form>
 
 
-        <!--Solution/ Answer-->
-        <!--Workplace-->
 
-        <div id="workplace" style="display:none">
-            <h5 class="question">Are you at risk?</h5>
-            <br />
-            <h5>
-                Some of the factors which determine the risk-
-            </h5>
-            <br />
-            <div class="card-deck">
-                <div class="card bg-warning mb-3 text-dark" style="display:none" id="old">
+        <div class="row justify-content-center">
 
-
-                    <div class="card-body">
-                        <h4 class="alert-heading">Work-related symptoms!</h4>
-                        <p class="mb-0">As your symptoms get better when you are away from work, the chances of having Occupational Lung Diseases should be considered.</p>
-
-                    </div>
-                </div>
-                <div class="card bg-warning mb-3 text-dark" style="display:none" id="years">
-
-
-                    <div class="card-body">
-                        <h4 class="alert-heading">Time you have spent in the industry!</h4>
-                        <p class="mb-0" id="years_text"></p>
-
-                    </div>
-                </div>
+            <div class="col-lg-10 col-md-12">
+                <div id="answer"></div>
             </div>
-            <div class="card-deck">
-                <div class="card bg-warning mb-3 text-dark" id="limit">
 
-
-                    <div class="card-body">
-                        <h4 class="alert-heading">Hazardous Substances!</h4>
-                        <p class="mb-0">
-                            Substances you are exposed to in your industry have a permissible limit.
-                            If your exposure is more than the prescribed limit then you might be at a higher risk.
-                        </p>
-                        <p class="mb-0" id="limit_text" style="display:none"></p>
-                    </div>
-                </div>
-                <div class="card bg-warning mb-3 text-dark" style="display:none" id="smoker">
-
-
-                    <div class="card-body">
-                        <h4 class="alert-heading">Smoking!</h4>
-                        <p class="mb-0">Smoking is the biggest risk factor for lung conditions like COPD and Lung Cancer. As you smoke you will be at a higher risk of developing a lung condition.</p>
-
-                    </div>
-                </div>
-
-            </div>
-            <hr />
-            <div class="row justify-content-center">
-
-                <div class="col-lg-12 col-md-12">
-                    <p class="pera-bottom mb-30">
-                        Visit this link to know more about the Risks and
-
-
-                            Preventive Measures
-                       specific to your industry
-                    </p>
-                    <div id="answerindustry" ></div>
-                    <hr />
-                    <p class="pera-bottom mb-30" id="diseasesol" style="display:none">
-                        Some of the suggested diseases links based on your symptoms and your working condition.
-
-                    </p>
-                    <div id="answer"></div>
-
-                </div>
-
-            </div>
 
         </div>
         <br />
-        <!--Policies-->
-
-        <div id="policies" style="display:none">
-            <h5 class="question">What should you do if you are feeling unwell?</h5>
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-12 col-md-12">
-                    <p class="pera-bottom mb-30">
-                        You should visit a doctor to know more about your condition and to get tests done.
-                        Access the map to find out your nearby Lung hospitals or clinics-
-                    </p>
-                    <a href="~/Home/Maps/" type="button" class="btn btn-primary">Maps</a>
-
-                    <hr />
-
-                    <p class="pera-bottom mb-30">
-                        You might be eligible to get compensation for your medical treatment. 
-                        Look further into the details using this link-
-                    </p>
-                    <a href="~/Home/Maps/" type="button" class="btn btn-primary">Maps</a>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
         <br />
-        <!--Lifestyle-->
-        <div id="lifestyle" style="display:none">
-            <h5 class="question">What can you do to keep your lungs healthy?</h5>
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-12 col-md-12">
-                    <p class="pera-bottom mb-30">
-                        Nutritional food, execises and some indoor plants can help you in keeping your lungs healthy.
-                        Visit this page to know more.
-                    </p>
-                    <a href="" type="button" class="btn btn-primary">General lung health</a>
-
-               
-                     <hr />
-     
-                    <p class="pera-bottom mb-30">
-                        The air you breathe outside of your workplace can have a major impact on your lung health.
-                        You can visit some lung friendly places to breathe good quality air. Access the map to find out your nearby spots.
-                    </p>
-                    <a href="~/Home/Maps/" type="button" class="btn btn-primary">Maps</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <br />
-        <br />
-
-        @*<div class="row align-items-center">
+        <div class="row align-items-center">
 
 
 
             <div class="col-lg-9 col-md-12" id="image" style="display:none">
                 <h5>General Preventive Measures for healthy Lungs</h5>
-                <img src="~/Images/preventive.png" alt="">
+                <img src="~/Images/precautionss.png" alt="">
             </div>
 
-        </div>*@
+        </div>
+
+        <div class="row align-items-center">
 
 
+            <div class="col-lg-6 col-md-12">
+                <div class="alert alert-dismissible alert-warning" id="years" style="display:none">
+
+                    <h4 class="alert-heading">Warning!</h4>
+                    <p class="mb-0">You have been working in an industry for a long time. It is advised for you to get a medical checkup done. <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="alert alert-dismissible alert-warning" id="smoker" style="display:none">
+
+                    <h4 class="alert-heading">Smoking is the biggest risk factor for lung conditions!</h4>
+                    <p class="mb-0">If you smoke you will be at a higher risk of developing a lung condition </p>
+                </div>
+
+            </div>
+
+        </div>
 
 
     </div>
-    </div>
+</div>
 
-<script src="~/js/questionnaire.js"></script>
-@Scripts.Render("~/js/questionnaire.js")
+<script>
+            function tabulateAnswers() {
+                event.preventDefault();
+                var array = [];
+                var diseases = ["Asthma", "LungCancer", "COPD", "Pneumoconiosis", "Mesothelioma", "Silicosis", "Asbestosis"];
+                 var urls = ['/Home/Asthma', '/Home/LungCancer', '/Home/COPD', '/Home/Pneumoconiosis', '/Home/Mesothelioma', '/Home/Silicosis', '/Home/Asbestosis'];
+                var symptoms = [["Shortness of breath", "Chest Pain", "Wheezing", "Coughing", "Sneezing", "Runny nose and eyes", "Manufacturing", "Construction"],
+                ["Shortness of breath", "Chest Pain", "Weight Loss", "Persistent Cough", "Coughing Blood", "Hoarse Voice", "Tiredness", "Construction", "Manufacturing", "Mining"],
+                ["Shortness of breath", "Wheezing", "Weight Loss", "Tiredness", "Coughing", "Construction", "Mining", "Manufacturing"],
+                ["Shortness of breath", "Phelgm", "Chest Pain", "Coughing", "Mining"],
+                ["Shortness of breath", "Persistent Cough", "Chest Pain", "Excessive Sweating", "Loss of Energy", "Construction", "Manufacturing"],
+                ["Shortness of breath", "Persistent Cough", "Chest Pain", "Weight loss", "Fatigue", "Sudden fever", "Mining", "Manufacturing", "Construction"],
+                ["Shortness of breath", "Dry Cough", "Chest Pain", "Weight Loss", "Pulmonary Hypertension", "Construction", "Manufacturing"],
+                ]
+
+                var x = document.getElementById("smoker");
+                var ans = document.getElementById("answer");
+                var quiz = document.getElementById("quiz");
+                var image = document.getElementById("image");
+                var years = document.getElementById("years");
+                var choices = document.getElementsByTagName('input');
+                var head = document.getElementById('header');
+                 var recom = document.getElementById('recommendations');
+                var disease = [];
+                var IndustryName;
+                for (i = 0; i < choices.length; i++) {
+
+                    if (choices[i].checked && choices[i].name == 'Industry') {
+
+                        array.push(choices[i].value);
+                    }
+                    if (choices[i].checked && choices[i].name == 'Symptoms') {
+
+                        array.push(choices[i].value);
+                    }
+                    if (choices[i].checked && choices[i].name == 'Smoke' && choices[i].value == 'Yes') {
+
+                        x.style.display = "block";
+                    }
+                    if (choices[i].checked && choices[i].name == 'q4' && (choices[i].value == '10-20 years' || choices[i].value == '20+years'))
+                    {
+
+                         years.style.display = "block";
+                    }
+                }
+                image.style.display = "block";
+                quiz.style.display = "none";
+                head.style.display = "none";
+                recom.style.display = "block";
+
+                for (i = 0; i < symptoms.length; i++) {
+
+                    for (y = 1; y < array.length; y++) {
+
+                        if (symptoms[i].includes(array[0])) {
+                            if (symptoms[i].includes(array[y])){
+                                disease.push(urls[i])
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                for ( i = 0; i < disease.length; i++) {
+
+                        var a = document.createElement('a');
+                        a.target = '_blank';
+                    a.href = urls[i];
+                    a.innerText = urls[i].split("/")[2];
+                    a.type = "button";
+                    a.className = "btn btn-primary";
+
+                    ans.append(a);
+
+                        // $("#answer").append("<a type=button href=# class='btn btn-primary'>" +
+                        //  response.list[i]+ "</a>");
+                        //  }
+
+
+                    }
+
+
+
+            }
+
+            @*$('#quiz').on('submit', function (event) {
+                event.preventDefault();
+                var answerbox = document.getElementById('answer');
+                var array = [];
+                $("input:checked").each(function () {
+
+                    if (this.name === 'Symptoms') {
+
+
+                        array.push(this.value);
+                    }
+                    if (this.name === 'Industry') {
+
+
+                        array.push(this.value);
+                    }
+                    if (this.name === 'Smoke') {
+                        $('#smoker').show();
+                    }
+
+                });
+
+
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: '@Url.Action("Question", "Questions")',
+            data: { 'data': array },
+            success: function (response) {
+                if (response.list) {
+                    for (let i = 0; i < response.list.length; i++) {
+
+                        var link = $("<a>");
+                        link.attr("href", "~/Home/"+response.list[i]);
+                        link.text(response.list[i]);
+                        link.attr("target","_blank")
+                        //link.type("button");
+                        link.addClass("btn btn-primary");
+
+                        $("#answer").append(link);
+
+
+                        // $("#answer").append("<a type=button href=# class='btn btn-primary'>" +
+                        //  response.list[i]+ "</a>");
+                        //  }
+
+
+                    }
+                   $('#image').show();
+                    alert('yes');
+
+                }*@
+
+
+
+
+        // $.get('/QuestionsController/Question', {'data':array}, function (response) {
+        // console.log(response);
+        // if(response.list) //same result variable we are returning from controller.
+        //{
+        //     // Let the user download the file he/she requested
+        //     console.log("hi");
+        //} else {
+        //     alert("There is no file assigned to this employee.");
+        //     }
+
+
+
+
+
+</script>
