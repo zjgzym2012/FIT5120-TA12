@@ -45,10 +45,10 @@
 //            }
 //        }
 //        // if it has a value, increment the counter
-     
+
 //    })
 
-       
+
 
 
 
@@ -67,9 +67,9 @@ function tabulateAnswers() {
             var arr = ['Industry', 'Symptoms', 'Condition', 'Sub', 'Chem', 'q4', 'Smoke'];
             break;
         }
-        
+
     }
-   
+
     //var button = document.getElementById("submit");
     for (var y = 0; y < arr.length; y++) {
         flag = false
@@ -85,10 +85,10 @@ function tabulateAnswers() {
         }
         if (flag == false) {
 
-           
+
             break;
         }
-      
+
 
     }
 
@@ -134,7 +134,7 @@ function tabulateAnswers() {
                 array[0] = choices[i].value;
             }
 
-            if (choices[i].checked && choices[i].name == 'Symptoms') {
+            if (choices[i].checked && choices[i].name == 'Symptoms' && choices[i].value != 'None') {
 
                 array.push(choices[i].value);
             }
@@ -187,31 +187,49 @@ function tabulateAnswers() {
         policies.style.display = "block";
         lifestyle.style.display = "block";
 
-        for (i = 0; i < symptoms.length; i++) {
+        if (array.length == 1) {
 
-            for (y = 1; y < array.length; y++) {
+            for (i = 0; i < symptoms.length; i++) {
 
+                if (symptoms[i].includes(array[0])) {
 
-
-                if (array[0] != "Nothing" && symptoms[i].includes(array[0])) {
-                    if (symptoms[i].includes(array[y])) {
-                        // disease.push(urls[i])
-                        index.push(i)
-                        break;
-                    }
-
-                }
-                else if (array[0] == "Nothing") {
-                    if (symptoms[i].includes(array[y])) {
-                        // disease.push(urls[i])
-                        index.push(i)
-                        break;
-                    }
+                    // disease.push(urls[i])
+                    index.push(i)
 
                 }
 
             }
 
+
+
+        }
+        else {
+
+            for (i = 0; i < symptoms.length; i++) {
+
+                for (y = 1; y < array.length; y++) {
+
+
+
+                    if (array[0] != "Nothing" && symptoms[i].includes(array[0])) {
+                        if (symptoms[i].includes(array[y])) {
+                            // disease.push(urls[i])
+                            index.push(i)
+                            break;
+                        }
+
+                    }
+                    else if (array[0] == "Nothing") {
+                        if (symptoms[i].includes(array[y])) {
+                            // disease.push(urls[i])
+                            index.push(i)
+                            break;
+                        }
+
+                    }
+
+                }
+            }
         }
         if (substances.length > 0) {
             var limitText = document.getElementById("limit_text")

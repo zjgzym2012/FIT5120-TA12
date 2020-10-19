@@ -450,6 +450,9 @@
     </Content>
     <None Include="Properties\PublishProfiles\BreathAndBelieve - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy3.pubxml" />
     <None Include="Properties\PublishProfiles\FIT5120TA12iteration2 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\YumengVM - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -508,7 +511,6 @@
     <Content Include="Views\Home\.htmyxyz" />
     <Content Include="Views\Home\LungCancer.cshtml" />
     <Content Include="Views\Home\Quiz.cshtml" />
-    <Content Include="Views\Home\Questionnaire.cshtml" />
     <Content Include="Views\Questions1\Create.cshtml" />
     <Content Include="Views\Questions1\Delete.cshtml" />
     <Content Include="Views\Questions1\Details.cshtml" />
@@ -526,6 +528,7 @@
     <Content Include="Views\Home\HazardLimit.cshtml" />
     <Content Include="Views\Home\Claims.cshtml" />
     <Content Include="Views\Home\GeneralLungInfo.cshtml" />
+    <Content Include="Views\Home\Questionnaire.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
