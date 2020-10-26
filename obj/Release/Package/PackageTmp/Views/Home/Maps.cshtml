@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Maps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <title>Geolocation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaptfzrd3_VALN-8knGS5eCXW5tXDDsz8&callback=initMap&libraries=places&v=weekly"
+            defer></script>
+
+
+</head>
+<body>
+    <div class="jumbotronmodify container">
+
+        <div class="pac-card" id="pac-card">
+            <div id="pac-container">
+                <input id="pac-input" type="text" placeholder="Enter a location" />
+            </div>
+            <br />
+        </div>
+        <button class="btn btn-primary" id="hospitals">Lung Hospitals</button>
+        <button class="btn btn-primary" id="places">Lung Friendly Places</button>
+        <br />
+        <br />
+        <div id="msg" style="font-size:14px;font-weight:400"></div>
+        <div id="map" style="height:400px"></div>
+        <br />
+        <div class="about-caption">
+            <h4>What are Lung friendly places?</h4>
+            <p>
+                Lung Friendly places include nearby <b>parks</b> and <b>suburbs</b> in your city which have a good air quality index.
+                The suburbs included have AQI between <b>(0-50)</b>. Air quality in that range is considered satisfactory, and air pollution poses little or no risk.
+            </p>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+<script src="~/js/map.js"></script>
+@Scripts.Render("~/js/map.js")

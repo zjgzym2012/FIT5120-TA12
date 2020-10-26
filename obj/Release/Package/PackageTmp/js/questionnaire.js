@@ -232,10 +232,10 @@ function tabulateAnswers() {
             }
         }
         if (substances.length > 0) {
-            var limitText = document.getElementById("limit_text")
-            limitText.style.display = "block";
+           // var limitText = document.getElementById("limit_text")
+          //  limitText.style.display = "block";
             //limitData.style.display = "block";
-            var content = "The permissible limit of some of the substances you are exposed to-";
+         //   var content = "The permissible limit of some of the substances you are exposed to-";
 
             for (i = 0; i < index.length; i++) {
 
@@ -254,19 +254,19 @@ function tabulateAnswers() {
                 }
 
             }
-            for (y = 0; y < substances.length; y++) {
+            //for (y = 0; y < substances.length; y++) {
 
-                content = content + substances[y];
-            }
-            limitText.innerHTML = content;
-            var a = document.createElement('a');
-            a.target = '_blank';
-            a.href = '/Home/HazardLimit';
-            a.innerText = "    Know more about permissible limits";
-            a.style.fontWeight = "bold";
-            // a.type = "button";
-            // a.className = "btn btn-primary";
-            limitText.append(a);
+            //    content = content + substances[y];
+           // }
+            //limitText.innerHTML = content;
+            //var a = document.createElement('a');
+            //a.target = '_blank';
+            //a.href = '/Home/HazardLimit';
+            //a.innerText = "    Know more about permissible limits";
+            //a.style.fontWeight = "bold";
+            //// a.type = "button";
+            //// a.className = "btn btn-primary";
+            //limitText.append(a);
         }
 
 

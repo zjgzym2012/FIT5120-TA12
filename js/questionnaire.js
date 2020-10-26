@@ -5,60 +5,10 @@
 });
 
 
-//$(document).ready(function () {
-//    validate();
-//    $('input').on('click', validate);
-//});
-
-//function validate() {
-
-//    var arr = ['Industry', 'Symptoms', 'Condition', 'Sub', 'q4', 'Smoke'];
-
-//    var myInputs = $("input");
-
-//    var button = $("button[type='submit']");
-//    var flag = false;
-
-
-
-//    $.each(arr, function (index, value) {
-
-//        var inputs = $("input[name=" + value + "]");
-
-//        inputs.each(function (e) {
-//            if ($(this).is(':checked')) {
-//                flag = true;
-//                return true;
-//            }
-//        });
-
-//        if (!flag) {
-
-//            $("button[type='submit']").disabled = true;
-//            return true ;
-//        }
-//        if (index == arr.length - 1) {
-
-//            if (flag) {
-
-//                $("button[type='submit']").disabled = false;
-//            }
-//        }
-//        // if it has a value, increment the counter
-
-//    })
-
-
-
-
-
-
-//    }
-
-
 
 function tabulateAnswers() {
     event.preventDefault();
+    document.documentElement.scrollTop = 0
     var flag = false;
     var arr = ['Industry', 'Symptoms', 'Condition', 'Sub', 'q4', 'Smoke'];
     var substance = document.getElementsByName('Sub');
@@ -232,10 +182,10 @@ function tabulateAnswers() {
             }
         }
         if (substances.length > 0) {
-            var limitText = document.getElementById("limit_text")
-            limitText.style.display = "block";
+           // var limitText = document.getElementById("limit_text")
+          //  limitText.style.display = "block";
             //limitData.style.display = "block";
-            var content = "The permissible limit of some of the substances you are exposed to-";
+         //   var content = "The permissible limit of some of the substances you are exposed to-";
 
             for (i = 0; i < index.length; i++) {
 
@@ -254,19 +204,19 @@ function tabulateAnswers() {
                 }
 
             }
-            for (y = 0; y < substances.length; y++) {
+            //for (y = 0; y < substances.length; y++) {
 
-                content = content + substances[y];
-            }
-            limitText.innerHTML = content;
-            var a = document.createElement('a');
-            a.target = '_blank';
-            a.href = '/Home/HazardLimit';
-            a.innerText = "    Know more about permissible limits";
-            a.style.fontWeight = "bold";
-            // a.type = "button";
-            // a.className = "btn btn-primary";
-            limitText.append(a);
+            //    content = content + substances[y];
+           // }
+            //limitText.innerHTML = content;
+            //var a = document.createElement('a');
+            //a.target = '_blank';
+            //a.href = '/Home/HazardLimit';
+            //a.innerText = "    Know more about permissible limits";
+            //a.style.fontWeight = "bold";
+            //// a.type = "button";
+            //// a.className = "btn btn-primary";
+            //limitText.append(a);
         }
 
 
@@ -322,60 +272,62 @@ function tabulateAnswers() {
     }
 }
 
- //$('#quiz').on('submit', function (event) {
- //   event.preventDefault();
- //   var answerbox = document.getElementById('answer');
- //   var array = [];
- //   $("input:checked").each(function () {
+//$('#quiz').on('submit', function (event) {
+//    event.preventDefault();
+//    var answerbox = document.getElementById('answer');
+//    var array = [];
+//    $("input:checked").each(function () {
 
- //       if (this.name === 'Symptoms') {
-
-
- //           array.push(this.value);
- //       }
- //       if (this.name === 'Industry') {
+//        if (this.name === 'Symptoms') {
 
 
- //           array.push(this.value);
- //       }
- //       if (this.name === 'Smoke') {
- //           $('#smoker').show();
- //       }
-
- //   });
+//            array.push(this.value);
+//        }
+//        if (this.name === 'Industry') {
 
 
- //   $.ajax({
- //       type: 'POST',
- //       dataType: 'json',
- //       url: '@Url.Action("Question", "Questions")',
- //       data: { 'data': array },
- //       success: function (response) {
- //           if (response.list) {
- //               for (let i = 0; i < response.list.length; i++) {
+//            array.push(this.value);
+//        }
+//        if (this.name === 'Smoke') {
+//            $('#smoker').show();
+//        }
 
- //                   var link = $("<a>");
- //                   link.attr("href", "~/Home/" + response.list[i]);
- //                   link.text(response.list[i]);
- //                   link.attr("target", "_blank")
- //                   //link.type("button");
- //                   link.addClass("btn btn-primary");
-
- //                   $("#answer").append(link);
+//    });
 
 
- //                   // $("#answer").append("<a type=button href=# class='btn btn-primary'>" +
- //                   //  response.list[i]+ "</a>");
- //                   //  }
+//    $.ajax({
+//        type: 'POST',
+//        dataType: 'json',
+//        url: '@Url.Action("Question", "QuestionsController")',
+//        data: { 'data': array },
+//        success: function (response) {
+//            if (response.list) {
+//                for (let i = 0; i < response.list.length; i++) {
+
+//                    var link = $("<a>");
+//                    link.attr("href", "~/Home/" + response.list[i]);
+//                    link.text(response.list[i]);
+//                    link.attr("target", "_blank")
+//                    //link.type("button");
+//                    link.addClass("btn btn-primary");
+
+//                    $("#answer").append(link);
 
 
- //               }
- //               $('#image').show();
- //               alert('yes');
-
- //           }
+//                    // $("#answer").append("<a type=button href=# class='btn btn-primary'>" +
+//                    //  response.list[i]+ "</a>");
+//                    //  }
 
 
+//                }
+//                $('#image').show();
+//                alert('yes');
+
+//            }
+//        }
+//    })
+
+//});
 
 
         // $.get('/QuestionsController/Question', {'data':array}, function (response) {

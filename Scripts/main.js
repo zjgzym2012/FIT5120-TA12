@@ -1,9 +1,5 @@
 /* =====================================
-Template Name: 	Mediplus.
-Author Name: Naimur Rahman
-Website: http://wpthemesgrid.com/
-Description: Mediplus - Doctor HTML Template.
-Version:	1.1
+
 ========================================*/   
 /*=======================================
 [Start Activation Code]
@@ -229,9 +225,9 @@ Version:	1.1
 		/*=====================================
 			Date Picker JS
 		======================================*/ 
-		$( function() {
-			$( "#datepicker" ).datepicker();
-		} );
+		//$( function() {
+		//	$( "#datepicker" ).datepicker();
+		//} );
 		
 		
 		
@@ -274,12 +270,12 @@ Version:	1.1
 		/*===================
 			Scroll Up JS
 		=====================*/
-		$.scrollUp({
-			scrollText: '<span><i class="fa fa-angle-up"></i></span>',
-			easingType: 'easeInOutExpo',
-			scrollSpeed: 900,
-			animation: 'fade'
-		}); 
+		//$.scrollUp({
+		//	scrollText: '<span><i class="fa fa-angle-up"></i></span>',
+		//	easingType: 'easeInOutExpo',
+		//	scrollSpeed: 900,
+		//	animation: 'fade'
+		//}); 
 
 		/*=======================
 			Animate Scroll JS
@@ -303,21 +299,21 @@ Version:	1.1
 		/*====================
 			Google Maps JS
 		======================*/
-		var map = new GMaps({
-				el: '#map',
-				lat: 23.011245,
-				lng: 90.884780,
-				scrollwheel: false,
-			});
-			map.addMarker({
-				lat: 23.011245,
-				lng: 90.884780,
-				title: 'Marker with InfoWindow',
-				infoWindow: {
-				content: '<p>welcome to Medipro</p>'
-			}
+		//var map = new GMaps({
+		//		el: '#map',
+		//		lat: 23.011245,
+		//		lng: 90.884780,
+		//		scrollwheel: false,
+		//	});
+		//	map.addMarker({
+		//		lat: 23.011245,
+		//		lng: 90.884780,
+		//		title: 'Marker with InfoWindow',
+		//		infoWindow: {
+		//		content: '<p>welcome to Medipro</p>'
+		//	}
 		
-		});
+		//});
 	});
 	
 	/*====================

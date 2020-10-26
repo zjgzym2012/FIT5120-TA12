@@ -53,10 +53,35 @@
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.SqlClient, Version=2.0.20168.4, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.SqlClient.2.0.1\lib\net46\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.14.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.4.14.0\lib\net45\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.5.6.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.5.6.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.5.6.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.5.6.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.5.6.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.5.6.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -67,6 +92,7 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -164,34 +190,11 @@
     <Content Include="App_Data\Questions_log.ldf">
       <DependentUpon>Questions.mdf</DependentUpon>
     </Content>
-    <Content Include="assets\img\about\1.jpg" />
-    <Content Include="assets\img\about\2.jpg" />
-    <Content Include="assets\img\about\3.jpg" />
-    <Content Include="assets\img\about\4.jpg" />
     <Content Include="assets\img\close-icon.svg" />
     <Content Include="assets\img\favicon.ico" />
     <Content Include="assets\img\header-bg.jpg" />
-    <Content Include="assets\img\logos\creative-market.jpg" />
-    <Content Include="assets\img\logos\designmodo.jpg" />
-    <Content Include="assets\img\logos\envato.jpg" />
-    <Content Include="assets\img\logos\themeforest.jpg" />
     <Content Include="assets\img\map-image.png" />
     <Content Include="assets\img\navbar-logo.svg" />
-    <Content Include="assets\img\portfolio\01-full.jpg" />
-    <Content Include="assets\img\portfolio\01-thumbnail.jpg" />
-    <Content Include="assets\img\portfolio\02-full.jpg" />
-    <Content Include="assets\img\portfolio\02-thumbnail.jpg" />
-    <Content Include="assets\img\portfolio\03-full.jpg" />
-    <Content Include="assets\img\portfolio\03-thumbnail.jpg" />
-    <Content Include="assets\img\portfolio\04-full.jpg" />
-    <Content Include="assets\img\portfolio\04-thumbnail.jpg" />
-    <Content Include="assets\img\portfolio\05-full.jpg" />
-    <Content Include="assets\img\portfolio\05-thumbnail.jpg" />
-    <Content Include="assets\img\portfolio\06-full.jpg" />
-    <Content Include="assets\img\portfolio\06-thumbnail.jpg" />
-    <Content Include="assets\img\team\1.jpg" />
-    <Content Include="assets\img\team\2.jpg" />
-    <Content Include="assets\img\team\3.jpg" />
     <Content Include="assets\mail\contact_me.js" />
     <Content Include="assets\mail\contact_me.php" />
     <Content Include="assets\mail\jqBootstrapValidation.js" />
@@ -239,7 +242,6 @@
     <Content Include="Images\copd_symp.png" />
     <Content Include="Images\cotton.jpg" />
     <Content Include="Images\cover.png" />
-    <Content Include="Images\David.png" />
     <Content Include="Images\diet.svg" />
     <Content Include="Images\dust.jpg" />
     <Content Include="Images\eliminate.jpg" />
@@ -280,7 +282,6 @@
     <Content Include="Images\lungs_1.png" />
     <Content Include="Images\lung_cancer.PNG" />
     <Content Include="Images\Lung_symp.png" />
-    <Content Include="Images\Manasie.png" />
     <Content Include="Images\manufacturing.jpg" />
     <Content Include="Images\manufacturing1.jpg" />
     <Content Include="Images\markus-spiske-wcAOi6t0qaA-unsplash_meitu_1.jpg" />
@@ -327,10 +328,8 @@
     <Content Include="Images\Stethoscope-03-160.png" />
     <Content Include="Images\Symptoms.png" />
     <Content Include="Images\textile.jpg" />
-    <Content Include="Images\Vaishnavi.png" />
     <Content Include="Images\ventilation.svg" />
     <Content Include="Images\virus.svg" />
-    <Content Include="Images\Yumeng.png" />
     <Content Include="img\about-img.jpg" />
     <Content Include="img\author1.jpg" />
     <Content Include="img\author2.jpg" />
@@ -453,6 +452,8 @@
     <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy2.pubxml" />
     <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy3.pubxml" />
+    <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy4.pubxml" />
+    <None Include="Properties\PublishProfiles\BreatheNbelieve - Web Deploy5.pubxml" />
     <None Include="Properties\PublishProfiles\FIT5120TA12iteration2 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\YumengVM - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -504,9 +505,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ViewDiseases.cshtml" />
     <Content Include="Views\Home\Industries.cshtml" />
-    <Content Include="Views\Home\Manufacturing.cshtml" />
     <Content Include="Views\Home\Mining.cshtml" />
-    <Content Include="Views\Home\Construction.cshtml" />
     <Content Include="Views\Home\.htaccess" />
     <Content Include="Views\Home\.htmyxyz" />
     <Content Include="Views\Home\LungCancer.cshtml" />
@@ -529,8 +528,12 @@
     <Content Include="Views\Home\Claims.cshtml" />
     <Content Include="Views\Home\GeneralLungInfo.cshtml" />
     <Content Include="Views\Home\Questionnaire.cshtml" />
+    <Content Include="Views\Home\Manufacturing.cshtml" />
+    <Content Include="Views\Home\Construction.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Industries\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -580,7 +583,9 @@
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.Data.SqlClient.SNI.2.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Data.SqlClient.SNI.2.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
   </Target>
+  <Import Project="packages\Microsoft.Data.SqlClient.SNI.2.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.2.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
