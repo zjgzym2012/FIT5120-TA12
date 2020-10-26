@@ -8,8 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title>@ViewBag.Title - Breathe And Believe</title>
-    
+    <title>@ViewBag.Title - Safe Lungs at Work</title>
+
     <!-- Favicon -->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -26,8 +26,6 @@
     <link rel="stylesheet" href="~/css/slicknav.min.css">
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="~/css/owl-carousel.css">
-    <!-- Datepicker CSS -->
-    <link rel="stylesheet" href="~/css/datepicker.css">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="~/css/animate.min.css">
     <!-- Magnific Popup CSS -->
@@ -35,8 +33,16 @@
 
     <link rel="stylesheet" href="~/style.css">
     <link rel="stylesheet" href="~/css/responsive.css">
+
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+
+        .nav-item {
+            padding-top: 0px;
+        }
+    </style>
 </head>
 <body style="padding-top:unset; padding-bottom:unset">
 
@@ -46,7 +52,7 @@
             <img src="~/Images/logo.PNG" class="img_logo">
         </a>
         <a href="/Home/Index" class="navbar-brand">
-            Safe Lungs At Work
+            Safe Lungs at Work
 
         </a>
         @*<a class="navbar-brand" href="#">Breathe And Believe</a>*@
@@ -56,29 +62,18 @@
 
         <div class="collapse navbar-collapse" id="navbarColor03">
 
-            <ul class="navbar-nav ml-auto nav-pills">
+            <ul class="navbar-nav ml-auto nav-pills" style="padding:0px">
                 <li class="nav-item">
                     <a class="nav-link" href="/Home/Index">Home <span class="sr-only">(current)</span></a>
                 </li>
                 @*<li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>*@
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>*@
                 @*</li>*@
-                <li class="nav-item">
 
-                    <a class="nav-link" href="/Home/Claims">Policies</a>
-                </li>
-                <li class="nav-item">
 
-                    <a class="nav-link" href="/Home/Maps">Maps</a>
-                </li>
-                <li class="nav-item">
-
-                    <a class="nav-link" href="/Home/GeneralLungInfo">General Lung Info</a>
-                </li>
-               
 
 
                 <li class="nav-item dropdown">
@@ -106,10 +101,6 @@
                 </li>
                 <li class="nav-item">
 
-                    <a class="nav-link" href="/Home/HazardLimit">Hazardous substances</a>
-                </li>
-                <li class="nav-item">
-
                     <a class="nav-link" href="/Home/About">About</a>
                 </li>
 
@@ -117,7 +108,7 @@
 
         </div>
     </nav>
-
+    @*<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>*@
 
 
     <div>
@@ -163,8 +154,8 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-12">
                             <div class="copyright-content">
-                                <p style="text-align:center; font-size:14px">Copyright ©2020 All rights reserved | This website is made by Respiratory Repairers </p>
-                                <p style="text-align:center; font-size:14px">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" style="font-size:14px">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"style="font-size:14px"> www.flaticon.com</a></p>
+                                <p style="text-align:center; font-size:14px; margin-bottom:0px">Copyright ©2020 All rights reserved | This website is made by Respiratory Repairers </p>
+                                <p style="text-align:center; font-size:14px; margin-bottom:0px">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" style="font-size:14px">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" style="font-size:14px"> www.flaticon.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -178,8 +169,8 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
-    @Scripts.Render("~/Scripts/jquery.scrollUp.min.js")
-    
+
+
     @RenderSection("scripts", required: false)
     <script>
 
@@ -188,7 +179,24 @@
             $(".nav").find(".active").removeClass("active");
             $(this).addClass("active");
         });
+        mybutton = document.getElementById("myBtn");
 
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
 </body>
 

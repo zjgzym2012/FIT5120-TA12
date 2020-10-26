@@ -16,6 +16,10 @@
         -webkit-column-count: 3; /* Safari and Chrome */
         column-count: 3;
     }
+    #limit_text{
+        font-size:13px;
+
+    }
 </style>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -25,7 +29,7 @@
     </ol>
 </nav>
 
-<div class="jumbotronmodify container" style="border:1px solid #234821">
+<div class="jumbotronmodify container"id="main" style="border:1px solid #234821">
     <div id="wrapper">
         <div id="header">
             <h3>Know if you are at risk at your workplace</h3>
@@ -235,6 +239,30 @@
         <div id="workplace" style="display:none">
             <h5 class="question">Are you at risk?</h5>
             <br />
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12 col-md-12">
+
+
+                    <p class="pera-bottom mb-30" id="diseasesol" style="display:none">
+                        Some of the suggested diseases links based on your symptoms and your working condition.
+
+                    </p>
+                    <div id="answer"></div>
+                    <hr />
+                    <p class="pera-bottom mb-30">
+                        Visit this link to know more about the Risks and
+
+
+                        Preventive Measures
+                        specific to your industry
+                    </p>
+                    <div id="answerindustry"></div>
+                </div>
+
+
+            </div>
+            <hr />
             <h5>
                 Some of the factors which determine the risk-
             </h5>
@@ -244,7 +272,7 @@
 
 
                     <div class="card-body">
-                        <h4 class="alert-heading">Work-related symptoms!</h4>
+                        <h5 class="alert-heading">Work-related symptoms!</h5>
                         <p class="mb-0">As your symptoms get better when you are away from work, the chances of having Occupational Lung Diseases should be considered.</p>
 
                     </div>
@@ -253,58 +281,37 @@
 
 
                     <div class="card-body">
-                        <h4 class="alert-heading">Time you have spent in the industry!</h4>
+                        <h5 class="alert-heading">Time you have spent in the industry!</h5>
                         <p class="mb-0" id="years_text"></p>
 
                     </div>
                 </div>
-            </div>
-            <div class="card-deck">
+
                 <div class="card bg-warning mb-3 text-dark" id="limit">
 
 
                     <div class="card-body">
-                        <h4 class="alert-heading">Hazardous Substances!</h4>
+                        <h5 class="alert-heading">Hazardous Substances!</h5>
                         <p class="mb-0">
-                            Substances you are exposed to in your industry have a permissible limit.
-                            If your exposure is more than the prescribed limit then you might be at a higher risk.
+
+                            If your exposure to the harmful substances is more than the prescribed limit then you might be at a higher risk.
                         </p>
-                        <p class="mb-0" id="limit_text"><a href="/Home/HazardLimit" target="_blank"><b>Know more about permissible limits</b></a></p>
+                        <p class="mb-0" id="limit_text"><a href="/Home/HazardLimit" target="_blank"><b>Know about permissible limits</b></a></p>
                     </div>
                 </div>
                 <div class="card bg-warning mb-3 text-dark" style="display:none" id="smoker">
 
 
                     <div class="card-body">
-                        <h4 class="alert-heading">Smoking!</h4>
+                        <h5 class="alert-heading">Smoking!</h5>
                         <p class="mb-0">Smoking is the biggest risk factor for lung conditions like COPD and Lung Cancer. As you smoke you will be at a higher risk of developing a lung condition.</p>
 
                     </div>
                 </div>
 
             </div>
-            <hr />
-            <div class="row justify-content-center">
+           
 
-                <div class="col-lg-12 col-md-12">
-                    <p class="pera-bottom mb-30">
-                        Visit this link to know more about the Risks and
-
-
-                        Preventive Measures
-                        specific to your industry
-                    </p>
-                    <div id="answerindustry"></div>
-                    <hr />
-                    <p class="pera-bottom mb-30" id="diseasesol" style="display:none">
-                        Some of the suggested diseases links based on your symptoms and your working condition.
-
-                    </p>
-                    <div id="answer"></div>
-
-                </div>
-
-            </div>
 
         </div>
         <br />

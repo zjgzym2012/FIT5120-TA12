@@ -1,28 +1,20 @@
-﻿
-var map, infoWindow, latlng;
+﻿var map, infoWindow, latlng, infowindow;
 var directionsService;
 var directionsRenderer;
 let markers = [];
 const TOKEN_ID = "AIzaSyBaptfzrd3_VALN - 8knGS5eCXW5tXDDsz8";
-function submit() {
-
-
-
-}
-
-
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -33.8688, lng: 151.2195 },
         zoom: 13,
     });
-    const card = document.getElementById("pac-card");
+
     const input = document.getElementById("pac-input");
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer();
     const autocomplete = new google.maps.places.Autocomplete(input);
-
+    infowindow = new google.maps.InfoWindow();
     autocomplete.bindTo("bounds", map);
     const marker = new google.maps.Marker({
         map,
@@ -145,24 +137,35 @@ function markerPointsPlaces(location) {
             for (var i = 0; i < stations.data.length; i++) {
 
                 if (stations.data[i].aqi <= 50) {
-                    const contentString = '<div>' +
+                    var contentString = '<div>' +
                         '<p> Name-' + stations.data[i].station.name + '<br> AQI-'
                         + stations.data[i].aqi + '</p>'
 
                     '</div>'
                     const myLatLng = { lat: stations.data[i].lat, lng: stations.data[i].lon };
 
-                    const infowindow = new google.maps.InfoWindow({
-                        content: contentString
-                    });
+                
                     const marker = new google.maps.Marker({
                         position: myLatLng,
                         icon: { url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png" },
                         map
                     });
                     markers.push(marker);
-                    marker.addListener("click", () => {
 
+                    
+                    
+                    
+                    
+                  
+                    marker.addListener("click", () => {
+                        //var distance = calculateAndDisplayRoute(latlng, myLatLng);
+                        infowindow.close();
+                        
+                        infowindow = new google.maps.InfoWindow();
+                       ///infowindow.setContent(contentString);
+                        
+                        //contentString = contentString + distance
+                        infowindow.setContent(contentString);
                         infowindow.open(map, marker);
                         calculateAndDisplayRoute(latlng, myLatLng)
 
@@ -198,6 +201,8 @@ function calculateAndDisplayRoute(origin, destination) {
                 }
                 else {
                     document.getElementById('msg').innerHTML = " Driving distance is " + directionsData.distance.text + " (" + directionsData.duration.text + ").";
+                    //return "Driving distance is " + directionsData.distance.text + "(" + directionsData.duration.text + ")";
+
                 }
             }
         });
@@ -237,9 +242,9 @@ function callback(results, status) {
 function createMarker(place) {
     const contentString = '<div>' + '<p>' + place.name + '<br>' + place.formatted_address
     '</p>' + '</div>';
-    const infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
+
+
+
     var url;
     if (place.types.includes("park")) {
 
@@ -261,7 +266,9 @@ function createMarker(place) {
     });
     markers.push(marker);
     marker.addListener("click", () => {
-
+        infowindow.close();
+        infowindow = new google.maps.InfoWindow();
+        infowindow.setContent(contentString);
         infowindow.open(map, marker);
         calculateAndDisplayRoute(latlng, place.geometry.location)
 
