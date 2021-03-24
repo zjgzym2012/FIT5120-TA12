@@ -2,7 +2,7 @@
 var directionsService;
 var directionsRenderer;
 let markers = [];
-const TOKEN_ID = "AIzaSyBaptfzrd3_VALN - 8knGS5eCXW5tXDDsz8";
+const TOKEN_ID = "";
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
